@@ -1,0 +1,32 @@
+# Pack de stack sin cambiar el modelo de agentes del core.
+# Copia a la raíz del consumidor y ajusta project.name.
+# Requiere sdaf-core@0.2.x y materializar skills/playbooks de este pack.
+
+sdaf:
+  version: "0.2.0"
+
+project:
+  name: MiProyecto
+  language: es
+
+stack:
+  pack: sdaf-stack-dotnet@0.1.0
+  src_path: src
+  tests_path: tests
+
+agents:
+  active:
+    - specification
+    - architecture
+    - testing-review
+  stubs:
+    - product
+    - domain
+    - application
+    - devops
+    - review
+    - testing
+    - frontend
+    - domain-application
+    - infrastructure
+  fusions: {}
