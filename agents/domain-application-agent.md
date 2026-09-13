@@ -2,9 +2,9 @@
 
 | Campo | Valor |
 |--------|--------|
-| Versión | 0.1.0 |
+| Versión | 0.1.1 |
 | Estado | Approved |
-| Fecha | 2026-08-25 |
+| Fecha | 2026-09-13 |
 | Modo | active (fusión; cuando el consumidor lo declare) |
 | Prompt base | `prompts/agents/domain-application-agent.md` |
 | Pack | sdaf-stack-dotnet@0.1.0 |
@@ -52,3 +52,17 @@ Slice In implementado o bloqueado con gap explícito; worklog cerrado hacia el s
 ## Prompt base
 
 `prompts/agents/domain-application-agent.md`
+
+## Contexto autorizado
+
+Índice. No sustituye al prompt base. No concatenar en un mega-prompt.
+
+| Capa | Artefacto | Resumen (1 línea) | Obligatorio |
+|------|-----------|-------------------|-------------|
+| Rol | `prompts/agents/domain-application-agent.md` | Slice dominio+aplicación .NET | sí |
+| Flujo | `skills/csharp-adr006-slice` | Vertical slice API/aplicación | según PBI |
+| Flujo | `skills/sdaf-gate0` | Gate 0 antes de código | sí |
+| Flujo | `skills/sdaf-worklog-handoff` | Cierre ATF / handoff | sí |
+| IDE | `.cursor/rules/coding-standards-csharp.mdc` | Estándares C# del pack | si Cursor |
+| IDE | `.cursor/rules/idioma-castellano.mdc` | Castellano en artefactos | si Cursor |
+
