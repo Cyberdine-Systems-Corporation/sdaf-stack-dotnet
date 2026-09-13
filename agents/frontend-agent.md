@@ -2,9 +2,9 @@
 
 | Campo | Valor |
 |--------|--------|
-| Versión | 0.1.0 |
+| Versión | 0.1.1 |
 | Estado | Approved |
-| Fecha | 2026-08-25 |
+| Fecha | 2026-09-13 |
 | Modo | active (cuando el consumidor lo declare) |
 | Prompt base | `prompts/agents/frontend-agent.md` |
 | Pack | sdaf-stack-dotnet@0.1.0 |
@@ -54,3 +54,17 @@ UI/BFF del alcance In verde o justificado; handoff a Testing+Review documentado.
 ## Prompt base
 
 `prompts/agents/frontend-agent.md`
+
+## Contexto autorizado
+
+Índice. No sustituye al prompt base. No concatenar en un mega-prompt.
+
+| Capa | Artefacto | Resumen (1 línea) | Obligatorio |
+|------|-----------|-------------------|-------------|
+| Rol | `prompts/agents/frontend-agent.md` | UI Blazor + BFF según specs | sí |
+| Flujo | `skills/blazor-bff-slice` | Slice UI+BFF | según PBI |
+| Flujo | `skills/sdaf-gate0` | Gate 0 antes de código | sí |
+| Flujo | `skills/sdaf-worklog-handoff` | Cierre ATF / handoff | sí |
+| IDE | `.cursor/rules/coding-standards-csharp.mdc` | Estándares C# del pack | si Cursor |
+| IDE | `.cursor/rules/idioma-castellano.mdc` | Castellano en artefactos | si Cursor |
+
