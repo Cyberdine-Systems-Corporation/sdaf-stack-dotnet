@@ -2,12 +2,24 @@
 
 | Campo | Valor |
 |--------|--------|
+| Rol | 📝 Prompt de sistema / plantilla |
 | ID | PROMPT-AGT-FE-001 |
-| Versión | 0.1.0 |
+| Versión | 0.1.1 |
 | Estado | Approved |
 | Agente / rol | frontend |
 | Fecha | 2026-08-25 |
-| Pack | sdaf-stack-dotnet@0.1.0 |
+| Pack | sdaf-stack-dotnet@0.1.1 |
+
+## En esta página
+
+- [Objetivo](#objetivo)
+- [Contexto](#contexto)
+- [Entradas](#entradas)
+- [Restricciones](#restricciones)
+- [Resultado esperado](#resultado-esperado)
+- [Criterios de aceptación](#criterios-de-aceptación)
+- [Historial](#historial)
+- [Relacionado](#relacionado)
 
 ## Objetivo
 
@@ -25,7 +37,8 @@ PBI; worklog; rutas de specs/ADR; `sdaf.config.yaml` (`src_path`).
 
 ## Restricciones
 
-Gate 0; no aprobar normas; no secretos; castellano; citar `skill@version` y prompt en worklog.
+> [!WARNING]
+> Gate 0; no aprobar normas; no secretos; castellano; citar `skill@version` y prompt en worklog.
 
 ## Resultado esperado
 
@@ -40,3 +53,12 @@ Trazable a acceptance; límites API respetados; worklog cerrado.
 | Versión | Fecha | Cambio |
 |---------|--------|--------|
 | 0.1.0 | 2026-08-25 | Primera versión del pack |
+| 0.1.1 | 2026-09-17 | Alineación pack@0.1.1; navegación docs |
+
+## Relacionado
+
+| Destino | Por qué |
+|---------|---------|
+| [../../agents/frontend-agent.md](../../agents/frontend-agent.md) | Contrato del agente |
+| [../../skills/blazor-bff-slice/SKILL.md](../../skills/blazor-bff-slice/SKILL.md) | Skill asociada |
+| [../../README.md](../../README.md) | Hub del pack |

@@ -2,12 +2,27 @@
 
 | Campo | Valor |
 |--------|--------|
+| Rol | Contrato de agente de extensión |
 | Versión | 0.1.1 |
 | Estado | Approved |
 | Fecha | 2026-09-13 |
 | Modo | active (cuando el consumidor lo declare) |
 | Prompt base | `prompts/agents/frontend-agent.md` |
-| Pack | sdaf-stack-dotnet@0.1.0 |
+| Pack | sdaf-stack-dotnet@0.1.1 |
+
+## En esta página
+
+- [Objetivo](#objetivo)
+- [Responsabilidades](#responsabilidades)
+- [Entradas](#entradas)
+- [Salidas](#salidas)
+- [Restricciones](#restricciones)
+- [Checklist](#checklist)
+- [KPIs](#kpis)
+- [Definition of Done](#definition-of-done)
+- [Prompt base](#prompt-base)
+- [Contexto autorizado](#contexto-autorizado)
+- [Relacionado](#relacionado)
 
 ## Objetivo
 
@@ -30,8 +45,9 @@ Código bajo `stack.src_path` del consumidor (UI/BFF); tests UI si aplica; workl
 
 ## Restricciones
 
-- No saltar Gate 0.
-- No aprobar handbook/specs/ADR.
+> [!WARNING]
+> ⛔ No saltar Gate 0. No aprobar handbook/specs/ADR.
+
 - No inventar alcance Out del MVP del consumidor.
 - No contradecir sdaf-core Approved ni coding standards del playbook C#.
 - Castellano en artefactos de ingeniería.
@@ -49,11 +65,11 @@ Slices UI trazables a acceptance; sin thrash de límites API.
 
 ## Definition of Done
 
-UI/BFF del alcance In verde o justificado; handoff a Testing+Review documentado.
+✅ UI/BFF del alcance In verde o justificado; handoff a Testing+Review documentado.
 
 ## Prompt base
 
-`prompts/agents/frontend-agent.md`
+[`prompts/agents/frontend-agent.md`](../prompts/agents/frontend-agent.md)
 
 ## Contexto autorizado
 
@@ -63,8 +79,16 @@ UI/BFF del alcance In verde o justificado; handoff a Testing+Review documentado.
 |------|-----------|-------------------|-------------|
 | Rol | `prompts/agents/frontend-agent.md` | UI Blazor + BFF según specs | sí |
 | Flujo | `skills/blazor-bff-slice` | Slice UI+BFF | según PBI |
-| Flujo | `skills/sdaf-gate0` | Gate 0 antes de código | sí |
-| Flujo | `skills/sdaf-worklog-handoff` | Cierre ATF / handoff | sí |
+| Flujo | `skills/sdaf-gate0` (sdaf-core) | Gate 0 antes de código | sí |
+| Flujo | `skills/sdaf-worklog-handoff` (sdaf-core) | Cierre ATF / handoff | sí |
 | IDE | `.cursor/rules/coding-standards-csharp.mdc` | Estándares C# del pack | si Cursor |
-| IDE | `.cursor/rules/idioma-castellano.mdc` | Castellano en artefactos | si Cursor |
+| IDE | `.cursor/rules/idioma-castellano.mdc` (consumidor/core) | Castellano en artefactos | si Cursor |
 
+## Relacionado
+
+| Destino | Por qué |
+|---------|---------|
+| [../prompts/agents/frontend-agent.md](../prompts/agents/frontend-agent.md) | Prompt de sistema |
+| [../skills/blazor-bff-slice/SKILL.md](../skills/blazor-bff-slice/SKILL.md) | Skill UI+BFF |
+| [../playbooks/coding-standards-csharp.md](../playbooks/coding-standards-csharp.md) | Estándares C# |
+| [../README.md](../README.md) | Hub del pack |
