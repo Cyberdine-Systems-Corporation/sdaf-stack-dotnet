@@ -1,0 +1,112 @@
+site_name: sdaf-stack-dotnet — Documentación navegable
+site_description: Contratos, skills, playbooks y adopción del pack sdaf-stack-dotnet
+site_url: https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/
+repo_url: https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet
+repo_name: Cyberdine-Systems-Corporation/sdaf-stack-dotnet
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: es
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle: { icon: material/brightness-7, name: "Modo oscuro" }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle: { icon: material/brightness-4, name: "Modo claro" }
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+
+# Falla / avisa ante enlaces internos rotos, imágenes faltantes o rutas absolutas.
+# Complementa (no sustituye por ahora) a scripts/check-md-links.ps1.
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: ["."]
+      check_paths: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search:
+      lang: es
+  - git-revision-date-localized:
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+nav:
+  - Inicio: index.md
+  - Uso local: uso-local.md
+  - Arquitectura:
+      - architecture/index.md
+      - Relación de componentes: architecture/relacion-componentes.md
+      - Decisiones (ADR):
+          - architecture/adr/index.md
+          - Plantilla: architecture/adr/plantilla-adr.md
+          - "ADR-0001 · Fusión domain-application": architecture/adr/0001-fusion-domain-application.md
+          - "ADR-0002 · Infrastructure como stub": architecture/adr/0002-infrastructure-stub.md
+  - Agentes:
+      - agents/index.md
+      - Frontend: agents/frontend.md
+      - Domain + Application: agents/domain-application.md
+      - Infrastructure (stub): agents/infrastructure.md
+  - Skills:
+      - skills/index.md
+      - csharp-adr006-slice: skills/csharp-adr006-slice.md
+      - blazor-bff-slice: skills/blazor-bff-slice.md
+      - aspire-local-run: skills/aspire-local-run.md
+  - Playbooks:
+      - playbooks/index.md
+      - "Coding standards C#": playbooks/coding-standards-csharp.md
+      - Vertical slice + CQRS: playbooks/vertical-slice-cqrs.md
+  - Adopción:
+      - adoption/index.md
+      - "Escenarios (examples/)": adoption/escenarios.md
+  - Navegación: navegacion-docs.md

@@ -3,6 +3,7 @@ name: csharp-adr006-slice
 description: Implementa un vertical slice .NET (API/aplicación + dominio) alineado a specs Approved. Usar tras Gate 0 en PBI de backend/aplicación.
 ---
 
+<!-- --8<-- [start:cuerpo] -->
 # csharp-adr006-slice
 
 | Campo | Valor |
@@ -74,6 +75,8 @@ flowchart TD
 > ⛔ No saltar Gate 0; no aprobar specs/ADR. No meter nombres de producto ajenos ni secretos.
 
 El “ADR-006” del id es histórico de naming; el ADR vigente es el del **consumidor**.
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Relacionado
 

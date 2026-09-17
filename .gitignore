@@ -1,0 +1,5 @@
+# Sitio de documentación (MkDocs)
+/site/
+/.venv/
+__pycache__/
+*.pyc

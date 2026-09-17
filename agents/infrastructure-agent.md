@@ -1,3 +1,4 @@
+<!-- --8<-- [start:cuerpo] -->
 # Infrastructure Agent
 
 | Campo | Valor |
@@ -57,6 +58,8 @@ Uso justificado.
 ## Definition of Done
 
 ✅ Entrega puntual + handoff documentado.
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Prompt base
 

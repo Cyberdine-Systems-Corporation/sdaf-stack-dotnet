@@ -45,6 +45,7 @@
 | Playbooks | [`coding-standards-csharp`](playbooks/coding-standards-csharp.md), [`vertical-slice-cqrs`](playbooks/vertical-slice-cqrs.md) |
 | IDE | [`.cursor/rules/coding-standards-csharp.mdc`](.cursor/rules/coding-standards-csharp.mdc) |
 | Ejemplos | [`examples/`](examples/) |
+| 🛠️ Sitio navegable | `mkdocs.yml` — ver [`docs/uso-local.md`](docs/uso-local.md) |
 
 ## Qué no es
 
@@ -112,5 +113,6 @@ MIT — ver [LICENSE](LICENSE).
 | [ADOPT.md](ADOPT.md) | Pasos de adopción y upgrade |
 | [skills/README.md](skills/README.md) | Catálogo operativo |
 | [docs/navegacion-docs.md](docs/navegacion-docs.md) | Vocabulario visual y mapa de clics |
+| [docs/uso-local.md](docs/uso-local.md) | Levantar el sitio MkDocs en local |
 | [CHANGELOG.md](CHANGELOG.md) | Historial de versiones del pack |
 | [pack.yaml](pack.yaml) | Manifest canónico |

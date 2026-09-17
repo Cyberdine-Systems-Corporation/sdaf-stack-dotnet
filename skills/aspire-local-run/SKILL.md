@@ -3,6 +3,7 @@ name: aspire-local-run
 description: Verifica o documenta el arranque del runtime local Aspire (o equivalente) del consumidor. Usar al validar Gate 2 local o al onboardear el entorno.
 ---
 
+<!-- --8<-- [start:cuerpo] -->
 # aspire-local-run
 
 | Campo | Valor |
@@ -72,6 +73,8 @@ flowchart TD
 > ⛔ No introducir secretos en el repo.
 
 No imponer Aspire si el ADR del consumidor eligió otro runtime: entonces documentar N/A y usar el runbook real. El nombre “aspire” es el playbook por defecto del pack; el consumidor manda.
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Relacionado
 

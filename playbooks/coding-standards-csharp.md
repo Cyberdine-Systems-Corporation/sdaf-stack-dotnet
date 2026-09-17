@@ -1,3 +1,4 @@
+<!-- --8<-- [start:cuerpo] -->
 # Playbook — Coding standards C#
 
 | Campo | Valor |
@@ -33,6 +34,8 @@ Convenciones de código C# / .NET para consumidores de este pack. El ADR de codi
 | 5 | Secretos solo fuera del repo (user secrets / variables de entorno). |
 | 6 | Tests en el proyecto de tests del consumidor (`tests_path`); nombres que reflejen acceptance. |
 | 7 | Commits y worklogs en castellano (regla SDAF); identificadores de código en inglés técnico salvo que el ADR diga lo contrario. |
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Relación con la regla IDE
 

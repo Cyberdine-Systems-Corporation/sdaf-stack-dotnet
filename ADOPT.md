@@ -1,3 +1,4 @@
+<!-- --8<-- [start:cuerpo] -->
 # Adopción — sdaf-stack-dotnet@0.1.1
 
 | Campo | Valor |
@@ -89,7 +90,7 @@ El HOWTO vive en `docs/materializacion-submodules.md` del **consumidor**. Puedes
 
 Materializar también skills/agentes/prompts del **core** según [`sdaf-core` docs/adopcion-y-upgrade.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/main/docs/adopcion-y-upgrade.md).
 
-4. Elegir escenario de [`examples/`](examples/):
+4. Elegir escenario de `examples/`:
 
 | Escenario | Uso |
 |-----------|-----|
@@ -116,6 +117,8 @@ Al subir el tag del pack:
 1. Actualizar pin del submodule, `stack.pack` semver, y citas `skill@version` en worklogs nuevos.
 2. Volver a ejecutar el script de materialización del consumidor (`-Force` / `--force` si cambió el árbol).
 3. No auto-migrar specs del consumidor.
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Relacionado
 
