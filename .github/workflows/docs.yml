@@ -1,18 +1,15 @@
 name: docs
 
+# Homogéneo con sdaf-core/.github/workflows/docs-deploy.yml:
+# - push a main  → mike alias "dev"  → …/sdaf-stack-dotnet/dev/
+# - tag vX.Y.Z   → versión + "latest" (default)
+# - PR           → solo build --strict (sin publicar)
+# - workflow_dispatch → redeploy "dev" desde main
+
 on:
   push:
     branches: [main]
-    paths:
-      - 'docs/**'
-      - 'agents/**'
-      - 'skills/**'
-      - 'playbooks/**'
-      - 'examples/**'
-      - 'ADOPT.md'
-      - 'mkdocs.yml'
-      - 'requirements-docs.txt'
-      - '.github/workflows/docs.yml'
+    tags: ["v*"]
   pull_request:
     paths:
       - 'docs/**'
@@ -26,10 +23,9 @@ on:
       - '.github/workflows/docs.yml'
   workflow_dispatch:
 
+# mike --push escribe en la rama gh-pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: docs-deploy
@@ -41,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # necesario para mkdocs-git-revision-date-localized-plugin
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -53,19 +49,36 @@ jobs:
       - name: Build estricto (warnings -> error)
         run: mkdocs build --strict
 
-      - uses: actions/upload-pages-artifact@v3
-        # push a main (merge) o "Run workflow" manual — no en PR
-        if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-        with:
-          path: site
-
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    if: >
+      github.event_name != 'pull_request' &&
+      (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # mike necesita historial de gh-pages
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements-docs.txt
+
+      - name: Configurar git para mike
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: Deploy versión de desarrollo (main / workflow_dispatch)
+        if: github.ref == 'refs/heads/main'
+        run: mike deploy --push --update-aliases dev
+
+      - name: Deploy versión de release (tag vX.Y.Z)
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          VERSION=$(echo "${GITHUB_REF_NAME}" | sed -E 's/^v([0-9]+\.[0-9]+).*/\1/')
+          mike deploy --push --update-aliases "$VERSION" latest
+          mike set-default --push latest

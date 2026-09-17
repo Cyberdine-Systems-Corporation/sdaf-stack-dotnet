@@ -1,5 +1,6 @@
 site_name: sdaf-stack-dotnet — Documentación navegable
 site_description: Contratos, skills, playbooks y adopción del pack sdaf-stack-dotnet
+# Base del sitio (sin /dev/): mike añade el prefijo de versión en el deploy.
 site_url: https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/
 repo_url: https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet
 repo_name: Cyberdine-Systems-Corporation/sdaf-stack-dotnet
@@ -80,6 +81,11 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
       fallback_to_build_date: true
+
+# Selector de versión en el header (mismo contrato que sdaf-core).
+extra:
+  version:
+    provider: mike
 
 nav:
   - Inicio: index.md
