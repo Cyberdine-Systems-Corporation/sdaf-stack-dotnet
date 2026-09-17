@@ -1,3 +1,4 @@
+<!-- --8<-- [start:cuerpo] -->
 # Playbook — Vertical slice + CQRS (aplicación)
 
 | Campo | Valor |
@@ -65,6 +66,8 @@ flowchart TD
 | God services que mezclan todos los PBI | Pierdes trazabilidad PBI → slice |
 | Exponer el modelo de dominio crudo por HTTP sin DTO/contrato | Rompe límites acordados |
 | UI que reimplementa reglas hard de dominio | Duplica norma fuera del slice |
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Relacionado
 
