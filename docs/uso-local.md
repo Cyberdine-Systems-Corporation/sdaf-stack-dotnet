@@ -16,12 +16,23 @@ pip install -r requirements-docs.txt
 # Servidor local con recarga en caliente -> http://127.0.0.1:8000
 mkdocs serve
 
-# Build de producción a ./site (mismo comando que corre el CI)
+# Build de producción a ./site (mismo comando que corre el CI en PRs)
 mkdocs build --strict
 ```
 
 > [!TIP]
 > `mkdocs build --strict` convierte en error cualquier warning (enlace roto, snippet inexistente, página fuera del `nav`). Ejecútalo antes de abrir PR sobre `docs/`.
+
+## Publicación versionada (mike, igual que sdaf-core)
+
+El CI publica con [`mike`](https://github.com/jimporter/mike) a la rama `gh-pages`:
+
+| Evento | Alias | URL |
+|--------|-------|-----|
+| push a `main` | `dev` | https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/ |
+| tag `vX.Y.Z` | `X.Y` + `latest` | `…/sdaf-stack-dotnet/X.Y/` (default → `latest`) |
+
+En GitHub → **Settings → Pages**, Source debe ser **Deploy from a branch** → rama **`gh-pages`** / `(root)` — no "GitHub Actions". Es el mismo modelo que `sdaf-core`.
 
 ## Convenciones de bloques de código
 
