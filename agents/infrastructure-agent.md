@@ -2,16 +2,31 @@
 
 | Campo | Valor |
 |--------|--------|
+| Rol | Contrato de agente de extensión (stub) |
 | Versión | 0.1.1 |
 | Estado | Approved |
 | Fecha | 2026-09-13 |
 | Modo | stub |
 | Prompt base | `prompts/agents/infrastructure-agent.md` |
-| Pack | sdaf-stack-dotnet@0.1.0 |
+| Pack | sdaf-stack-dotnet@0.1.1 |
+
+## En esta página
+
+- [Objetivo](#objetivo)
+- [Responsabilidades](#responsabilidades)
+- [Entradas](#entradas)
+- [Salidas](#salidas)
+- [Restricciones](#restricciones)
+- [Checklist](#checklist)
+- [KPIs](#kpis)
+- [Definition of Done](#definition-of-done)
+- [Prompt base](#prompt-base)
+- [Contexto autorizado](#contexto-autorizado)
+- [Relacionado](#relacionado)
 
 ## Objetivo
 
-Persistencia y adapters de infraestructura cuando el humano active este stub (no forma parte del handoff canónico 0.1.0).
+Persistencia y adapters de infraestructura cuando el humano active este stub (no forma parte del handoff canónico 0.1.x).
 
 ## Responsabilidades
 
@@ -27,7 +42,8 @@ Adapters / infra según layout del consumidor.
 
 ## Restricciones
 
-Stub = no invocar por defecto. Gate 0 si toca producto. No aprobar normas.
+> [!WARNING]
+> ⛔ Stub = no invocar por defecto. Gate 0 si toca producto. No aprobar normas.
 
 ## Checklist
 
@@ -40,11 +56,11 @@ Uso justificado.
 
 ## Definition of Done
 
-Entrega puntual + handoff documentado.
+✅ Entrega puntual + handoff documentado.
 
 ## Prompt base
 
-`prompts/agents/infrastructure-agent.md`
+[`prompts/agents/infrastructure-agent.md`](../prompts/agents/infrastructure-agent.md)
 
 ## Contexto autorizado
 
@@ -53,8 +69,15 @@ Entrega puntual + handoff documentado.
 | Capa | Artefacto | Resumen (1 línea) | Obligatorio |
 |------|-----------|-------------------|-------------|
 | Rol | `prompts/agents/infrastructure-agent.md` | Persistencia/adapters bajo demanda | sí (si se activa) |
-| Flujo | `skills/sdaf-gate0` | Gate 0 si toca producto | si implementación |
-| Flujo | `skills/sdaf-worklog-handoff` | Cierre ATF / handoff | sí (si se activa) |
+| Flujo | `skills/sdaf-gate0` (sdaf-core) | Gate 0 si toca producto | si implementación |
+| Flujo | `skills/sdaf-worklog-handoff` (sdaf-core) | Cierre ATF / handoff | sí (si se activa) |
 | IDE | `.cursor/rules/coding-standards-csharp.mdc` | Estándares C# del pack | si Cursor |
-| IDE | `.cursor/rules/idioma-castellano.mdc` | Castellano en artefactos | si Cursor |
+| IDE | `.cursor/rules/idioma-castellano.mdc` (consumidor/core) | Castellano en artefactos | si Cursor |
 
+## Relacionado
+
+| Destino | Por qué |
+|---------|---------|
+| [../prompts/agents/infrastructure-agent.md](../prompts/agents/infrastructure-agent.md) | Prompt de sistema |
+| [../playbooks/vertical-slice-cqrs.md](../playbooks/vertical-slice-cqrs.md) | Cuándo aparecen puertos/adapters |
+| [../README.md](../README.md) | Hub del pack |
