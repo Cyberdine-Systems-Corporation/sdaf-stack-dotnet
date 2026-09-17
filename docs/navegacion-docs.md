@@ -93,7 +93,7 @@ Si no encaja, no pongas icono. Cero emoji en headings de páginas normativas (co
 
 ## Sitio navegable (MkDocs)
 
-Este mismo contenido también se sirve como sitio con búsqueda, Mermaid y syntax highlighting vía MkDocs + Material. Ver [`docs/uso-local.md`](uso-local.md) para levantarlo en local y el workflow [`docs.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs.yml) para el despliegue automático a GitHub Pages.
+Este mismo contenido también se sirve como sitio con búsqueda, Mermaid y syntax highlighting vía MkDocs + Material (versionado con `mike`, igual que sdaf-core). URL de desarrollo: [`…/sdaf-stack-dotnet/dev/`](https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/). Ver [`docs/uso-local.md`](uso-local.md) y el workflow [`docs.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs.yml).
 
 ## Validar enlaces
 
