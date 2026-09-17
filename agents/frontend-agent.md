@@ -1,3 +1,4 @@
+<!-- --8<-- [start:cuerpo] -->
 # Frontend Agent
 
 | Campo | Valor |
@@ -66,6 +67,8 @@ Slices UI trazables a acceptance; sin thrash de límites API.
 ## Definition of Done
 
 ✅ UI/BFF del alcance In verde o justificado; handoff a Testing+Review documentado.
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Prompt base
 

@@ -14,6 +14,7 @@
 - [Tres puertas](#tres-puertas)
 - [Mapa de clics](#mapa-de-clics)
 - [Vocabulario visual](#vocabulario-visual)
+- [Sitio navegable (MkDocs)](#sitio-navegable-mkdocs)
 - [Validar enlaces](#validar-enlaces)
 - [Relacionado](#relacionado)
 
@@ -89,6 +90,10 @@ Si no encaja, no pongas icono. Cero emoji en headings de páginas normativas (co
 | ok | `#d4edda` / `#2d6a4f` | Approved / listo |
 | stub | `#e9ecef` / `#6c757d` | stub / derivado |
 | core | `#d0e3f8` / `#1e4d8b` | nivel constitucional / core |
+
+## Sitio navegable (MkDocs)
+
+Este mismo contenido también se sirve como sitio con búsqueda, Mermaid y syntax highlighting vía MkDocs + Material. Ver [`docs/uso-local.md`](uso-local.md) para levantarlo en local y [`.github/workflows/docs.yml`](../.github/workflows/docs.yml) para el despliegue automático a GitHub Pages.
 
 ## Validar enlaces
 

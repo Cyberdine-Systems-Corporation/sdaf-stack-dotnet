@@ -1,3 +1,4 @@
+<!-- --8<-- [start:cuerpo] -->
 # Domain+Application Agent
 
 | Campo | Valor |
@@ -65,6 +66,8 @@ Un PBI → un slice coherente; acceptance mapeable.
 ## Definition of Done
 
 ✅ Slice In implementado o bloqueado con gap explícito; worklog cerrado hacia el siguiente agente.
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Prompt base
 

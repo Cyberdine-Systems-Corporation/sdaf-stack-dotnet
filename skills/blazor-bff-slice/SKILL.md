@@ -3,6 +3,7 @@ name: blazor-bff-slice
 description: Implementa un slice UI Blazor y/o BFF según specs Approved. Usar con agente frontend tras Gate 0.
 ---
 
+<!-- --8<-- [start:cuerpo] -->
 # blazor-bff-slice
 
 | Campo | Valor |
@@ -72,6 +73,8 @@ flowchart TD
 > ⛔ No Gate 0 skip; no secretos en cliente.
 
 Framework concreto lo fija el ADR del consumidor (este skill asume Blazor como playbook del pack).
+
+<!-- --8<-- [end:cuerpo] -->
 
 ## Relacionado
 
