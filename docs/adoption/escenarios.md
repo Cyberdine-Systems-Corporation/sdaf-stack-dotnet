@@ -3,7 +3,7 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 🛠️ HOWTO de escenarios de config |
-| Pack | `sdaf-stack-dotnet@0.1.1` |
+| Pack | `sdaf-stack-dotnet@0.2.0` |
 
 Cada escenario es un `sdaf.config.yaml` de referencia a copiar en la raíz del consumidor y ajustar (`project.name`, `stack.src_path`, `stack.tests_path`).
 

@@ -10,12 +10,12 @@ description: Implementa un vertical slice .NET (API/aplicación + dominio) aline
 |--------|--------|
 | Rol | 🛠️ Skill / HOWTO operativo |
 | ID | csharp-adr006-slice |
-| Versión | 0.1.1 |
+| Versión | 0.2.0 |
 | Estado | Approved |
 | Prioridad | alta |
 | Fecha | 2026-08-25 |
-| Pack | sdaf-stack-dotnet@0.1.1 |
-| Norma | playbooks/vertical-slice-cqrs.md, playbooks/coding-standards-csharp.md, Gate 0 (sdaf-core) |
+| Pack | sdaf-stack-dotnet@0.2.0 |
+| Norma | playbooks/vertical-slice-cqrs.md, playbooks/coding-standards-csharp.md, Gate 0 (sdaf-core); handoff a testing-review (core 0.3) |
 
 > [!NOTE]
 > HOWTO de implementación. No sustituye playbooks Approved ni Gate 0 del core.
@@ -42,7 +42,7 @@ flowchart TD
   pb --> id[Identificar comando/consulta]
   id --> impl[Implementar en src_path]
   impl --> tests[Tests en tests_path]
-  tests --> wl[Registrar skill@0.1.1]
+  tests --> wl[Registrar skill@0.2.0]
   skip[Saltar Gate 0] --> stop[STOP]
 
   classDef stop fill:#f8d0d0,stroke:#8b1e1e,color:#8b1e1e
@@ -61,7 +61,7 @@ flowchart TD
 3. Identificar comando/consulta, invariantes y acceptance del slice.
 4. Implementar en el layout del consumidor (`src_path`): aplicación (+ dominio si la fusión lo exige) sin filtrar detalles de UI.
 5. Añadir o ajustar tests en `tests_path` derivados de acceptance.
-6. Registrar `csharp-adr006-slice@0.1.1` en worklog; handoff a frontend o testing-review.
+6. Registrar `csharp-adr006-slice@0.2.0` en worklog; handoff a frontend o testing-review.
 
 ## Definition of Done
 
@@ -93,3 +93,4 @@ El “ADR-006” del id es histórico de naming; el ADR vigente es el del **cons
 |---------|--------|--------|
 | 0.1.0 | 2026-08-25 | Primera versión del pack |
 | 0.1.1 | 2026-09-17 | Alineación pack@0.1.1; TOC/Relacionado/Mermaid |
+| 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 |

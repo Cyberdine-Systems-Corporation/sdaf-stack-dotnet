@@ -1,19 +1,19 @@
 # sdaf-stack-dotnet
 
-`sdaf-stack-dotnet@0.1.1` — pack de stack SDAF para **.NET / Blazor / Aspire**.
+`sdaf-stack-dotnet@0.2.0` — pack de stack SDAF para **.NET / Blazor / Aspire**.
 
 | Campo | Valor |
 |--------|--------|
-| Id | `sdaf-stack-dotnet@0.1.1` |
-| Compat | `sdaf-core` **>=0.2.0 &lt;0.3.0** |
-| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.2.0/docs/contrato-pack-stack.md) |
+| Id | `sdaf-stack-dotnet@0.2.0` |
+| Compat | `sdaf-core` **>=0.3.0 &lt;0.4.0** |
+| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.3.3/docs/contrato-pack-stack.md) |
 | Rol | Índice / hub del pack (no es constitución del método) |
 
 > [!NOTE]
 > Este repositorio es un **overlay técnico**. La constitución y el handbook Approved viven en **sdaf-core**. Este pack no los sustituye.
 
 > [!IMPORTANT]
-> Gate 0 del core manda sobre cualquier skill de implementación de este pack.
+> Gate 0 del core manda sobre cualquier skill de implementación de este pack. Compat: **sdaf-core 0.3.x** (pin árbol `v0.3.3` recomendado).
 
 ## En esta página
 
@@ -63,7 +63,7 @@
 sdaf-stack-dotnet/
 ├── README.md                 ← hub (esta página)
 ├── ADOPT.md                  ← HOWTO adopción
-├── pack.yaml                 ← manifest @0.1.1
+├── pack.yaml                 ← manifest @0.2.0
 ├── CHANGELOG.md
 ├── docs/                     ← HOWTO sitio + arquitectura del pack
 │   ├── navegacion-docs.md
@@ -99,7 +99,7 @@ flowchart LR
 ```
 
 > [!TIP]
-> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.1.1`, y elige un escenario en [`examples/`](docs/adoption/escenarios.md).
+> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.2.0`, y elige un escenario en [`examples/`](docs/adoption/escenarios.md).
 
 ## Familia sdaf-stack-*
 

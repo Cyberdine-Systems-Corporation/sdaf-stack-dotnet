@@ -4,11 +4,11 @@
 |--------|--------|
 | Rol | 📝 Prompt de sistema / plantilla |
 | ID | PROMPT-AGT-FE-001 |
-| Versión | 0.1.1 |
+| Versión | 0.2.0 |
 | Estado | Approved |
 | Agente / rol | frontend |
 | Fecha | 2026-08-25 |
-| Pack | sdaf-stack-dotnet@0.1.1 |
+| Pack | sdaf-stack-dotnet@0.2.0 |
 
 ## En esta página
 
@@ -54,6 +54,7 @@ Trazable a acceptance; límites API respetados; worklog cerrado.
 |---------|--------|--------|
 | 0.1.0 | 2026-08-25 | Primera versión del pack |
 | 0.1.1 | 2026-09-17 | Alineación pack@0.1.1; navegación docs |
+| 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 |
 
 ## Relacionado
 

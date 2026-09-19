@@ -1,16 +1,18 @@
 # Pack + domain-application + frontend (extensiones del pack).
 # Handoff: Specification → Architecture → domain-application → frontend
 #                                                    ↘ testing-review ↗
+# Alineado con sdaf-core examples/07-pack-frontend.yaml.
+# Requiere sdaf-core@0.3.x (pin árbol v0.3.3 recomendado).
 
 sdaf:
-  version: "0.2.0"
+  version: "0.3.0"
 
 project:
   name: MiProyecto
   language: es
 
 stack:
-  pack: sdaf-stack-dotnet@0.1.1
+  pack: sdaf-stack-dotnet@0.2.0
   src_path: src
   tests_path: tests
 

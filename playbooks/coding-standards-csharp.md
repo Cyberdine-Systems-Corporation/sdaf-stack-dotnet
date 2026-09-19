@@ -4,8 +4,8 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 📖 Playbook / norma técnica de stack |
-| Versión | 0.1.1 |
-| Pack | sdaf-stack-dotnet@0.1.1 |
+| Versión | 0.2.0 |
+| Pack | sdaf-stack-dotnet@0.2.0 |
 | Estado | Approved |
 | Fecha | 2026-08-25 |
 

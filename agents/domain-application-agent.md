@@ -4,12 +4,12 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | Contrato de agente de extensión (fusión) |
-| Versión | 0.1.1 |
+| Versión | 0.2.0 |
 | Estado | Approved |
 | Fecha | 2026-09-13 |
 | Modo | active (fusión; cuando el consumidor lo declare) |
 | Prompt base | `prompts/agents/domain-application-agent.md` |
-| Pack | sdaf-stack-dotnet@0.1.1 |
+| Pack | sdaf-stack-dotnet@0.2.0 |
 
 ## En esta página
 

@@ -1,11 +1,11 @@
 <!-- --8<-- [start:cuerpo] -->
-# Adopción — sdaf-stack-dotnet@0.1.1
+# Adopción — sdaf-stack-dotnet@0.2.0
 
 | Campo | Valor |
 |--------|--------|
 | Rol | 🛠️ HOWTO de adopción (no es constitución del método) |
-| Pack | `sdaf-stack-dotnet@0.1.1` |
-| Requiere | `sdaf-core@0.2.x` ya adoptado + Gate 0 del método vigente |
+| Pack | `sdaf-stack-dotnet@0.2.0` |
+| Requiere | `sdaf-core@0.3.x` ya adoptado + Gate 0 del método vigente |
 
 > [!NOTE]
 > Esto es un **HOWTO**. No sustituye el handbook Approved ni la constitución de **sdaf-core**.
@@ -22,7 +22,7 @@
 
 ```mermaid
 flowchart TD
-  pin[Pin submodule v0.1.1] --> cfg[sdaf.config.yaml]
+  pin[Pin submodule v0.2.0] --> cfg[sdaf.config.yaml]
   cfg --> mat[Materializar enlaces]
   mat --> ex[Elegir examples]
   ex --> adr{ADR stack nuevo?}
@@ -45,22 +45,24 @@ flowchart TD
 
 ## Pasos
 
-1. Añadir este pack como submodule pinneado a tag `v0.1.1`, p. ej. en `sdaf-stack-dotnet/`:
+1. Añadir este pack como submodule pinneado a tag `v0.2.0`, p. ej. en `sdaf-stack-dotnet/`:
 
 ```text
 git submodule add <url-sdaf-stack-dotnet> sdaf-stack-dotnet
-cd sdaf-stack-dotnet && git checkout v0.1.1
+cd sdaf-stack-dotnet && git checkout v0.2.0
 ```
 
 2. En la raíz del consumidor, `sdaf.config.yaml`:
 
 ```yaml
 sdaf:
-  version: "0.2.0"
+  version: "0.3.0"
 stack:
-  pack: sdaf-stack-dotnet@0.1.1
+  pack: sdaf-stack-dotnet@0.2.0
 ```
 
+> [!TIP]
+> Pin del **core**: tag `v0.3.3` (o posterior 0.3.x). `sdaf.version` del consumidor puede quedar en `"0.3.0"` con ese pin — igual que documenta sdaf-core.
 3. Materializar aportes del pack en la raíz del consumidor.
 
 > [!TIP]
@@ -101,6 +103,9 @@ Materializar también skills/agentes/prompts del **core** según [`sdaf-core` do
 
 6. Antes de código de producto: skill `sdaf-gate0` del core.
 
+> [!IMPORTANT]
+> Con **sdaf-core 0.3.x**, H06 exige petición humana **explícita en el mensaje de este turno** para commit o escritura al remoto. El pack no la relaja: no autorices git/remoto desde skills o prompts del overlay.
+
 ## Prohibido
 
 > [!CAUTION]
@@ -112,11 +117,13 @@ Materializar también skills/agentes/prompts del **core** según [`sdaf-core` do
 
 ## Upgrade
 
-Al subir el tag del pack:
+Al subir el tag del pack **o** al pasar de core 0.2.x → 0.3.x:
 
-1. Actualizar pin del submodule, `stack.pack` semver, y citas `skill@version` en worklogs nuevos.
-2. Volver a ejecutar el script de materialización del consumidor (`-Force` / `--force` si cambió el árbol).
-3. No auto-migrar specs del consumidor.
+1. Actualizar pin del submodule del **core** (`v0.3.3` recomendado) y `sdaf.version` a `"0.3.0"` si aún no.
+2. Actualizar pin del submodule del **pack**, `stack.pack` semver, y citas `skill@version` en worklogs nuevos.
+3. Volver a ejecutar el script de materialización del consumidor (`-Force` / `--force` si cambió el árbol).
+4. No auto-migrar specs del consumidor.
+5. Revisar handoff a `testing-review` y skills del core Parte III (`testing-review-pr`, `security-review`, `devops-ci-gate`) según el escenario.
 
 <!-- --8<-- [end:cuerpo] -->
 

@@ -3,7 +3,7 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 🧭 Índice de normas técnicas del overlay |
-| Pack | `sdaf-stack-dotnet@0.1.1` |
+| Pack | `sdaf-stack-dotnet@0.2.0` |
 
 Normas técnicas del overlay `sdaf-stack-dotnet`. No sustituyen el handbook Approved de `sdaf-core` ni el ADR de stack del consumidor; endurecen o precisan convenciones para .NET/Blazor.
 

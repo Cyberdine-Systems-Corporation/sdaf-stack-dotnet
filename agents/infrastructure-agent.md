@@ -4,12 +4,12 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | Contrato de agente de extensión (stub) |
-| Versión | 0.1.1 |
+| Versión | 0.2.0 |
 | Estado | Approved |
 | Fecha | 2026-09-13 |
 | Modo | stub |
 | Prompt base | `prompts/agents/infrastructure-agent.md` |
-| Pack | sdaf-stack-dotnet@0.1.1 |
+| Pack | sdaf-stack-dotnet@0.2.0 |
 
 ## En esta página
 
