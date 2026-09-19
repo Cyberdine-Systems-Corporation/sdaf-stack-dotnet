@@ -1356,7 +1356,7 @@
         
   
   <span class="md-ellipsis">
-    Adopción — sdaf-stack-dotnet@0.1.1
+    Adopción — sdaf-stack-dotnet@0.2.0
   </span>
   
 
@@ -1620,7 +1620,7 @@
 </tr>
 <tr>
 <td>Versión</td>
-<td>0.1.1</td>
+<td>0.2.0</td>
 </tr>
 <tr>
 <td>Estado</td>
@@ -1636,11 +1636,11 @@
 </tr>
 <tr>
 <td>Pack</td>
-<td>sdaf-stack-dotnet@0.1.1</td>
+<td>sdaf-stack-dotnet@0.2.0</td>
 </tr>
 <tr>
 <td>Norma</td>
-<td>playbooks/vertical-slice-cqrs.md, playbooks/coding-standards-csharp.md, Gate 0 (sdaf-core)</td>
+<td>playbooks/vertical-slice-cqrs.md, playbooks/coding-standards-csharp.md, Gate 0 (sdaf-core); handoff a testing-review (core 0.3)</td>
 </tr>
 </tbody>
 </table>
@@ -1668,7 +1668,7 @@ HOWTO de implementación. No sustituye playbooks Approved ni Gate 0 del core.</p
   pb --&gt; id[Identificar comando/consulta]
   id --&gt; impl[Implementar en src_path]
   impl --&gt; tests[Tests en tests_path]
-  tests --&gt; wl[Registrar skill@0.1.1]
+  tests --&gt; wl[Registrar skill@0.2.0]
   skip[Saltar Gate 0] --&gt; stop[STOP]
 
   classDef stop fill:#f8d0d0,stroke:#8b1e1e,color:#8b1e1e
@@ -1686,7 +1686,7 @@ HOWTO de implementación. No sustituye playbooks Approved ni Gate 0 del core.</p
 <li>Identificar comando/consulta, invariantes y acceptance del slice.</li>
 <li>Implementar en el layout del consumidor (<code>src_path</code>): aplicación (+ dominio si la fusión lo exige) sin filtrar detalles de UI.</li>
 <li>Añadir o ajustar tests en <code>tests_path</code> derivados de acceptance.</li>
-<li>Registrar <code>csharp-adr006-slice@0.1.1</code> en worklog; handoff a frontend o testing-review.</li>
+<li>Registrar <code>csharp-adr006-slice@0.2.0</code> en worklog; handoff a frontend o testing-review.</li>
 </ol>
 <h2 id="definition-of-done">Definition of Done<a class="headerlink" href="#definition-of-done" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1751,6 +1751,11 @@ HOWTO de implementación. No sustituye playbooks Approved ni Gate 0 del core.</p
 <td>0.1.1</td>
 <td>2026-09-17</td>
 <td>Alineación pack@0.1.1; TOC/Relacionado/Mermaid</td>
+</tr>
+<tr>
+<td>0.2.0</td>
+<td>2026-09-19</td>
+<td>Compat sdaf-core 0.3.x; pack@0.2.0</td>
 </tr>
 </tbody>
 </table>
