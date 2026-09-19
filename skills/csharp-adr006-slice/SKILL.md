@@ -80,12 +80,12 @@ El “ADR-006” del id es histórico de naming; el ADR vigente es el del **cons
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../../playbooks/vertical-slice-cqrs.md](../../playbooks/vertical-slice-cqrs.md) | Norma del slice |
-| [../../playbooks/coding-standards-csharp.md](../../playbooks/coding-standards-csharp.md) | Estándares C# |
-| [../../agents/domain-application-agent.md](../../agents/domain-application-agent.md) | Contrato que invoca esta skill |
-| [../README.md](../README.md) | Índice de skills |
+| | Destino | Por qué |
+|--|---------|---------|
+| 📖 | [../../playbooks/vertical-slice-cqrs.md](../../playbooks/vertical-slice-cqrs.md) | Norma del slice |
+| 📖 | [../../playbooks/coding-standards-csharp.md](../../playbooks/coding-standards-csharp.md) | Estándares C# |
+| 🧭 | [../../agents/domain-application-agent.md](../../agents/domain-application-agent.md) | Contrato que invoca esta skill |
+| 🧭 | [../README.md](../README.md) | Índice de skills |
 
 ## Historial
 

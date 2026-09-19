@@ -39,13 +39,13 @@ Convenciones de código C# / .NET para consumidores de este pack. El ADR de codi
 
 ## Relación con la regla IDE
 
-La regla [`.cursor/rules/coding-standards-csharp.mdc`](../.cursor/rules/coding-standards-csharp.mdc) resume lo anterior sin duplicar el handbook del método.
+La regla [`.cursor/rules/coding-standards-csharp.mdc`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.cursor/rules/coding-standards-csharp.mdc) resume lo anterior sin duplicar el handbook del método.
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [vertical-slice-cqrs.md](vertical-slice-cqrs.md) | Cómo estructurar el slice |
-| [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Flujo operativo del slice |
-| [../.cursor/rules/coding-standards-csharp.mdc](../.cursor/rules/coding-standards-csharp.mdc) | Resumen IDE |
-| [../README.md](../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 📖 | [vertical-slice-cqrs.md](vertical-slice-cqrs.md) | Cómo estructurar el slice |
+| 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Flujo operativo del slice |
+| 🛠️ | [`coding-standards-csharp.mdc`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.cursor/rules/coding-standards-csharp.mdc) | Resumen IDE |
+| 🧭 | [../README.md](../README.md) | Hub del pack |

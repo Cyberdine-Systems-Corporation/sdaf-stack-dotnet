@@ -1,0 +1,106 @@
+site_name: sdaf-stack-dotnet
+site_description: Contratos, skills, playbooks y adopción del pack sdaf-stack-dotnet
+# Base del sitio (sin /dev/): mike añade el prefijo de versión en el deploy.
+site_url: https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/
+repo_url: https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet
+repo_name: sdaf-stack-dotnet
+# Fuentes canónicas viven en la raíz del repo (vía symlinks en src/).
+edit_uri: edit/main/
+
+docs_dir: src
+site_dir: ../site
+
+# YAML de examples/ se incluyen vía snippets, no como páginas.
+exclude_docs: |
+  /examples/*.yaml
+
+# Look Material alineado con sdaf-core (Decisión A).
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      toggle: { icon: material/brightness-7, name: Modo oscuro }
+    - scheme: slate
+      toggle: { icon: material/brightness-4, name: Modo claro }
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+markdown_extensions:
+  - admonition
+  - pymdownx.blocks.admonition:
+      types: [note, tip, warning, caution, danger]
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.snippets:
+      # CI ejecuta desde la raíz del repo (-f mkdocs/mkdocs.yml).
+      # "." = raíz; ".." cubre si pymdownx resuelve respecto a mkdocs/.
+      base_path: [".", ".."]
+      check_paths: true
+  - tables
+  - toc:
+      permalink: true
+      slugify: !!python/name:markdown.extensions.toc.slugify_unicode
+
+plugins:
+  - search:
+      lang: es
+
+extra:
+  version:
+    provider: mike
+
+nav:
+  - Inicio: README.md
+  - Uso local: docs/uso-local.md
+  - Arquitectura:
+      - docs/architecture/index.md
+      - Relación de componentes: docs/architecture/relacion-componentes.md
+      - Decisiones (ADR):
+          - docs/architecture/adr/index.md
+          - Plantilla: docs/architecture/adr/plantilla-adr.md
+          - "ADR-0001 · Fusión domain-application": docs/architecture/adr/0001-fusion-domain-application.md
+          - "ADR-0002 · Infrastructure como stub": docs/architecture/adr/0002-infrastructure-stub.md
+  - Agentes:
+      - agents/README.md
+      - Frontend: agents/frontend-agent.md
+      - Domain + Application: agents/domain-application-agent.md
+      - Infrastructure (stub): agents/infrastructure-agent.md
+  - Skills:
+      - skills/README.md
+      - csharp-adr006-slice: skills/csharp-adr006-slice/SKILL.md
+      - blazor-bff-slice: skills/blazor-bff-slice/SKILL.md
+      - aspire-local-run: skills/aspire-local-run/SKILL.md
+  - Playbooks:
+      - playbooks/README.md
+      - "Coding standards C#": playbooks/coding-standards-csharp.md
+      - Vertical slice + CQRS: playbooks/vertical-slice-cqrs.md
+  - Prompts:
+      - Frontend: prompts/agents/frontend-agent.md
+      - Domain + Application: prompts/agents/domain-application-agent.md
+      - Infrastructure: prompts/agents/infrastructure-agent.md
+  - Adopción:
+      - ADOPT.md
+      - "Escenarios (examples/)": docs/adoption/escenarios.md
+  - Navegación:
+      - docs/navegacion-docs.md
+      - Checklist de página: docs/checklist-pagina-docs.md

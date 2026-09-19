@@ -55,7 +55,7 @@ Encargo explícito registrado; worklog cerrado.
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../../agents/infrastructure-agent.md](../../agents/infrastructure-agent.md) | Contrato del agente |
-| [../../README.md](../../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [../../agents/infrastructure-agent.md](../../agents/infrastructure-agent.md) | Contrato del agente |
+| 🧭 | [../../README.md](../../README.md) | Hub del pack |

@@ -1,6 +1,6 @@
 # Decisiones de diseño (ADR)
 
-Estos ADR documentan decisiones de diseño **del propio pack** `sdaf-stack-dotnet` (por qué se modela así el conjunto de agentes/skills/playbooks). No sustituyen ni prescriben los ADR de stack que cada **consumidor** debe abrir para su runtime, UI o base de datos concretos — ver [ADOPT.md](../../adoption/index.md).
+Estos ADR documentan decisiones de diseño **del propio pack** `sdaf-stack-dotnet` (por qué se modela así el conjunto de agentes/skills/playbooks). No sustituyen ni prescriben los ADR de stack que cada **consumidor** debe abrir para su runtime, UI o base de datos concretos — ver [ADOPT.md](../../../ADOPT.md).
 
 ## Índice
 
@@ -13,7 +13,7 @@ Usa la [plantilla](plantilla-adr.md) para proponer nuevos ADR del pack.
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [Arquitectura](../index.md) | Contexto general del pack |
-| [Relación de componentes](../relacion-componentes.md) | Diagrama que estas decisiones explican |
+| | Destino | Por qué |
+|--|---------|---------|
+| 📦 | [Arquitectura](../index.md) | Contexto general del pack |
+| 📦 | [Relación de componentes](../relacion-componentes.md) | Diagrama que estas decisiones explican |

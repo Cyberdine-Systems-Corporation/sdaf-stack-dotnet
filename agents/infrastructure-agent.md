@@ -79,8 +79,8 @@ Uso justificado.
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../prompts/agents/infrastructure-agent.md](../prompts/agents/infrastructure-agent.md) | Prompt de sistema |
-| [../playbooks/vertical-slice-cqrs.md](../playbooks/vertical-slice-cqrs.md) | Cuándo aparecen puertos/adapters |
-| [../README.md](../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 📝 | [../prompts/agents/infrastructure-agent.md](../prompts/agents/infrastructure-agent.md) | Prompt de sistema |
+| 📖 | [../playbooks/vertical-slice-cqrs.md](../playbooks/vertical-slice-cqrs.md) | Cuándo aparecen puertos/adapters |
+| 🧭 | [../README.md](../README.md) | Hub del pack |

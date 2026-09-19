@@ -88,10 +88,10 @@ Un PBI → un slice coherente; acceptance mapeable.
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../prompts/agents/domain-application-agent.md](../prompts/agents/domain-application-agent.md) | Prompt de sistema |
-| [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill del slice |
-| [../playbooks/vertical-slice-cqrs.md](../playbooks/vertical-slice-cqrs.md) | Norma del slice |
-| [../playbooks/coding-standards-csharp.md](../playbooks/coding-standards-csharp.md) | Estándares C# |
-| [../README.md](../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 📝 | [../prompts/agents/domain-application-agent.md](../prompts/agents/domain-application-agent.md) | Prompt de sistema |
+| 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill del slice |
+| 📖 | [../playbooks/vertical-slice-cqrs.md](../playbooks/vertical-slice-cqrs.md) | Norma del slice |
+| 📖 | [../playbooks/coding-standards-csharp.md](../playbooks/coding-standards-csharp.md) | Estándares C# |
+| 🧭 | [../README.md](../README.md) | Hub del pack |

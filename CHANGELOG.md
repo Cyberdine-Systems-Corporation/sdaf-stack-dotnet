@@ -2,6 +2,12 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/). El semver del pack vive en [`pack.yaml`](pack.yaml).
 
+## [Unreleased]
+
+### Fixed
+
+- CI docs: `pymdownx.snippets` `base_path`, enlaces ADR `../../../`, exclusiones de `mkdocs/src` en `check-md-links`, enlaces del hub compatibles con MkDocs strict.
+
 ## [0.1.1] — 2026-09-17
 
 ### Changed

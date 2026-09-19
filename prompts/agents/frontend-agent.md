@@ -57,8 +57,8 @@ Trazable a acceptance; límites API respetados; worklog cerrado.
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../../agents/frontend-agent.md](../../agents/frontend-agent.md) | Contrato del agente |
-| [../../skills/blazor-bff-slice/SKILL.md](../../skills/blazor-bff-slice/SKILL.md) | Skill asociada |
-| [../../README.md](../../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [../../agents/frontend-agent.md](../../agents/frontend-agent.md) | Contrato del agente |
+| 🛠️ | [../../skills/blazor-bff-slice/SKILL.md](../../skills/blazor-bff-slice/SKILL.md) | Skill asociada |
+| 🧭 | [../../README.md](../../README.md) | Hub del pack |

@@ -18,6 +18,9 @@
 - [Validar enlaces](#validar-enlaces)
 - [Relacionado](#relacionado)
 
+> [!TIP]
+> DoD de una página markdown: [checklist-pagina-docs.md](checklist-pagina-docs.md).
+
 ## Roles de página
 
 | Rol | Dónde | Sustituye constitución? |
@@ -95,6 +98,10 @@ Si no encaja, no pongas icono. Cero emoji en headings de páginas normativas (co
 
 Este mismo contenido también se sirve como sitio con búsqueda, Mermaid y syntax highlighting vía MkDocs + Material (versionado con `mike`, igual que sdaf-core). URL de desarrollo: [`…/sdaf-stack-dotnet/dev/`](https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/). Ver [`docs/uso-local.md`](uso-local.md) y el workflow [`docs.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs.yml).
 
+**Decisión A (look):** palette Material sin `primary` indigo, features mínimas y `slugify_unicode` — mismo contrato visual que sdaf-core. Semántica de iconos/alertas/Mermaid = esta página; no usar iconos `:material-*` en hubs.
+
+**Fase 3 (fuentes):** `mkdocs/src/` enlaza con symlinks a `agents/`, `skills/`, `playbooks/`, `prompts/`, `docs/`, etc. No hay páginas espejo en `docs/` que re-copien contratos. Config: [`mkdocs/mkdocs.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/mkdocs/mkdocs.yml).
+
 ## Validar enlaces
 
 Falla si un enlace relativo apunta a un archivo inexistente. Avisa anclas dudosas y Markdown huérfanos.
@@ -109,9 +116,10 @@ CI: [`docs-links.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-sta
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/README.md) | Hub y tres puertas |
-| [ADOPT.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/ADOPT.md) | Adopción |
-| [CHANGELOG.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/CHANGELOG.md) | Versiones del pack |
-| [skills/README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/skills/README.md) | Catálogo operativo |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/README.md) | Hub y tres puertas |
+| 🛠️ | [ADOPT.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/ADOPT.md) | Adopción |
+| 📝 | [checklist-pagina-docs.md](checklist-pagina-docs.md) | DoD de página markdown |
+| ✅ | [CHANGELOG.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/CHANGELOG.md) | Versiones del pack |
+| 🛠️ | [skills/README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/skills/README.md) | Catálogo operativo |

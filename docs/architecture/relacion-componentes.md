@@ -51,8 +51,8 @@ flowchart TB
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [Arquitectura](index.md) | Árbol del pack y contrato con sdaf-core |
-| [ADR](adr/index.md) | Por qué domain+application está fusionado y por qué infrastructure es stub |
-| [Adopción](../adoption/index.md) | Cómo se materializa este grafo en un consumidor |
+| | Destino | Por qué |
+|--|---------|---------|
+| 📦 | [Arquitectura](index.md) | Árbol del pack y contrato con sdaf-core |
+| 📦 | [ADR](adr/index.md) | Por qué domain+application está fusionado y por qué infrastructure es stub |
+| 🛠️ | [ADOPT.md](../../ADOPT.md) | Cómo se materializa este grafo en un consumidor |

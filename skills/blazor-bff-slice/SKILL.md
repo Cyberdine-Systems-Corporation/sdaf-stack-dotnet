@@ -78,11 +78,11 @@ Framework concreto lo fija el ADR del consumidor (este skill asume Blazor como p
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../../agents/frontend-agent.md](../../agents/frontend-agent.md) | Contrato que invoca esta skill |
-| [../../playbooks/coding-standards-csharp.md](../../playbooks/coding-standards-csharp.md) | Estándares C# |
-| [../README.md](../README.md) | Índice de skills |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [../../agents/frontend-agent.md](../../agents/frontend-agent.md) | Contrato que invoca esta skill |
+| 📖 | [../../playbooks/coding-standards-csharp.md](../../playbooks/coding-standards-csharp.md) | Estándares C# |
+| 🧭 | [../README.md](../README.md) | Índice de skills |
 
 ## Historial
 
