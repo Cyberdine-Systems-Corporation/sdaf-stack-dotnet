@@ -1,8 +1,8 @@
 # pack.yaml — manifest sdaf-stack-dotnet
 
 id: sdaf-stack-dotnet
-version: "0.1.1"
-sdaf_core: ">=0.2.0 <0.3.0"
+version: "0.2.0"
+sdaf_core: ">=0.3.0 <0.4.0"
 
 description: >
   Overlay técnico SDAF para consumidores .NET: playbooks C#, Blazor BFF,
@@ -13,12 +13,12 @@ agents:
   extension:
     - frontend
     - domain-application
-    - infrastructure  # stub en 0.1.x
+    - infrastructure  # stub en 0.2.x
 
 skills:
-  - csharp-adr006-slice@0.1.1
-  - blazor-bff-slice@0.1.1
-  - aspire-local-run@0.1.1
+  - csharp-adr006-slice@0.2.0
+  - blazor-bff-slice@0.2.0
+  - aspire-local-run@0.2.0
 
 playbooks:
   - playbooks/coding-standards-csharp.md
@@ -28,4 +28,4 @@ limits:
   - No incluir specs/, knowledge/ ni handbook de un producto.
   - No redefinir agentes del núcleo de sdaf-core.
   - No saltar Gate 0 ni aprobar normas Approved.
-  - No contradecir el handbook Approved de sdaf-core.
+  - No contradecir el handbook Approved de sdaf-core (línea 0.3.x).

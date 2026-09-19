@@ -4,7 +4,7 @@
 |--------|--------|
 | Estado | Approved |
 | Fecha | 2026-09-13 |
-| Pack | `sdaf-stack-dotnet@0.1.1` |
+| Pack | `sdaf-stack-dotnet@0.2.0` |
 
 ## Contexto
 

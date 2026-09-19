@@ -4,8 +4,8 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 📖 Playbook / norma técnica de stack |
-| Versión | 0.1.1 |
-| Pack | sdaf-stack-dotnet@0.1.1 |
+| Versión | 0.2.0 |
+| Pack | sdaf-stack-dotnet@0.2.0 |
 | Estado | Approved |
 | Fecha | 2026-08-25 |
 
@@ -73,7 +73,7 @@ flowchart TD
 
 | | Destino | Por qué |
 |--|---------|---------|
-| 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill asociada `csharp-adr006-slice@0.1.1` |
+| 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill asociada `csharp-adr006-slice@0.2.0` |
 | 📖 | [coding-standards-csharp.md](coding-standards-csharp.md) | Estándares C# del pack |
 | 🧭 | [../agents/domain-application-agent.md](../agents/domain-application-agent.md) | Contrato que aplica este playbook |
 | 🧭 | [../README.md](../README.md) | Hub del pack |

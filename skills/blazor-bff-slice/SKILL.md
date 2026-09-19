@@ -10,11 +10,11 @@ description: Implementa un slice UI Blazor y/o BFF según specs Approved. Usar c
 |--------|--------|
 | Rol | 🛠️ Skill / HOWTO operativo |
 | ID | blazor-bff-slice |
-| Versión | 0.1.1 |
+| Versión | 0.2.0 |
 | Estado | Approved |
 | Prioridad | alta |
 | Fecha | 2026-08-25 |
-| Pack | sdaf-stack-dotnet@0.1.1 |
+| Pack | sdaf-stack-dotnet@0.2.0 |
 | Norma | playbooks/coding-standards-csharp.md, ADRs UI/API del consumidor, Gate 0 |
 
 > [!NOTE]
@@ -41,7 +41,7 @@ flowchart TD
   g0[Confirmar Gate 0] --> adr[Respetar límites BFF/API]
   adr --> ui[Implementar Blazor + BFF]
   ui --> reuse[Reutilizar contratos de aplicación]
-  reuse --> wl[Registrar skill@0.1.1]
+  reuse --> wl[Registrar skill@0.2.0]
   domainUi[Reglas de dominio en UI] --> stop[STOP]
 
   classDef stop fill:#f8d0d0,stroke:#8b1e1e,color:#8b1e1e
@@ -59,7 +59,7 @@ flowchart TD
 2. Respetar límites BFF/API del ADR del consumidor (no llamar dominio desde el browser si el ADR lo prohíbe).
 3. Implementar componentes/páginas Blazor y endpoints BFF necesarios en `src_path`.
 4. Reutilizar contratos ya expuestos por el slice de aplicación; no duplicar reglas de negocio en la UI.
-5. Citar `blazor-bff-slice@0.1.1` en worklog; handoff a testing-review.
+5. Citar `blazor-bff-slice@0.2.0` en worklog; handoff a testing-review.
 
 ## Definition of Done
 
@@ -90,3 +90,4 @@ Framework concreto lo fija el ADR del consumidor (este skill asume Blazor como p
 |---------|--------|--------|
 | 0.1.0 | 2026-08-25 | Primera versión del pack |
 | 0.1.1 | 2026-09-17 | Alineación pack@0.1.1; TOC/Relacionado/Mermaid |
+| 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 |

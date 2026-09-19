@@ -3,7 +3,7 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 🧭 Índice de contratos del pack |
-| Pack | `sdaf-stack-dotnet@0.1.1` |
+| Pack | `sdaf-stack-dotnet@0.2.0` |
 
 Contratos de los agentes que este pack añade sobre `sdaf-core`. Ninguno redefine `specification`, `architecture` o `testing-review` del núcleo.
 

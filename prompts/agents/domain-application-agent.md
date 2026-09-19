@@ -4,11 +4,11 @@
 |--------|--------|
 | Rol | 📝 Prompt de sistema / plantilla |
 | ID | PROMPT-AGT-DA-001 |
-| Versión | 0.1.1 |
+| Versión | 0.2.0 |
 | Estado | Approved |
 | Agente / rol | domain-application |
 | Fecha | 2026-08-25 |
-| Pack | sdaf-stack-dotnet@0.1.1 |
+| Pack | sdaf-stack-dotnet@0.2.0 |
 
 ## En esta página
 
@@ -46,7 +46,7 @@ Slice implementado + tests derivados; handoff a frontend o testing-review.
 
 ## Criterios de aceptación
 
-Acceptance del slice cubierto o gap documentado; worklog con `csharp-adr006-slice@0.1.1` si aplica.
+Acceptance del slice cubierto o gap documentado; worklog con `csharp-adr006-slice@0.2.0` si aplica.
 
 ## Historial
 
@@ -54,6 +54,7 @@ Acceptance del slice cubierto o gap documentado; worklog con `csharp-adr006-slic
 |---------|--------|--------|
 | 0.1.0 | 2026-08-25 | Primera versión del pack |
 | 0.1.1 | 2026-09-17 | Alineación pack@0.1.1; navegación docs |
+| 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 |
 
 ## Relacionado
 

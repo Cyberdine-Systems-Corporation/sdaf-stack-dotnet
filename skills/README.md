@@ -1,9 +1,9 @@
-# Skills — sdaf-stack-dotnet@0.1.1
+# Skills — sdaf-stack-dotnet@0.2.0
 
 | Campo | Valor |
 |--------|--------|
 | Rol | 🧭 Índice de skills del pack |
-| Pack | `sdaf-stack-dotnet@0.1.1` |
+| Pack | `sdaf-stack-dotnet@0.2.0` |
 
 > [!NOTE]
 > Catálogo operativo (HOWTO por skill). Gate 0 del core manda sobre cualquier skill de implementación.
@@ -14,7 +14,7 @@
 | `blazor-bff-slice` | alta | [blazor-bff-slice/SKILL.md](blazor-bff-slice/SKILL.md) |
 | `aspire-local-run` | media | [aspire-local-run/SKILL.md](aspire-local-run/SKILL.md) |
 
-Citar `skill-id@version` en worklogs (p. ej. `csharp-adr006-slice@0.1.1`).
+Citar `skill-id@version` en worklogs (p. ej. `csharp-adr006-slice@0.2.0`).
 
 ## Relacionado
 
