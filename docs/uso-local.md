@@ -60,3 +60,4 @@ Los YAML de `examples/` sí se incrustan en [Escenarios](adoption/escenarios.md)
 | 🧭 | [Navegación](navegacion-docs.md) | Vocabulario visual y Decisión A |
 | 📝 | [Checklist de página](checklist-pagina-docs.md) | DoD de PRs de docs |
 | 🛠️ | [.github/workflows/docs.yml](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs.yml) | Mismo build en CI |
+| 🧭 | [mkdocs/README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/mkdocs/README.md) | Layout del sitio Material |

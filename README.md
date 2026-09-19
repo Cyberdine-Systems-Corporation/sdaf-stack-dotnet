@@ -31,7 +31,7 @@
 | Puerta | Destino | Para quién |
 |--------|---------|------------|
 | 🛠️ Adoptar el pack | [ADOPT.md](ADOPT.md) | Quien materializa submodule, `sdaf.config.yaml` y enlaces |
-| 📖 Entender contratos | [agents/](agents/) · [playbooks/](playbooks/) | Quien aplica norma del overlay (constitución = sdaf-core) |
+| 📖 Entender contratos | [agents/README.md](agents/README.md) · [playbooks/README.md](playbooks/README.md) | Quien aplica norma del overlay (constitución = sdaf-core) |
 | 🛠️ Operar el día a día | [skills/README.md](skills/README.md) | Quien ejecuta slices, UI/BFF o runtime local |
 
 🧭 Mapa de clics y vocabulario visual: [docs/navegacion-docs.md](docs/navegacion-docs.md). DoD de página: [docs/checklist-pagina-docs.md](docs/checklist-pagina-docs.md).
@@ -43,8 +43,8 @@
 | 📦 Skills | [`csharp-adr006-slice`](skills/csharp-adr006-slice/SKILL.md), [`blazor-bff-slice`](skills/blazor-bff-slice/SKILL.md), [`aspire-local-run`](skills/aspire-local-run/SKILL.md) |
 | Contratos | [`frontend`](agents/frontend-agent.md), [`domain-application`](agents/domain-application-agent.md), [`infrastructure`](agents/infrastructure-agent.md) (stub) |
 | Playbooks | [`coding-standards-csharp`](playbooks/coding-standards-csharp.md), [`vertical-slice-cqrs`](playbooks/vertical-slice-cqrs.md) |
-| IDE | [`.cursor/rules/coding-standards-csharp.mdc`](.cursor/rules/coding-standards-csharp.mdc) |
-| Ejemplos | [`examples/`](examples/) |
+| IDE | [`.cursor/rules/coding-standards-csharp.mdc`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.cursor/rules/coding-standards-csharp.mdc) |
+| Ejemplos | [`examples/`](docs/adoption/escenarios.md) |
 | 🛠️ Sitio navegable | `mkdocs/mkdocs.yml` — ver [`docs/uso-local.md`](docs/uso-local.md) |
 
 ## Qué no es
@@ -99,7 +99,7 @@ flowchart LR
 ```
 
 > [!TIP]
-> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.1.1`, y elige un escenario en [`examples/`](examples/).
+> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.1.1`, y elige un escenario en [`examples/`](docs/adoption/escenarios.md).
 
 ## Familia sdaf-stack-*
 
@@ -107,7 +107,7 @@ Otros packs (node, etc.) deben repetir este patrón: `pack.yaml`, agentes solo d
 
 ## Licencia
 
-MIT — ver [LICENSE](LICENSE).
+MIT — ver [LICENSE](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/LICENSE).
 
 ## Relacionado
 
@@ -118,5 +118,5 @@ MIT — ver [LICENSE](LICENSE).
 | 🧭 | [docs/navegacion-docs.md](docs/navegacion-docs.md) | Vocabulario visual y mapa de clics |
 | 📝 | [docs/checklist-pagina-docs.md](docs/checklist-pagina-docs.md) | DoD de PRs que tocan markdown |
 | 🛠️ | [docs/uso-local.md](docs/uso-local.md) | Levantar el sitio MkDocs en local |
-| ✅ | [CHANGELOG.md](CHANGELOG.md) | Historial de versiones del pack |
-| 📦 | [pack.yaml](pack.yaml) | Manifest canónico |
+| ✅ | [CHANGELOG.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/CHANGELOG.md) | Historial de versiones del pack |
+| 📦 | [pack.yaml](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/pack.yaml) | Manifest canónico |

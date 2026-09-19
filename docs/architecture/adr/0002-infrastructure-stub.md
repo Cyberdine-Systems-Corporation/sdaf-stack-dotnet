@@ -8,7 +8,7 @@
 
 ## Contexto
 
-No todo consumidor de este pack necesita puertos/adapters de persistencia explícitos en su MVP; el playbook [`vertical-slice-cqrs.md`](../../playbooks/vertical-slice-cqrs.md) ya establece que "puertos/adapters solo si el ADR de infraestructura lo exige". Definir `infrastructure` como agente activo por defecto obligaría a modelar una capa que muchos PBI no necesitan.
+No todo consumidor de este pack necesita puertos/adapters de persistencia explícitos en su MVP; el playbook [`vertical-slice-cqrs.md`](../../../playbooks/vertical-slice-cqrs.md) ya establece que "puertos/adapters solo si el ADR de infraestructura lo exige". Definir `infrastructure` como agente activo por defecto obligaría a modelar una capa que muchos PBI no necesitan.
 
 ## Decisión
 
@@ -29,5 +29,5 @@ No todo consumidor de este pack necesita puertos/adapters de persistencia explí
 
 | | Destino | Por qué |
 |--|---------|---------|
-| 🧭 | [Contrato infrastructure](../../agents/infrastructure-agent.md) | Restricciones del modo stub |
-| 📖 | [vertical-slice-cqrs](../../playbooks/vertical-slice-cqrs.md) | Regla que origina el stub |
+| 🧭 | [Contrato infrastructure](../../../agents/infrastructure-agent.md) | Restricciones del modo stub |
+| 📖 | [vertical-slice-cqrs](../../../playbooks/vertical-slice-cqrs.md) | Regla que origina el stub |

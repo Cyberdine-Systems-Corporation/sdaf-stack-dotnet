@@ -52,8 +52,9 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets:
-      # Relativo a este mkdocs.yml → raíz del repo.
-      base_path: [".."]
+      # CI ejecuta desde la raíz del repo (-f mkdocs/mkdocs.yml).
+      # "." = raíz; ".." cubre si pymdownx resuelve respecto a mkdocs/.
+      base_path: [".", ".."]
       check_paths: true
   - tables
   - toc:

@@ -125,8 +125,8 @@ Al subir el tag del pack:
 | | Destino | Por qué |
 |--|---------|---------|
 | 🧭 | [README.md](README.md) | Hub y tres puertas |
-| 📦 | [examples/](examples/) | Escenarios de configuración |
+| 📦 | [Escenarios examples/](docs/adoption/escenarios.md) | Escenarios de configuración |
 | 🛠️ | [skills/README.md](skills/README.md) | Skills a materializar |
 | 🧭 | [docs/navegacion-docs.md](docs/navegacion-docs.md) | Mapa de clics del pack |
 | 📝 | [docs/checklist-pagina-docs.md](docs/checklist-pagina-docs.md) | DoD de página markdown |
-| 📦 | [pack.yaml](pack.yaml) | Manifest canónico |
+| 📦 | [pack.yaml](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/pack.yaml) | Manifest canónico |

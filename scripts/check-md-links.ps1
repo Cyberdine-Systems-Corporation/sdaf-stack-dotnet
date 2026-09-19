@@ -25,7 +25,10 @@ if ([string]::IsNullOrWhiteSpace($Root)) {
 $failCount = 0
 $warnCount = 0
 $mdFiles = Get-ChildItem -Path $Root -Filter '*.md' -Recurse -File |
-    Where-Object { $_.FullName -notmatch '[\\/]\.git[\\/]' }
+    Where-Object {
+        $_.FullName -notmatch '[\\/]\.git[\\/]' -and
+        $_.FullName -notmatch '[\\/]mkdocs[\\/]src[\\/]'
+    }
 
 function Get-GfmSlug {
     param([string]$Heading)
