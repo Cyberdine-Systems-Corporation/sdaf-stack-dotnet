@@ -10,22 +10,28 @@
       
       
       
+        <link rel="canonical" href="https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/prompts/agents/frontend-agent/">
       
       
+        <link rel="prev" href="../../../playbooks/vertical-slice-cqrs/">
       
-      <link rel="icon" href="/sdaf-stack-dotnet/dev/assets/images/favicon.png">
+      
+        <link rel="next" href="../domain-application-agent/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
     
     
       
-        <title>sdaf-stack-dotnet</title>
+        <title>Frontend - sdaf-stack-dotnet</title>
       
     
     
-      <link rel="stylesheet" href="/sdaf-stack-dotnet/dev/assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.a40c8224.min.css">
       
         
-        <link rel="stylesheet" href="/sdaf-stack-dotnet/dev/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/sdaf-stack-dotnet/dev",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -69,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#prompt-agt-fe-001-frontend-agent-net-pack" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +94,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href="/sdaf-stack-dotnet/dev/." title="sdaf-stack-dotnet" class="md-header__button md-logo" aria-label="sdaf-stack-dotnet" data-md-component="logo">
+    <a href="../../.." title="sdaf-stack-dotnet" class="md-header__button md-logo" aria-label="sdaf-stack-dotnet" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -103,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Frontend
             
           </span>
         </div>
@@ -212,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sdaf-stack-dotnet/dev/." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
     
@@ -229,7 +240,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/uso-local/" class="md-tabs__link">
+      <a href="../../../docs/uso-local/" class="md-tabs__link">
         
   
     
@@ -248,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/sdaf-stack-dotnet/dev/docs/architecture/" class="md-tabs__link">
+        <a href="../../../docs/architecture/" class="md-tabs__link">
           
   
     
@@ -268,7 +279,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/sdaf-stack-dotnet/dev/agents/" class="md-tabs__link">
+        <a href="../../../agents/" class="md-tabs__link">
           
   
     
@@ -288,7 +299,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/sdaf-stack-dotnet/dev/skills/" class="md-tabs__link">
+        <a href="../../../skills/" class="md-tabs__link">
           
   
     
@@ -308,7 +319,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/sdaf-stack-dotnet/dev/playbooks/" class="md-tabs__link">
+        <a href="../../../playbooks/" class="md-tabs__link">
           
   
     
@@ -324,11 +335,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/sdaf-stack-dotnet/dev/prompts/agents/frontend-agent/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -348,7 +361,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/sdaf-stack-dotnet/dev/ADOPT/" class="md-tabs__link">
+        <a href="../../../ADOPT/" class="md-tabs__link">
           
   
     
@@ -368,7 +381,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/sdaf-stack-dotnet/dev/docs/navegacion-docs/" class="md-tabs__link">
+        <a href="../../../docs/navegacion-docs/" class="md-tabs__link">
           
   
     
@@ -403,7 +416,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/sdaf-stack-dotnet/dev/." title="sdaf-stack-dotnet" class="md-nav__button md-logo" aria-label="sdaf-stack-dotnet" data-md-component="logo">
+    <a href="../../.." title="sdaf-stack-dotnet" class="md-nav__button md-logo" aria-label="sdaf-stack-dotnet" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -433,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -453,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/uso-local/" class="md-nav__link">
+      <a href="../../../docs/uso-local/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +513,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/sdaf-stack-dotnet/dev/docs/architecture/" class="md-nav__link ">
+            <a href="../../../docs/architecture/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -533,7 +546,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/architecture/relacion-componentes/" class="md-nav__link">
+      <a href="../../../docs/architecture/relacion-componentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -583,7 +596,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/sdaf-stack-dotnet/dev/docs/architecture/adr/" class="md-nav__link ">
+            <a href="../../../docs/architecture/adr/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -616,7 +629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/architecture/adr/plantilla-adr/" class="md-nav__link">
+      <a href="../../../docs/architecture/adr/plantilla-adr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -637,7 +650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/architecture/adr/0001-fusion-domain-application/" class="md-nav__link">
+      <a href="../../../docs/architecture/adr/0001-fusion-domain-application/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -658,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/architecture/adr/0002-infrastructure-stub/" class="md-nav__link">
+      <a href="../../../docs/architecture/adr/0002-infrastructure-stub/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -723,7 +736,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/sdaf-stack-dotnet/dev/agents/" class="md-nav__link ">
+            <a href="../../../agents/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -756,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/agents/frontend-agent/" class="md-nav__link">
+      <a href="../../../agents/frontend-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/agents/domain-application-agent/" class="md-nav__link">
+      <a href="../../../agents/domain-application-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/agents/infrastructure-agent/" class="md-nav__link">
+      <a href="../../../agents/infrastructure-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -855,7 +868,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/sdaf-stack-dotnet/dev/skills/" class="md-nav__link ">
+            <a href="../../../skills/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -888,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/skills/csharp-adr006-slice/SKILL/" class="md-nav__link">
+      <a href="../../../skills/csharp-adr006-slice/SKILL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -909,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/skills/blazor-bff-slice/SKILL/" class="md-nav__link">
+      <a href="../../../skills/blazor-bff-slice/SKILL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/skills/aspire-local-run/SKILL/" class="md-nav__link">
+      <a href="../../../skills/aspire-local-run/SKILL/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -985,7 +998,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="/sdaf-stack-dotnet/dev/playbooks/" class="md-nav__link ">
+            <a href="../../../playbooks/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1018,7 +1031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/playbooks/coding-standards-csharp/" class="md-nav__link">
+      <a href="../../../playbooks/coding-standards-csharp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1039,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/playbooks/vertical-slice-cqrs/" class="md-nav__link">
+      <a href="../../../playbooks/vertical-slice-cqrs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,8 +1077,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1078,19 +1093,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1101,7 +1119,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Prompts
@@ -1112,10 +1130,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/prompts/agents/frontend-agent/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Frontend
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1124,6 +1162,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#en-esta-página" class="md-nav__link">
+    <span class="md-ellipsis">
+      En esta página
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entradas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restricciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado esperado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptación" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de aceptación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacionado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionado
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1136,7 +1275,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/prompts/agents/domain-application-agent/" class="md-nav__link">
+      <a href="../domain-application-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1157,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/prompts/agents/infrastructure-agent/" class="md-nav__link">
+      <a href="../infrastructure-agent/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1231,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/ADOPT/" class="md-nav__link">
+      <a href="../../../ADOPT/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1252,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/adoption/escenarios/" class="md-nav__link">
+      <a href="../../../docs/adoption/escenarios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1326,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/navegacion-docs/" class="md-nav__link">
+      <a href="../../../docs/navegacion-docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/sdaf-stack-dotnet/dev/docs/checklist-pagina-docs/" class="md-nav__link">
+      <a href="../../../docs/checklist-pagina-docs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1385,6 +1524,97 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#en-esta-página" class="md-nav__link">
+    <span class="md-ellipsis">
+      En esta página
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#objetivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objetivo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contexto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entradas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entradas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restricciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restricciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultado-esperado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado esperado
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-aceptación" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de aceptación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacionado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relacionado
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1396,8 +1626,148 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+  
+    <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/edit/main/prompts/agents/frontend-agent.md" title="Editar esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="prompt-agt-fe-001-frontend-agent-net-pack">PROMPT-AGT-FE-001 — Frontend Agent (.NET pack)<a class="headerlink" href="#prompt-agt-fe-001-frontend-agent-net-pack" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rol</td>
+<td>📝 Prompt de sistema / plantilla</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>PROMPT-AGT-FE-001</td>
+</tr>
+<tr>
+<td>Versión</td>
+<td>0.1.1</td>
+</tr>
+<tr>
+<td>Estado</td>
+<td>Approved</td>
+</tr>
+<tr>
+<td>Agente / rol</td>
+<td>frontend</td>
+</tr>
+<tr>
+<td>Fecha</td>
+<td>2026-08-25</td>
+</tr>
+<tr>
+<td>Pack</td>
+<td>sdaf-stack-dotnet@0.1.1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="en-esta-página">En esta página<a class="headerlink" href="#en-esta-página" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#objetivo">Objetivo</a></li>
+<li><a href="#contexto">Contexto</a></li>
+<li><a href="#entradas">Entradas</a></li>
+<li><a href="#restricciones">Restricciones</a></li>
+<li><a href="#resultado-esperado">Resultado esperado</a></li>
+<li><a href="#criterios-de-aceptación">Criterios de aceptación</a></li>
+<li><a href="#historial">Historial</a></li>
+<li><a href="#relacionado">Relacionado</a></li>
+</ul>
+<h2 id="objetivo">Objetivo<a class="headerlink" href="#objetivo" title="Permanent link">&para;</a></h2>
+<p>Implementar UI/BFF del PBI según specs Approved y ADRs, sin ampliar Out.</p>
+<h2 id="contexto">Contexto<a class="headerlink" href="#contexto" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Contrato <code>agents/frontend-agent.md</code></li>
+<li>Handbook método (sdaf-core); handbook de producto del consumidor</li>
+<li>Skills: <code>blazor-bff-slice</code>; playbook coding standards C#</li>
+</ul>
+<h2 id="entradas">Entradas<a class="headerlink" href="#entradas" title="Permanent link">&para;</a></h2>
+<p>PBI; worklog; rutas de specs/ADR; <code>sdaf.config.yaml</code> (<code>src_path</code>).</p>
+<h2 id="restricciones">Restricciones<a class="headerlink" href="#restricciones" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>[!WARNING]
+Gate 0; no aprobar normas; no secretos; castellano; citar <code>skill@version</code> y prompt en worklog.</p>
+</blockquote>
+<h2 id="resultado-esperado">Resultado esperado<a class="headerlink" href="#resultado-esperado" title="Permanent link">&para;</a></h2>
+<p>Diff UI/BFF acotado; tests si la acceptance lo exige; handoff Testing+Review.</p>
+<h2 id="criterios-de-aceptación">Criterios de aceptación<a class="headerlink" href="#criterios-de-aceptación" title="Permanent link">&para;</a></h2>
+<p>Trazable a acceptance; límites API respetados; worklog cerrado.</p>
+<h2 id="historial">Historial<a class="headerlink" href="#historial" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Fecha</th>
+<th>Cambio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.0</td>
+<td>2026-08-25</td>
+<td>Primera versión del pack</td>
+</tr>
+<tr>
+<td>0.1.1</td>
+<td>2026-09-17</td>
+<td>Alineación pack@0.1.1; navegación docs</td>
+</tr>
+</tbody>
+</table>
+<h2 id="relacionado">Relacionado<a class="headerlink" href="#relacionado" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Destino</th>
+<th>Por qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🧭</td>
+<td><a href="../../../agents/frontend-agent/">../../agents/frontend-agent.md</a></td>
+<td>Contrato del agente</td>
+</tr>
+<tr>
+<td>🛠️</td>
+<td><a href="../../../skills/blazor-bff-slice/SKILL/">../../skills/blazor-bff-slice/SKILL.md</a></td>
+<td>Skill asociada</td>
+</tr>
+<tr>
+<td>🧭</td>
+<td><a href="../../../">../../README.md</a></td>
+<td>Hub del pack</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1437,10 +1807,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/sdaf-stack-dotnet/dev", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "content.code.copy", "content.action.edit"], "search": "/sdaf-stack-dotnet/dev/assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="/sdaf-stack-dotnet/dev/assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.60a45f97.min.js"></script>
       
     
   </body>
