@@ -27,7 +27,7 @@ No todo consumidor de este pack necesita puertos/adapters de persistencia explí
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [Contrato infrastructure](../../agents/infrastructure.md) | Restricciones del modo stub |
-| [vertical-slice-cqrs](../../playbooks/vertical-slice-cqrs.md) | Regla que origina el stub |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [Contrato infrastructure](../../agents/infrastructure-agent.md) | Restricciones del modo stub |
+| 📖 | [vertical-slice-cqrs](../../playbooks/vertical-slice-cqrs.md) | Regla que origina el stub |

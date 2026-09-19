@@ -122,10 +122,11 @@ Al subir el tag del pack:
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [README.md](README.md) | Hub y tres puertas |
-| [examples/](examples/) | Escenarios de configuración |
-| [skills/README.md](skills/README.md) | Skills a materializar |
-| [docs/navegacion-docs.md](docs/navegacion-docs.md) | Mapa de clics del pack |
-| [pack.yaml](pack.yaml) | Manifest canónico |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [README.md](README.md) | Hub y tres puertas |
+| 📦 | [examples/](examples/) | Escenarios de configuración |
+| 🛠️ | [skills/README.md](skills/README.md) | Skills a materializar |
+| 🧭 | [docs/navegacion-docs.md](docs/navegacion-docs.md) | Mapa de clics del pack |
+| 📝 | [docs/checklist-pagina-docs.md](docs/checklist-pagina-docs.md) | DoD de página markdown |
+| 📦 | [pack.yaml](pack.yaml) | Manifest canónico |

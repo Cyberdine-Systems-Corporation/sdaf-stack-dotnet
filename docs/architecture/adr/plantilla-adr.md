@@ -26,4 +26,4 @@
 - Impacto en agentes/skills/playbooks existentes: ...
 
 > [!NOTE]
-> Este ADR aplica al **pack**. Si tu decisión es sobre el runtime/UI/BD de un producto consumidor, ábrela en el repo del consumidor — no aquí (ver [ADOPT.md](../../adoption/index.md), sección "Prohibido").
+> Este ADR aplica al **pack**. Si tu decisión es sobre el runtime/UI/BD de un producto consumidor, ábrela en el repo del consumidor — no aquí (ver [ADOPT.md](../../../ADOPT.md), sección "Prohibido").

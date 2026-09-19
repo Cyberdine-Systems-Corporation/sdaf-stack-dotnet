@@ -57,9 +57,9 @@ Acceptance del slice cubierto o gap documentado; worklog con `csharp-adr006-slic
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../../agents/domain-application-agent.md](../../agents/domain-application-agent.md) | Contrato del agente |
-| [../../skills/csharp-adr006-slice/SKILL.md](../../skills/csharp-adr006-slice/SKILL.md) | Skill asociada |
-| [../../playbooks/vertical-slice-cqrs.md](../../playbooks/vertical-slice-cqrs.md) | Norma del slice |
-| [../../README.md](../../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [../../agents/domain-application-agent.md](../../agents/domain-application-agent.md) | Contrato del agente |
+| 🛠️ | [../../skills/csharp-adr006-slice/SKILL.md](../../skills/csharp-adr006-slice/SKILL.md) | Skill asociada |
+| 📖 | [../../playbooks/vertical-slice-cqrs.md](../../playbooks/vertical-slice-cqrs.md) | Norma del slice |
+| 🧭 | [../../README.md](../../README.md) | Hub del pack |

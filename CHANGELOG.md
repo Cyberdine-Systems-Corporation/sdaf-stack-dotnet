@@ -2,6 +2,21 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/). El semver del pack vive en [`pack.yaml`](pack.yaml).
 
+## [Unreleased]
+
+### Changed
+
+- Docs MkDocs **Decisión A** (paridad visual con sdaf-core): sin `primary` indigo, features Material mínimas, `slugify_unicode`, `pymdownx.blocks.admonition`, deps sin `git-revision-date-localized`.
+- Hub del sitio: tres puertas con vocabulario emoji cerrado (sin `:material-*`).
+- **Fase 3:** sitio en `mkdocs/` con symlinks a fuentes canónicas (como sdaf-core); eliminados wrappers `docs/agents|skills|playbooks` basados en snippets.
+- Nav del sitio incluye **Prompts**; Relacionado con columna de icono en contratos, skills, playbooks y prompts.
+
+### Added
+
+- [`docs/checklist-pagina-docs.md`](docs/checklist-pagina-docs.md) — DoD de página markdown (adaptado del core al overlay).
+- [`agents/README.md`](agents/README.md) y [`playbooks/README.md`](playbooks/README.md) — índices canónicos del overlay.
+- [`.github/pull_request_template.md`](.github/pull_request_template.md) — DoD de PR enlaza el checklist de página.
+
 ## [0.1.1] — 2026-09-17
 
 ### Changed

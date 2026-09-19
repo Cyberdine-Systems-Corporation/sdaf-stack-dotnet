@@ -18,10 +18,10 @@ Citar `skill-id@version` en worklogs (p. ej. `csharp-adr006-slice@0.1.1`).
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../README.md](../README.md) | Hub del pack |
-| [../playbooks/vertical-slice-cqrs.md](../playbooks/vertical-slice-cqrs.md) | Norma del slice .NET |
-| [../playbooks/coding-standards-csharp.md](../playbooks/coding-standards-csharp.md) | Estándares C# |
-| [../agents/domain-application-agent.md](../agents/domain-application-agent.md) | Contrato que invoca el slice API |
-| [../agents/frontend-agent.md](../agents/frontend-agent.md) | Contrato que invoca UI/BFF |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [../README.md](../README.md) | Hub del pack |
+| 📖 | [../playbooks/vertical-slice-cqrs.md](../playbooks/vertical-slice-cqrs.md) | Norma del slice .NET |
+| 📖 | [../playbooks/coding-standards-csharp.md](../playbooks/coding-standards-csharp.md) | Estándares C# |
+| 🧭 | [../agents/domain-application-agent.md](../agents/domain-application-agent.md) | Contrato que invoca el slice API |
+| 🧭 | [../agents/frontend-agent.md](../agents/frontend-agent.md) | Contrato que invoca UI/BFF |

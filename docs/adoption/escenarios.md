@@ -1,5 +1,10 @@
 # Escenarios de `examples/`
 
+| Campo | Valor |
+|--------|--------|
+| Rol | 🛠️ HOWTO de escenarios de config |
+| Pack | `sdaf-stack-dotnet@0.1.1` |
+
 Cada escenario es un `sdaf.config.yaml` de referencia a copiar en la raíz del consumidor y ajustar (`project.name`, `stack.src_path`, `stack.tests_path`).
 
 ## `01-pack-only.yaml` — playbooks sin activar agentes de extensión
@@ -20,7 +25,8 @@ Uso: handoff completo `Specification → Architecture → domain-application →
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [Adopción](index.md) | Pasos completos de materialización |
-| [ADR-0001](../architecture/adr/0001-fusion-domain-application.md) | Por qué domain+application se activa fusionado |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🛠️ | [ADOPT.md](../../ADOPT.md) | Pasos completos de materialización |
+| 📦 | [ADR-0001](../architecture/adr/0001-fusion-domain-application.md) | Por qué domain+application se activa fusionado |
+| 🧭 | [README.md](../../README.md) | Hub del pack |

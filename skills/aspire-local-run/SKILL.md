@@ -78,11 +78,11 @@ No imponer Aspire si el ADR del consumidor eligió otro runtime: entonces docume
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../README.md](../README.md) | Índice de skills |
-| [../../ADOPT.md](../../ADOPT.md) | Adopción del pack / entorno |
-| [../../README.md](../../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🧭 | [../README.md](../README.md) | Índice de skills |
+| 🛠️ | [../../ADOPT.md](../../ADOPT.md) | Adopción del pack / entorno |
+| 🧭 | [../../README.md](../../README.md) | Hub del pack |
 
 ## Historial
 

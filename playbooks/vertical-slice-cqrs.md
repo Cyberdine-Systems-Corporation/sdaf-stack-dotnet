@@ -71,9 +71,9 @@ flowchart TD
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill asociada `csharp-adr006-slice@0.1.1` |
-| [coding-standards-csharp.md](coding-standards-csharp.md) | Estándares C# del pack |
-| [../agents/domain-application-agent.md](../agents/domain-application-agent.md) | Contrato que aplica este playbook |
-| [../README.md](../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill asociada `csharp-adr006-slice@0.1.1` |
+| 📖 | [coding-standards-csharp.md](coding-standards-csharp.md) | Estándares C# del pack |
+| 🧭 | [../agents/domain-application-agent.md](../agents/domain-application-agent.md) | Contrato que aplica este playbook |
+| 🧭 | [../README.md](../README.md) | Hub del pack |

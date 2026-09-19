@@ -89,9 +89,9 @@ Slices UI trazables a acceptance; sin thrash de límites API.
 
 ## Relacionado
 
-| Destino | Por qué |
-|---------|---------|
-| [../prompts/agents/frontend-agent.md](../prompts/agents/frontend-agent.md) | Prompt de sistema |
-| [../skills/blazor-bff-slice/SKILL.md](../skills/blazor-bff-slice/SKILL.md) | Skill UI+BFF |
-| [../playbooks/coding-standards-csharp.md](../playbooks/coding-standards-csharp.md) | Estándares C# |
-| [../README.md](../README.md) | Hub del pack |
+| | Destino | Por qué |
+|--|---------|---------|
+| 📝 | [../prompts/agents/frontend-agent.md](../prompts/agents/frontend-agent.md) | Prompt de sistema |
+| 🛠️ | [../skills/blazor-bff-slice/SKILL.md](../skills/blazor-bff-slice/SKILL.md) | Skill UI+BFF |
+| 📖 | [../playbooks/coding-standards-csharp.md](../playbooks/coding-standards-csharp.md) | Estándares C# |
+| 🧭 | [../README.md](../README.md) | Hub del pack |
