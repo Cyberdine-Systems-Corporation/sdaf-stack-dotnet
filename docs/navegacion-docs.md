@@ -3,7 +3,7 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 🧭 HOWTO de navegación (no es norma) |
-| Pack | `sdaf-stack-dotnet@0.2.0` |
+| Pack | `sdaf-stack-dotnet@0.3.0` |
 
 > [!NOTE]
 > Mapa de clics y vocabulario visual. No sustituye contratos Approved, playbooks ni sdaf-core.
@@ -26,22 +26,22 @@
 | Rol | Dónde | Sustituye constitución? |
 |-----|-------|-------------------------|
 | Constitución / método | sdaf-core (externo) | — |
-| HOWTO adopción | [ADOPT.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/ADOPT.md) | No |
-| Contrato Approved | [agents/](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/tree/main/agents) | No |
-| Playbook / norma técnica | [playbooks/](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/tree/main/playbooks) | No (overlay) |
-| Skill operativa | [skills/](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/tree/main/skills) | No |
-| Prompt / plantilla | [prompts/agents/](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/tree/main/prompts/agents) | No |
-| Índice / hub | [README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/README.md) | No |
+| HOWTO adopción | [ADOPT.md](../ADOPT.md) | No |
+| Contrato Approved | [agents/](../agents/README.md) | No |
+| Playbook / norma técnica | [playbooks/](../playbooks/README.md) | No (overlay) |
+| Skill operativa | [skills/](../skills/README.md) | No |
+| Prompt / plantilla | `prompts/agents/` (enlazado desde cada [contrato](../agents/README.md)) | No |
+| Índice / hub | [README.md](../README.md) | No |
 
 ## Tres puertas
 
-Desde el [README](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/README.md):
+Desde el [README](../README.md):
 
 | Puerta | Destino |
 |--------|---------|
-| 🛠️ Adoptar | [ADOPT.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/ADOPT.md) |
-| 📖 Entender contratos | [agents/](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/tree/main/agents) · [playbooks/](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/tree/main/playbooks) |
-| 🛠️ Operar | [skills/README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/skills/README.md) |
+| 🛠️ Adoptar | [ADOPT.md](../ADOPT.md) |
+| 📖 Entender contratos | [agents/](../agents/README.md) · [playbooks/](../playbooks/README.md) |
+| 🛠️ Operar | [skills/README.md](../skills/README.md) |
 
 ## Mapa de clics
 
@@ -100,26 +100,26 @@ Este mismo contenido también se sirve como sitio con búsqueda, Mermaid y synta
 
 **Decisión A (look):** palette Material sin `primary` indigo, features mínimas y `slugify_unicode` — mismo contrato visual que sdaf-core. Semántica de iconos/alertas/Mermaid = esta página; no usar iconos `:material-*` en hubs.
 
-**Fase 3 (fuentes):** `mkdocs/src/` enlaza con symlinks a `agents/`, `skills/`, `playbooks/`, `prompts/`, `docs/`, etc. No hay páginas espejo en `docs/` que re-copien contratos. Config: [`mkdocs/mkdocs.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/mkdocs/mkdocs.yml).
+**Fuentes:** `docs_dir` es la raíz del repo, como en sdaf-core desde 2026-09-20 (sin symlinks ni páginas espejo). Un enlace relativo vale igual en GitHub y en el sitio, también hacia `CHANGELOG.md`, `pack.yaml` o `.cursor/`. Config: [`mkdocs/mkdocs.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/mkdocs/mkdocs.yml).
 
 ## Validar enlaces
 
-Falla si un enlace relativo apunta a un archivo inexistente. Avisa anclas dudosas y Markdown huérfanos.
+Falla si un enlace relativo apunta a un archivo inexistente. Con `-StrictAnchors` falla también por anclas que no existan con el slug de GitHub **y** el de MkDocs (`slugify_unicode`); con `-StrictOrphans`, por Markdown sin enlaces entrantes.
 
 ```powershell
-pwsh -File ./scripts/check-md-links.ps1
+pwsh -File ./scripts/check-md-links.ps1 -StrictAnchors -StrictOrphans
 # o, en Windows PowerShell 5.1:
-powershell -File ./scripts/check-md-links.ps1
+powershell -File ./scripts/check-md-links.ps1 -StrictAnchors -StrictOrphans
 ```
 
-CI: [`docs-links.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs-links.yml).
+CI: [`docs-links.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs-links.yml), en modo estricto y en todo PR.
 
 ## Relacionado
 
 | | Destino | Por qué |
 |--|---------|---------|
-| 🧭 | [README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/README.md) | Hub y tres puertas |
-| 🛠️ | [ADOPT.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/ADOPT.md) | Adopción |
+| 🧭 | [README.md](../README.md) | Hub y tres puertas |
+| 🛠️ | [ADOPT.md](../ADOPT.md) | Adopción |
 | 📝 | [checklist-pagina-docs.md](checklist-pagina-docs.md) | DoD de página markdown |
-| ✅ | [CHANGELOG.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/CHANGELOG.md) | Versiones del pack |
-| 🛠️ | [skills/README.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/skills/README.md) | Catálogo operativo |
+| ✅ | [CHANGELOG.md](../CHANGELOG.md) | Versiones del pack |
+| 🛠️ | [skills/README.md](../skills/README.md) | Catálogo operativo |

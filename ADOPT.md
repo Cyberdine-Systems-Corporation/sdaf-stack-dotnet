@@ -1,11 +1,11 @@
 <!-- --8<-- [start:cuerpo] -->
-# Adopción — sdaf-stack-dotnet@0.2.0
+# Adopción — sdaf-stack-dotnet@0.3.0
 
 | Campo | Valor |
 |--------|--------|
 | Rol | 🛠️ HOWTO de adopción (no es constitución del método) |
-| Pack | `sdaf-stack-dotnet@0.2.0` |
-| Requiere | `sdaf-core@0.3.x` ya adoptado + Gate 0 del método vigente |
+| Pack | `sdaf-stack-dotnet@0.3.0` |
+| Requiere | `sdaf-core@0.4.x` ya adoptado (pin `v0.4.0`) + Gate 0 del método vigente |
 
 > [!NOTE]
 > Esto es un **HOWTO**. No sustituye el handbook Approved ni la constitución de **sdaf-core**.
@@ -22,7 +22,7 @@
 
 ```mermaid
 flowchart TD
-  pin[Pin submodule v0.2.0] --> cfg[sdaf.config.yaml]
+  pin[Pin submodule v0.3.0] --> cfg[sdaf.config.yaml]
   cfg --> mat[Materializar enlaces]
   mat --> ex[Elegir examples]
   ex --> adr{ADR stack nuevo?}
@@ -45,66 +45,64 @@ flowchart TD
 
 ## Pasos
 
-1. Añadir este pack como submodule pinneado a tag `v0.2.0`, p. ej. en `sdaf-stack-dotnet/`:
+1. Añadir este pack como submodule pinneado a tag `v0.3.0`, p. ej. en `sdaf-stack-dotnet/`:
 
-```text
-git submodule add <url-sdaf-stack-dotnet> sdaf-stack-dotnet
-cd sdaf-stack-dotnet && git checkout v0.2.0
-```
+    ```text
+    git submodule add <url-sdaf-stack-dotnet> sdaf-stack-dotnet
+    cd sdaf-stack-dotnet && git checkout v0.3.0
+    ```
 
 2. En la raíz del consumidor, `sdaf.config.yaml`:
 
-```yaml
-sdaf:
-  version: "0.3.0"
-stack:
-  pack: sdaf-stack-dotnet@0.2.0
-```
+    ```yaml
+    sdaf:
+      version: "0.4.0"
+    stack:
+      pack: sdaf-stack-dotnet@0.3.0
+    ```
 
-> [!TIP]
-> Pin del **core**: tag `v0.3.3` (o posterior 0.3.x). `sdaf.version` del consumidor puede quedar en `"0.3.0"` con ese pin — igual que documenta sdaf-core.
-3. Materializar aportes del pack en la raíz del consumidor.
+    Pin del **core**: tag `v0.4.0`. `sdaf.version` nombra la línea de constitución (`"0.4.0"`), no un tag — igual que documenta sdaf-core.
 
-> [!TIP]
-> Preferido: symlinks relativos (Git mode `120000`), no copias.
+3. Materializar aportes del pack en la raíz del consumidor. Preferido: symlinks relativos (Git mode `120000`), no copias.
 
-En repos de referencia (p. ej. [ShiftFlow-sdaf](https://github.com/Cyberdine-Systems-Corporation/ShiftFlow-sdaf)) hay un script documentado:
+    En repos de referencia (p. ej. [ShiftFlow-sdaf](https://github.com/Cyberdine-Systems-Corporation/ShiftFlow-sdaf)) hay un script documentado:
 
-```powershell
-git submodule update --init --recursive
-git config core.symlinks true
-.\scripts\materialize-submodules.ps1 -Force
-```
+    ```powershell
+    git submodule update --init --recursive
+    git config core.symlinks true
+    .\scripts\materialize-submodules.ps1 -Force
+    ```
 
-El HOWTO vive en `docs/materializacion-submodules.md` del **consumidor**. Puedes copiar `scripts/materialize-submodules.ps1` / `.sh` al adoptar el pack; el manifesto incluye rutas del pack y del core.
+    El HOWTO vive en `docs/materializacion-submodules.md` del **consumidor**. Puedes copiar `scripts/materialize-submodules.ps1` / `.sh` al adoptar el pack; el manifiesto incluye rutas del pack y del core.
 
-**Fallback manual** (copiar o `ln -s` / `New-Item SymbolicLink`):
+    **Fallback manual** (copiar o `ln -s` / `New-Item SymbolicLink`):
 
-| Consumidor | Origen (relativo desde el padre del enlace) |
-|------------|---------------------------------------------|
-| `agents/frontend-agent.md`, `domain-application-agent.md`, `infrastructure-agent.md` | `../sdaf-stack-dotnet/agents/…` |
-| `prompts/agents/` (mismos ids) | `../../sdaf-stack-dotnet/prompts/agents/…` |
-| `skills/csharp-adr006-slice`, `blazor-bff-slice`, `aspire-local-run` | `../sdaf-stack-dotnet/skills/<id>` |
-| `.cursor/rules/coding-standards-csharp.mdc` (opcional) | `../../sdaf-stack-dotnet/.cursor/rules/coding-standards-csharp.mdc` |
+    | Consumidor | Origen (relativo desde el padre del enlace) |
+    |------------|---------------------------------------------|
+    | `agents/frontend-agent.md`, `domain-application-agent.md`, `infrastructure-agent.md` | `../sdaf-stack-dotnet/agents/…` |
+    | `prompts/agents/` (mismos ids) | `../../sdaf-stack-dotnet/prompts/agents/…` |
+    | `skills/csharp-adr006-slice`, `blazor-bff-slice`, `aspire-local-run` | `../sdaf-stack-dotnet/skills/<id>` |
+    | `.cursor/rules/coding-standards-csharp.mdc` (opcional) | `../../sdaf-stack-dotnet/.cursor/rules/coding-standards-csharp.mdc` |
 
-> [!WARNING]
-> **No** usar junctions de Windows (`mklink /J`): Git no los modela como enlaces portables cross-platform.
+    ⛔ **No** usar junctions de Windows (`mklink /J`): Git no los modela como enlaces portables cross-platform.
 
-Materializar también skills/agentes/prompts del **core** según [`sdaf-core` docs/adopcion-y-upgrade.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/main/docs/adopcion-y-upgrade.md).
+    Materializar también skills/agentes/prompts del **core** según [`sdaf-core` docs/adopcion-y-upgrade.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/docs/adopcion-y-upgrade.md).
 
-4. Elegir escenario de `examples/`:
+4. Elegir escenario de `examples/` ([detalle](docs/adoption/escenarios.md)):
 
-| Escenario | Uso |
-|-----------|-----|
-| `01-pack-only.yaml` | Playbooks sin cambiar activos del core |
-| `02-pack-frontend.yaml` | Activa `domain-application` + `frontend` |
+    | Escenario | Uso |
+    |-----------|-----|
+    | `01-pack-only.yaml` | Playbooks sin cambiar activos del core |
+    | `02-pack-frontend.yaml` | Activa `domain-application` + `frontend` |
 
 5. Si el runtime/UI/BD se fijan por primera vez: abrir **ADR** en el consumidor (el pack no sustituye esa decisión).
 
-6. Antes de código de producto: skill `sdaf-gate0` del core.
+6. Opcional: validar `sdaf.config.yaml` en el CI del consumidor con la composite action [`validate-sdaf`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/.github/actions/validate-sdaf/README.md) del core (este pack la usa para sus `examples/`).
+
+7. Antes de código de producto: skill `sdaf-gate0` del core.
 
 > [!IMPORTANT]
-> Con **sdaf-core 0.3.x**, H06 exige petición humana **explícita en el mensaje de este turno** para commit o escritura al remoto. El pack no la relaja: no autorices git/remoto desde skills o prompts del overlay.
+> Con **sdaf-core 0.4.x**, H06 §7 exige petición humana **explícita en el mensaje de este turno** para commit o escritura al remoto. El pack no la relaja: no autorices git/remoto desde skills o prompts del overlay.
 
 ## Prohibido
 
@@ -117,13 +115,15 @@ Materializar también skills/agentes/prompts del **core** según [`sdaf-core` do
 
 ## Upgrade
 
-Al subir el tag del pack **o** al pasar de core 0.2.x → 0.3.x:
+Pack **0.2.0 → 0.3.0** exige core **0.4.x**. Quien siga en core `v0.3.3` se queda en pack `v0.2.0`.
 
-1. Actualizar pin del submodule del **core** (`v0.3.3` recomendado) y `sdaf.version` a `"0.3.0"` si aún no.
-2. Actualizar pin del submodule del **pack**, `stack.pack` semver, y citas `skill@version` en worklogs nuevos.
+1. Subir antes el **core**: pin `v0.4.0` y `sdaf.version: "0.4.0"`, siguiendo la sección 0.4.0 de [`adopcion-y-upgrade.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/docs/adopcion-y-upgrade.md) (H13, `CODEOWNERS` para QG-Review, worklogs nuevos con frontmatter).
+2. Actualizar pin del submodule del **pack** a `v0.3.0`, `stack.pack: sdaf-stack-dotnet@0.3.0` y citas `skill@version` (`@0.3.0`) en worklogs **nuevos**. Los worklogs ya cerrados no se reescriben.
 3. Volver a ejecutar el script de materialización del consumidor (`-Force` / `--force` si cambió el árbol).
 4. No auto-migrar specs del consumidor.
 5. Revisar handoff a `testing-review` y skills del core Parte III (`testing-review-pr`, `security-review`, `devops-ci-gate`) según el escenario.
+
+Los contratos, skills y playbooks no cambian de obligación en 0.3.0: ver [CHANGELOG](CHANGELOG.md).
 
 <!-- --8<-- [end:cuerpo] -->
 
@@ -136,4 +136,4 @@ Al subir el tag del pack **o** al pasar de core 0.2.x → 0.3.x:
 | 🛠️ | [skills/README.md](skills/README.md) | Skills a materializar |
 | 🧭 | [docs/navegacion-docs.md](docs/navegacion-docs.md) | Mapa de clics del pack |
 | 📝 | [docs/checklist-pagina-docs.md](docs/checklist-pagina-docs.md) | DoD de página markdown |
-| 📦 | [pack.yaml](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/pack.yaml) | Manifest canónico |
+| 📦 | [pack.yaml](pack.yaml) | Manifest canónico |

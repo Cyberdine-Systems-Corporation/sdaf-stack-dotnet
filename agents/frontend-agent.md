@@ -4,12 +4,12 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | Contrato de agente de extensión |
-| Versión | 0.2.0 |
+| Versión | 0.3.0 |
 | Estado | Approved |
-| Fecha | 2026-09-13 |
+| Fecha | 2026-09-25T09:01+02:00 |
 | Modo | active (cuando el consumidor lo declare) |
 | Prompt base | `prompts/agents/frontend-agent.md` |
-| Pack | sdaf-stack-dotnet@0.2.0 |
+| Pack | sdaf-stack-dotnet@0.3.0 |
 
 ## En esta página
 
@@ -23,6 +23,7 @@
 - [Definition of Done](#definition-of-done)
 - [Prompt base](#prompt-base)
 - [Contexto autorizado](#contexto-autorizado)
+- [Historial](#historial)
 - [Relacionado](#relacionado)
 
 ## Objetivo
@@ -86,6 +87,15 @@ Slices UI trazables a acceptance; sin thrash de límites API.
 | Flujo | `skills/sdaf-worklog-handoff` (sdaf-core) | Cierre ATF / handoff | sí |
 | IDE | `.cursor/rules/coding-standards-csharp.mdc` | Estándares C# del pack | si Cursor |
 | IDE | `.cursor/rules/idioma-castellano.mdc` (consumidor/core) | Castellano en artefactos | si Cursor |
+
+## Historial
+
+| Versión | Fecha | Cambio |
+|---------|--------|--------|
+| 0.1.0 | 2026-08-25 | Primera versión del pack (tag `v0.1.0`) |
+| 0.1.1 | 2026-09-13 | Publicado en tag `v0.1.1` |
+| 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 (tag `v0.2.0`; la cabecera publicada decía 2026-09-13) |
+| 0.3.0 | 2026-09-25T09:01+02:00 | Compat sdaf-core 0.4.x; pack@0.3.0. Historial añadido desde los tags publicados. Sin cambio de norma. |
 
 ## Relacionado
 

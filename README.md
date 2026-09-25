@@ -1,19 +1,19 @@
 # sdaf-stack-dotnet
 
-`sdaf-stack-dotnet@0.2.0` — pack de stack SDAF para **.NET / Blazor / Aspire**.
+`sdaf-stack-dotnet@0.3.0` — pack de stack SDAF para **.NET / Blazor / Aspire**.
 
 | Campo | Valor |
 |--------|--------|
-| Id | `sdaf-stack-dotnet@0.2.0` |
-| Compat | `sdaf-core` **>=0.3.0 &lt;0.4.0** |
-| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.3.3/docs/contrato-pack-stack.md) |
+| Id | `sdaf-stack-dotnet@0.3.0` |
+| Compat | `sdaf-core` `>=0.4.0 <0.5.0` |
+| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/docs/contrato-pack-stack.md) |
 | Rol | Índice / hub del pack (no es constitución del método) |
 
 > [!NOTE]
 > Este repositorio es un **overlay técnico**. La constitución y el handbook Approved viven en **sdaf-core**. Este pack no los sustituye.
 
 > [!IMPORTANT]
-> Gate 0 del core manda sobre cualquier skill de implementación de este pack. Compat: **sdaf-core 0.3.x** (pin árbol `v0.3.3` recomendado).
+> Gate 0 del core manda sobre cualquier skill de implementación de este pack. Compat: **sdaf-core 0.4.x** (pin árbol `v0.4.0` recomendado, `sdaf.version: "0.4.0"`).
 
 ## En esta página
 
@@ -43,7 +43,7 @@
 | 📦 Skills | [`csharp-adr006-slice`](skills/csharp-adr006-slice/SKILL.md), [`blazor-bff-slice`](skills/blazor-bff-slice/SKILL.md), [`aspire-local-run`](skills/aspire-local-run/SKILL.md) |
 | Contratos | [`frontend`](agents/frontend-agent.md), [`domain-application`](agents/domain-application-agent.md), [`infrastructure`](agents/infrastructure-agent.md) (stub) |
 | Playbooks | [`coding-standards-csharp`](playbooks/coding-standards-csharp.md), [`vertical-slice-cqrs`](playbooks/vertical-slice-cqrs.md) |
-| IDE | [`.cursor/rules/coding-standards-csharp.mdc`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.cursor/rules/coding-standards-csharp.mdc) |
+| IDE | [`.cursor/rules/coding-standards-csharp.mdc`](.cursor/rules/coding-standards-csharp.mdc) |
 | Ejemplos | [`examples/`](docs/adoption/escenarios.md) |
 | 🛠️ Sitio navegable | `mkdocs/mkdocs.yml` — ver [`docs/uso-local.md`](docs/uso-local.md) |
 
@@ -63,17 +63,22 @@
 sdaf-stack-dotnet/
 ├── README.md                 ← hub (esta página)
 ├── ADOPT.md                  ← HOWTO adopción
-├── pack.yaml                 ← manifest @0.2.0
+├── pack.yaml                 ← manifest @0.3.0 (fuente de verdad de versión)
 ├── CHANGELOG.md
+├── CONTRIBUTING.md           ← cómo proponer cambios y qué comprueba el CI
+├── SECURITY.md               ← aviso de vulnerabilidades
+├── CODEOWNERS                ← identidad nominada para QG-Review
 ├── docs/                     ← HOWTO sitio + arquitectura del pack
 │   ├── navegacion-docs.md
 │   └── checklist-pagina-docs.md
-├── mkdocs/                   ← Material + symlinks a fuentes canónicas
+├── mkdocs/                   ← config Material (docs_dir = raíz del repo)
 ├── agents/                   ← contratos de extensión
 ├── prompts/agents/           ← prompts de sistema
 ├── playbooks/                ← norma técnica del stack
 ├── skills/                   ← playbooks operativos por skill
 ├── examples/                 ← escenarios sdaf.config
+├── scripts/                  ← checkers locales y de CI
+├── worklogs/                 ← trazabilidad de cambios materiales (H08)
 └── .cursor/rules/            ← regla IDE fina C#
 ```
 
@@ -99,7 +104,7 @@ flowchart LR
 ```
 
 > [!TIP]
-> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.2.0`, y elige un escenario en [`examples/`](docs/adoption/escenarios.md).
+> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.3.0`, y elige un escenario en [`examples/`](docs/adoption/escenarios.md).
 
 ## Familia sdaf-stack-*
 
@@ -107,7 +112,7 @@ Otros packs (node, etc.) deben repetir este patrón: `pack.yaml`, agentes solo d
 
 ## Licencia
 
-MIT — ver [LICENSE](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/LICENSE).
+MIT — ver [LICENSE](LICENSE).
 
 ## Relacionado
 
@@ -118,5 +123,7 @@ MIT — ver [LICENSE](https://github.com/Cyberdine-Systems-Corporation/sdaf-stac
 | 🧭 | [docs/navegacion-docs.md](docs/navegacion-docs.md) | Vocabulario visual y mapa de clics |
 | 📝 | [docs/checklist-pagina-docs.md](docs/checklist-pagina-docs.md) | DoD de PRs que tocan markdown |
 | 🛠️ | [docs/uso-local.md](docs/uso-local.md) | Levantar el sitio MkDocs en local |
-| ✅ | [CHANGELOG.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/CHANGELOG.md) | Historial de versiones del pack |
-| 📦 | [pack.yaml](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/pack.yaml) | Manifest canónico |
+| ✅ | [CHANGELOG.md](CHANGELOG.md) | Historial de versiones del pack |
+| 📦 | [pack.yaml](pack.yaml) | Manifest canónico |
+| 🛠️ | [CONTRIBUTING.md](CONTRIBUTING.md) | Rama, PR, checks y worklog |
+| 🧭 | [SECURITY.md](SECURITY.md) | Aviso privado de vulnerabilidades |

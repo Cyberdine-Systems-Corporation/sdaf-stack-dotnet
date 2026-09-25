@@ -1,7 +1,8 @@
 # Dependencias del sitio de documentación (MkDocs + Material + mike).
-# Alineado con sdaf-core/requirements-docs.txt (Decisión A: mismo stack visual).
+# Mismas versiones que sdaf-core/requirements-docs.txt en v0.4.0 (Decisión A).
+# Dependabot (pip) propone las subidas.
 # Instalar con: pip install -r requirements-docs.txt
 mkdocs==1.6.*
-mkdocs-material==9.5.*
-mike==2.1.*
-pymdown-extensions==10.*
+mkdocs-material==9.7.*
+mike==2.2.*
+pymdown-extensions==12.*

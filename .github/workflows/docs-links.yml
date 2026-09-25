@@ -1,22 +1,32 @@
 name: Docs links
 
+# Enlaces, anclas (GitHub y MkDocs) y huérfanos en modo estricto + markdownlint.
+# Corre en todo PR: un enlace roto puede venir de mover o renombrar cualquier
+# fichero, no solo de editar Markdown.
+# Acciones fijadas por SHA (comentario = versión); dependabot propone subidas.
+
 on:
   push:
-    paths:
-      - '**/*.md'
-      - 'scripts/check-md-links.ps1'
-      - '.github/workflows/docs-links.yml'
+    branches: [main]
   pull_request:
-    paths:
-      - '**/*.md'
-      - 'scripts/check-md-links.ps1'
-      - '.github/workflows/docs-links.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-links-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check-md-links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Validate relative Markdown links
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Enlaces, anclas y huérfanos (estricto)
         shell: pwsh
-        run: ./scripts/check-md-links.ps1
+        run: ./scripts/check-md-links.ps1 -StrictAnchors -StrictOrphans
+      - name: markdownlint (fences y enlaces vacíos)
+        uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
+        with:
+          globs: |
+            **/*.md

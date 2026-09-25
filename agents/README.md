@@ -3,7 +3,7 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 🧭 Índice de contratos del pack |
-| Pack | `sdaf-stack-dotnet@0.2.0` |
+| Pack | `sdaf-stack-dotnet@0.3.0` |
 
 Contratos de los agentes que este pack añade sobre `sdaf-core`. Ninguno redefine `specification`, `architecture` o `testing-review` del núcleo.
 
@@ -12,6 +12,8 @@ Contratos de los agentes que este pack añade sobre `sdaf-core`. Ninguno redefin
 | [Frontend](frontend-agent.md) | active (si el consumidor lo declara) | UI Blazor + BFF |
 | [Domain + Application](domain-application-agent.md) | active (fusión) | Slice dominio + aplicación .NET |
 | [Infrastructure](infrastructure-agent.md) | **stub** | Persistencia/adapters bajo demanda humana |
+
+«Activo» significa listado en `agents.active` del `sdaf.config.yaml` del consumidor. Con `stack.pack` declarado, el validador del core acepta estos ids de extensión (invariante I4); ver los [escenarios](../docs/adoption/escenarios.md).
 
 > [!IMPORTANT]
 > Gate 0 del core manda sobre cualquier skill de implementación invocada por estos agentes.

@@ -1,5 +1,10 @@
-# Sitio de documentación (MkDocs)
+# Sitio de documentación (MkDocs). site_dir por defecto sale del repo
+# (/tmp/sdaf-stack-dotnet-mkdocs-site); por si alguien usa MKDOCS_SITE_DIR local.
 /site/
+.mkdocs_cache/
+
+# Python
 /.venv/
+venv/
 __pycache__/
 *.pyc

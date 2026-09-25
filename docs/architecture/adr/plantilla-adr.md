@@ -1,10 +1,12 @@
-# ADR-NNNN · &lt;Título de la decisión&gt;
+# ADR-NNN — Título de la decisión
 
 | Campo | Valor |
 |--------|--------|
-| Estado | Propuesta / Approved / Deprecated |
-| Fecha | AAAA-MM-DD |
-| Pack | `sdaf-stack-dotnet@x.y.z` |
+| Estado | Propuesto / Aceptado / Derogado |
+| Fecha | AAAA-MM-DDThh:mm±hh:mm (ISO 8601 con hora y zona, H13 §9) |
+| Decisores | Nombre (@handle); quien acepta es la identidad de `CODEOWNERS` |
+| Aceptación | AAAA-MM-DDThh:mm±hh:mm, por quién. Un agente la transcribe; no la autodeclara. No anterior a Fecha. |
+| Vigente en | `sdaf-stack-dotnet@x.y.z` |
 
 ## Contexto
 
@@ -26,4 +28,4 @@
 - Impacto en agentes/skills/playbooks existentes: ...
 
 > [!NOTE]
-> Este ADR aplica al **pack**. Si tu decisión es sobre el runtime/UI/BD de un producto consumidor, ábrela en el repo del consumidor — no aquí (ver [ADOPT.md](../../../ADOPT.md), sección "Prohibido").
+> Este ADR aplica al **pack**. Si tu decisión es sobre el runtime/UI/BD de un producto consumidor, ábrela en el repo del consumidor — no aquí (ver [ADOPT.md](../../../ADOPT.md), sección "Prohibido"). Numera desde el último `ADR-NNN` de [index.md](index.md) y añade la fila al índice.

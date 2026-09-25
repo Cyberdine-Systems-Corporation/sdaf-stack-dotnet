@@ -1,17 +1,19 @@
 # Pack de stack sin cambiar el modelo de agentes del core.
 # Copia a la raíz del consumidor y ajusta project.name.
-# Requiere sdaf-core@0.3.x (pin árbol v0.3.3 recomendado) y materializar skills/playbooks de este pack.
-# Alineado con sdaf-core examples/04-pack-stack.yaml.
+# Requiere sdaf-core@0.4.x (pin árbol v0.4.0) y materializar skills/playbooks de este pack.
+# Parte de sdaf-core examples/04-pack-stack.yaml; además lista los ids de
+# extensión del pack como stubs para dejar explícito que no se activan.
+# CI: validado con la action validate-sdaf del core (--strict-i4).
 
 sdaf:
-  version: "0.3.0"
+  version: "0.4.0"
 
 project:
   name: MiProyecto
   language: es
 
 stack:
-  pack: sdaf-stack-dotnet@0.2.0
+  pack: sdaf-stack-dotnet@0.3.0
   src_path: src
   tests_path: tests
 

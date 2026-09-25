@@ -10,3 +10,4 @@ alwaysApply: false
 - Specs Approved y Gate 0 mandan sobre conveniencia de framework.
 - Sin secretos en el repo; castellano en commits/worklogs.
 - Vertical slice + CQRS ligero: ver `playbooks/vertical-slice-cqrs.md`.
+- Castellano en artefactos: la regla `idioma-castellano.mdc` viene del core o del consumidor, no de este pack; los contratos del pack la dan por materializada si se usa Cursor.
