@@ -1,0 +1,33 @@
+# pack.yaml — manifest sdaf-stack-dotnet
+# Fuente de verdad de versión y compat. scripts/check-pack-metadata.py
+# comprueba que cabeceras, citas skill@version y examples/ coincidan.
+
+id: sdaf-stack-dotnet
+version: "0.3.0"
+sdaf_core: ">=0.4.0 <0.5.0"
+
+description: >
+  Overlay técnico SDAF para consumidores .NET: playbooks C#, Blazor BFF,
+  runtime local Aspire. No constituye producto ni fija el runtime por norma;
+  el stack concreto queda en ADRs del consumidor.
+
+agents:
+  extension:
+    - frontend
+    - domain-application
+    - infrastructure  # stub (ADR-002)
+
+skills:
+  - csharp-adr006-slice@0.3.0
+  - blazor-bff-slice@0.3.0
+  - aspire-local-run@0.3.0
+
+playbooks:
+  - playbooks/coding-standards-csharp.md
+  - playbooks/vertical-slice-cqrs.md
+
+limits:
+  - No incluir specs/, knowledge/ ni handbook de un producto.
+  - No redefinir agentes del núcleo de sdaf-core.
+  - No saltar Gate 0 ni aprobar normas Approved.
+  - No contradecir el handbook Approved de sdaf-core (línea 0.4.x).

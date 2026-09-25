@@ -1,0 +1,13 @@
+---
+description: Estándares C# del pack sdaf-stack-dotnet (resumen). Apunta a playbooks/; no duplica el handbook SDAF.
+globs: "**/*.{cs,csproj}"
+alwaysApply: false
+---
+
+# Coding standards C# (pack)
+
+- Seguir `playbooks/coding-standards-csharp.md` del pack `sdaf-stack-dotnet`.
+- Specs Approved y Gate 0 mandan sobre conveniencia de framework.
+- Sin secretos en el repo; castellano en commits/worklogs.
+- Vertical slice + CQRS ligero: ver `playbooks/vertical-slice-cqrs.md`.
+- Castellano en artefactos: la regla `idioma-castellano.mdc` viene del core o del consumidor, no de este pack; los contratos del pack la dan por materializada si se usa Cursor.
