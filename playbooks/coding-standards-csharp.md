@@ -4,10 +4,10 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 📖 Playbook / norma técnica de stack |
-| Versión | 0.2.0 |
-| Pack | sdaf-stack-dotnet@0.2.0 |
+| Versión | 0.3.0 |
+| Pack | sdaf-stack-dotnet@0.3.0 |
 | Estado | Approved |
-| Fecha | 2026-08-25 |
+| Fecha | 2026-09-25T09:01+02:00 |
 
 > [!NOTE]
 > Norma técnica del **overlay**. No sustituye el handbook Approved de sdaf-core ni el ADR de coding standards del consumidor.
@@ -17,6 +17,7 @@
 - [Alcance](#alcance)
 - [Normas](#normas)
 - [Relación con la regla IDE](#relación-con-la-regla-ide)
+- [Historial](#historial)
 - [Relacionado](#relacionado)
 
 ## Alcance
@@ -39,7 +40,16 @@ Convenciones de código C# / .NET para consumidores de este pack. El ADR de codi
 
 ## Relación con la regla IDE
 
-La regla [`.cursor/rules/coding-standards-csharp.mdc`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.cursor/rules/coding-standards-csharp.mdc) resume lo anterior sin duplicar el handbook del método.
+La regla [`.cursor/rules/coding-standards-csharp.mdc`](../.cursor/rules/coding-standards-csharp.mdc) resume lo anterior sin duplicar el handbook del método.
+
+## Historial
+
+| Versión | Fecha | Cambio |
+|---------|--------|--------|
+| 0.1.0 | 2026-08-25 | Primera versión del pack (tag `v0.1.0`; también en `v0.1.1`) |
+| 0.1.1 | 2026-09-17 | Alineación pack@0.1.1 en `main`; no incluida en ningún tag |
+| 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 (tag `v0.2.0`) |
+| 0.3.0 | 2026-09-25T09:01+02:00 | Compat sdaf-core 0.4.x; pack@0.3.0. Historial añadido desde los tags publicados. Sin cambio de norma. |
 
 ## Relacionado
 
@@ -47,5 +57,5 @@ La regla [`.cursor/rules/coding-standards-csharp.mdc`](https://github.com/Cyberd
 |--|---------|---------|
 | 📖 | [vertical-slice-cqrs.md](vertical-slice-cqrs.md) | Cómo estructurar el slice |
 | 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Flujo operativo del slice |
-| 🛠️ | [`coding-standards-csharp.mdc`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.cursor/rules/coding-standards-csharp.mdc) | Resumen IDE |
+| 🛠️ | [`coding-standards-csharp.mdc`](../.cursor/rules/coding-standards-csharp.mdc) | Resumen IDE |
 | 🧭 | [../README.md](../README.md) | Hub del pack |

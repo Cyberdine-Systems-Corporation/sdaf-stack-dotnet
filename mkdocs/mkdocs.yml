@@ -4,15 +4,27 @@ site_description: Contratos, skills, playbooks y adopción del pack sdaf-stack-d
 site_url: https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/
 repo_url: https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet
 repo_name: sdaf-stack-dotnet
-# Fuentes canónicas viven en la raíz del repo (vía symlinks en src/).
 edit_uri: edit/main/
 
-docs_dir: src
-site_dir: ../site
+# Mismo modelo que sdaf-core: docs_dir es la raíz del repo (sin symlinks),
+# así los enlaces relativos a CHANGELOG, pack.yaml o .cursor/ funcionan igual
+# en GitHub y en el sitio. site_dir NO puede quedar dentro de docs_dir.
+docs_dir: ..
+site_dir: !ENV [MKDOCS_SITE_DIR, "/tmp/sdaf-stack-dotnet-mkdocs-site"]
 
-# YAML de examples/ se incluyen vía snippets, no como páginas.
+# MkDocs excluye por defecto '.*' y '/templates/' del docs_dir. Se niega
+# .cursor/ porque la regla IDE es contenido del pack; el resto es tooling.
+# Los YAML de examples/ se incluyen vía snippets, no como páginas.
 exclude_docs: |
+  /mkdocs/
+  /site/
+  /scripts/
+  !/.cursor/
   /examples/*.yaml
+  /requirements-docs.txt
+
+not_in_nav: |
+  /worklogs/
 
 # Look Material alineado con sdaf-core (Decisión A).
 theme:
@@ -78,8 +90,8 @@ nav:
       - Decisiones (ADR):
           - docs/architecture/adr/index.md
           - Plantilla: docs/architecture/adr/plantilla-adr.md
-          - "ADR-0001 · Fusión domain-application": docs/architecture/adr/0001-fusion-domain-application.md
-          - "ADR-0002 · Infrastructure como stub": docs/architecture/adr/0002-infrastructure-stub.md
+          - "ADR-001 · Fusión domain-application": docs/architecture/adr/ADR-001-fusion-domain-application.md
+          - "ADR-002 · Infrastructure como stub": docs/architecture/adr/ADR-002-infrastructure-stub.md
   - Agentes:
       - agents/README.md
       - Frontend: agents/frontend-agent.md
@@ -104,3 +116,7 @@ nav:
   - Navegación:
       - docs/navegacion-docs.md
       - Checklist de página: docs/checklist-pagina-docs.md
+  - Proyecto:
+      - Changelog: CHANGELOG.md
+      - Contribuir: CONTRIBUTING.md
+      - Seguridad: SECURITY.md

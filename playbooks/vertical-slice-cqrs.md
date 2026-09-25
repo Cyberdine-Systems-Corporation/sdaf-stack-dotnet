@@ -4,10 +4,10 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 📖 Playbook / norma técnica de stack |
-| Versión | 0.2.0 |
-| Pack | sdaf-stack-dotnet@0.2.0 |
+| Versión | 0.3.0 |
+| Pack | sdaf-stack-dotnet@0.3.0 |
 | Estado | Approved |
-| Fecha | 2026-08-25 |
+| Fecha | 2026-09-25T09:01+02:00 |
 
 > [!NOTE]
 > Norma del overlay para estructurar el PBI. No sustituye specs Approved ni ADRs del consumidor.
@@ -17,6 +17,7 @@
 - [Idea](#idea)
 - [Pasos conceptuales](#pasos-conceptuales)
 - [Anti-patrones](#anti-patrones)
+- [Historial](#historial)
 - [Relacionado](#relacionado)
 
 ## Idea
@@ -53,7 +54,7 @@ flowchart TD
 | 1 | Nombrar el use case desde la spec de aplicación. |
 | 2 | Separar comando vs consulta cuando aporte claridad (CQRS ligero). |
 | 3 | Invariantes de dominio cerca del modelo; orquestación en aplicación. |
-| 4 | Puertos/adapters solo si el ADR de infraestructura lo exige (el agente infrastructure es stub en 0.1.x). |
+| 4 | Puertos/adapters solo si el ADR de infraestructura lo exige (el agente infrastructure es stub: ADR-002 del pack). |
 | 5 | Acceptance → tests antes o junto al código (Test from Specs). |
 
 ## Anti-patrones
@@ -69,11 +70,20 @@ flowchart TD
 
 <!-- --8<-- [end:cuerpo] -->
 
+## Historial
+
+| Versión | Fecha | Cambio |
+|---------|--------|--------|
+| 0.1.0 | 2026-08-25 | Primera versión del pack (tag `v0.1.0`; también en `v0.1.1`) |
+| 0.1.1 | 2026-09-17 | Alineación pack@0.1.1 en `main`; no incluida en ningún tag |
+| 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 (tag `v0.2.0`) |
+| 0.3.0 | 2026-09-25T09:01+02:00 | Compat sdaf-core 0.4.x; pack@0.3.0. Historial añadido desde los tags publicados. Sin cambio de norma. |
+
 ## Relacionado
 
 | | Destino | Por qué |
 |--|---------|---------|
-| 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill asociada `csharp-adr006-slice@0.2.0` |
+| 🛠️ | [../skills/csharp-adr006-slice/SKILL.md](../skills/csharp-adr006-slice/SKILL.md) | Skill asociada `csharp-adr006-slice@0.3.0` |
 | 📖 | [coding-standards-csharp.md](coding-standards-csharp.md) | Estándares C# del pack |
 | 🧭 | [../agents/domain-application-agent.md](../agents/domain-application-agent.md) | Contrato que aplica este playbook |
 | 🧭 | [../README.md](../README.md) | Hub del pack |

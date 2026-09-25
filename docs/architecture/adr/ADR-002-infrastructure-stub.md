@@ -1,10 +1,12 @@
-# ADR-0002 · `infrastructure` como agente stub en 0.1.x
+# ADR-002 — `infrastructure` como agente stub
 
 | Campo | Valor |
 |--------|--------|
-| Estado | Approved |
+| Estado | Aceptado |
 | Fecha | 2026-09-13 |
-| Pack | `sdaf-stack-dotnet@0.2.0` |
+| Decisores | No constan en el texto publicado. Autor del fichero: Manuel Ortiz de Villajos Quirós (commit `c9517a9`). |
+| Aceptación | Publicado con estado `Approved` en el merge del PR #4 (`ae2df53`, 2026-09-17, por @mortiz-iadev, identidad de [`CODEOWNERS`](../../../CODEOWNERS)) y en el tag `v0.2.0`. La hora no consta. En 0.3.0 solo cambian el vocabulario del estado (`Approved` → `Aceptado`, como en sdaf-core) y la numeración (`ADR-0002` → `ADR-002`); no es una aceptación nueva. |
+| Vigente en | `sdaf-stack-dotnet@0.3.0` (desde 0.1.0) |
 
 ## Contexto
 

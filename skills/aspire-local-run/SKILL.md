@@ -10,11 +10,11 @@ description: Verifica o documenta el arranque del runtime local Aspire (o equiva
 |--------|--------|
 | Rol | 🛠️ Skill / HOWTO operativo |
 | ID | aspire-local-run |
-| Versión | 0.2.0 |
+| Versión | 0.3.0 |
 | Estado | Approved |
 | Prioridad | media |
-| Fecha | 2026-08-25 |
-| Pack | sdaf-stack-dotnet@0.2.0 |
+| Fecha | 2026-09-25T09:01+02:00 |
+| Pack | sdaf-stack-dotnet@0.3.0 |
 | Norma | Gate 2 (sdaf-core H05), runbook `docs/` del consumidor |
 
 > [!NOTE]
@@ -59,7 +59,7 @@ flowchart TD
 2. Arrancar según el ADR/runtime acordado (Aspire AppHost u otro documentado).
 3. Comprobar health básico de los servicios In del MVP.
 4. Si falla: listar gaps (config, secretos ausentes, puertos); no “arreglar” saltándose specs.
-5. Registrar `aspire-local-run@0.2.0` y resultado en worklog.
+5. Registrar `aspire-local-run@0.3.0` y resultado en worklog.
 
 ## Definition of Done
 
@@ -91,3 +91,4 @@ No imponer Aspire si el ADR del consumidor eligió otro runtime: entonces docume
 | 0.1.0 | 2026-08-25 | Primera versión del pack |
 | 0.1.1 | 2026-09-17 | Alineación pack@0.1.1; Relacionado/Mermaid |
 | 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 |
+| 0.3.0 | 2026-09-25T09:01+02:00 | Compat sdaf-core 0.4.x; pack@0.3.0. Sin cambio de norma. |
