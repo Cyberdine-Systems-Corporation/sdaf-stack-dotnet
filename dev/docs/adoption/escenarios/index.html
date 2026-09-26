@@ -2058,7 +2058,7 @@
 <h2 id="01-pack-onlyyaml-playbooks-sin-activar-agentes-de-extensión"><code>01-pack-only.yaml</code>: playbooks sin activar agentes de extensión<a class="headerlink" href="#01-pack-onlyyaml-playbooks-sin-activar-agentes-de-extensión" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Pack de stack sin cambiar el modelo de agentes del core.</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># Copia a la raíz del consumidor y ajusta project.name.</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Requiere sdaf-core@0.4.x (pin árbol v0.4.0) y materializar skills/playbooks de este pack.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Requiere sdaf-core@0.4.x (pin árbol v0.4.2) y materializar skills/playbooks de este pack.</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Parte de sdaf-core examples/04-pack-stack.yaml; además lista los ids de</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># extensión del pack como stubs para dejar explícito que no se activan.</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1"># CI: validado con la action validate-sdaf del core (--strict-i4).</span>
@@ -2099,7 +2099,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="c1"># Handoff: Specification → Architecture → domain-application → frontend</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">#                                                    ↘ testing-review ↗</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1"># Alineado con sdaf-core examples/07-pack-frontend.yaml.</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Requiere sdaf-core@0.4.x (pin árbol v0.4.0).</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1"># Requiere sdaf-core@0.4.x (pin árbol v0.4.2).</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># domain y application quedan en stubs: sus miembros se activan solo a través</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># de la fusión domain-application (ADR-001 del pack), nunca por separado.</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="c1"># CI: validado con la action validate-sdaf del core (--strict-i4).</span>
@@ -2139,7 +2139,7 @@
 <p>Uso: handoff completo <code>Specification → Architecture → domain-application → frontend ↘ testing-review ↗</code>. Activa la fusión documentada en <a href="../../architecture/adr/ADR-001-fusion-domain-application/">ADR-001</a>.</p>
 <p><code>domain</code> y <code>application</code> aparecen en <code>stubs</code> y a la vez como miembros de la fusión: no se activan por separado, solo a través de <code>domain-application</code>. Tenerlos en <code>agents.active</code> junto con la fusión incumple el <a href="../../../agents/domain-application-agent/#restricciones">contrato</a>.</p>
 <h2 id="validación">Validación<a class="headerlink" href="#validación" title="Permanent link">&para;</a></h2>
-<p>Los dos escenarios se validan en el CI del pack con la composite action <code>validate-sdaf</code> de sdaf-core <code>v0.4.0</code> (schema + invariantes, I4 en modo estricto). En local, con un checkout del core al lado:</p>
+<p>Los dos escenarios se validan en el CI del pack con la composite action <code>validate-sdaf</code> de sdaf-core <code>v0.4.2</code> (schema + invariantes, I4 en modo estricto). En local, con un checkout del core al lado:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">python</span> <span class="p">../</span><span class="n">sdaf-core</span><span class="p">/</span><span class="n">scripts</span><span class="p">/</span><span class="n">validate-config</span><span class="p">.</span><span class="n">py</span> <span class="p">-</span><span class="n">-strict-i4</span> <span class="p">-</span><span class="n">-consumer-root</span> <span class="p">.</span> <span class="n">examples</span><span class="p">/</span><span class="n">01-pack-only</span><span class="p">.</span><span class="n">yaml</span> <span class="n">examples</span><span class="p">/</span><span class="n">02-pack-frontend</span><span class="p">.</span><span class="n">yaml</span>
 </code></pre></div>
 <h2 id="relacionado">Relacionado<a class="headerlink" href="#relacionado" title="Permanent link">&para;</a></h2>

@@ -1585,6 +1585,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tooling-externo-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling externo (opcional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prohibido" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1993,6 +2004,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tooling-externo-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tooling externo (opcional)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prohibido" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2069,7 +2091,7 @@
 </tr>
 <tr>
 <td>Requiere</td>
-<td><code>sdaf-core@0.4.x</code> ya adoptado (pin <code>v0.4.0</code>) + Gate 0 del método vigente</td>
+<td><code>sdaf-core@0.4.x</code> ya adoptado (pin <code>v0.4.2</code> recomendado) + Gate 0 del método vigente</td>
 </tr>
 </tbody>
 </table>
@@ -2081,6 +2103,7 @@ Esto es un <strong>HOWTO</strong>. No sustituye el handbook Approved ni la const
 <ul>
 <li><a href="#flujo">Flujo</a></li>
 <li><a href="#pasos">Pasos</a></li>
+<li><a href="#tooling-externo-opcional">Tooling externo (opcional)</a></li>
 <li><a href="#prohibido">Prohibido</a></li>
 <li><a href="#upgrade">Upgrade</a></li>
 <li><a href="#relacionado">Relacionado</a></li>
@@ -2121,7 +2144,7 @@ Esto es un <strong>HOWTO</strong>. No sustituye el handbook Approved ni la const
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">stack</span><span class="p">:</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">pack</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">sdaf-stack-dotnet@0.3.0</span>
 </code></pre></div>
-<p>Pin del <strong>core</strong>: tag <code>v0.4.0</code>. <code>sdaf.version</code> nombra la línea de constitución (<code>"0.4.0"</code>), no un tag — igual que documenta sdaf-core.</p>
+<p>Pin del <strong>core</strong>: tag <code>v0.4.2</code> (recomendado; <code>v0.4.0</code> y <code>v0.4.1</code> también valen). <code>sdaf.version</code> nombra la línea de constitución (<code>"0.4.0"</code>), no un tag — igual que documenta sdaf-core.</p>
 </li>
 <li>
 <p>Materializar aportes del pack en la raíz del consumidor. Preferido: symlinks relativos (Git mode <code>120000</code>), no copias.</p>
@@ -2159,7 +2182,7 @@ Esto es un <strong>HOWTO</strong>. No sustituye el handbook Approved ni la const
 </tbody>
 </table>
 <p>⛔ <strong>No</strong> usar junctions de Windows (<code>mklink /J</code>): Git no los modela como enlaces portables cross-platform.</p>
-<p>Materializar también skills/agentes/prompts del <strong>core</strong> según <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/docs/adopcion-y-upgrade.md"><code>sdaf-core</code> docs/adopcion-y-upgrade.md</a>.</p>
+<p>Materializar también skills/agentes/prompts del <strong>core</strong> según <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/adopcion-y-upgrade.md"><code>sdaf-core</code> docs/adopcion-y-upgrade.md</a>.</p>
 </li>
 <li>
 <p>Elegir escenario de <code>examples/</code> (<a href="../docs/adoption/escenarios/">detalle</a>):</p>
@@ -2186,7 +2209,7 @@ Esto es un <strong>HOWTO</strong>. No sustituye el handbook Approved ni la const
 <p>Si el runtime/UI/BD se fijan por primera vez: abrir <strong>ADR</strong> en el consumidor (el pack no sustituye esa decisión).</p>
 </li>
 <li>
-<p>Opcional: validar <code>sdaf.config.yaml</code> en el CI del consumidor con la composite action <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/.github/actions/validate-sdaf/README.md"><code>validate-sdaf</code></a> del core (este pack la usa para sus <code>examples/</code>).</p>
+<p>Opcional: validar <code>sdaf.config.yaml</code> en el CI del consumidor con la composite action <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/.github/actions/validate-sdaf/README.md"><code>validate-sdaf</code></a> del core (este pack la usa para sus <code>examples/</code>).</p>
 </li>
 <li>
 <p>Antes de código de producto: skill <code>sdaf-gate0</code> del core.</p>
@@ -2196,6 +2219,14 @@ Esto es un <strong>HOWTO</strong>. No sustituye el handbook Approved ni la const
 <p>[!IMPORTANT]
 Con <strong>sdaf-core 0.4.x</strong>, H06 §7 exige petición humana <strong>explícita en el mensaje de este turno</strong> para commit o escritura al remoto. El pack no la relaja: no autorices git/remoto desde skills o prompts del overlay.</p>
 </blockquote>
+<h2 id="tooling-externo-opcional">Tooling externo (opcional)<a class="headerlink" href="#tooling-externo-opcional" title="Permanent link">&para;</a></h2>
+<p>El pack no aporta ni presupone tooling de agentes (memoria, MCP, instaladores como gentle-ai). Según <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/architecture/decisions/ADR-004-tooling-externo-de-agentes.md">ADR-004</a> del core, ese tooling no es un pack: se declara en <code>tooling.gentle_ai</code> de <code>sdaf.config.yaml</code>, nunca en <code>stack.pack</code>.</p>
+<p>Si el consumidor lo adopta:</p>
+<ul>
+<li>Las skills del pack (<code>csharp-adr006-slice</code>, <code>blazor-bff-slice</code>, <code>aspire-local-run</code>) siguen subordinadas a Gate 0 y a H06 §7. No se usan las skills <code>sdd-*</code>.</li>
+<li><code>AGENTS.md</code> lleva la sección «Tooling externo» de <code>AGENTS.md.template</code> (core <code>v0.4.2</code>).</li>
+<li>Guía del core: <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/integracion-gentle-ai.md"><code>integracion-gentle-ai.md</code></a>.</li>
+</ul>
 <h2 id="prohibido">Prohibido<a class="headerlink" href="#prohibido" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>[!CAUTION]
@@ -2209,7 +2240,7 @@ Con <strong>sdaf-core 0.4.x</strong>, H06 §7 exige petición humana <strong>exp
 <h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h2>
 <p>Pack <strong>0.2.0 → 0.3.0</strong> exige core <strong>0.4.x</strong>. Quien siga en core <code>v0.3.3</code> se queda en pack <code>v0.2.0</code>.</p>
 <ol>
-<li>Subir antes el <strong>core</strong>: pin <code>v0.4.0</code> y <code>sdaf.version: "0.4.0"</code>, siguiendo la sección 0.4.0 de <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/docs/adopcion-y-upgrade.md"><code>adopcion-y-upgrade.md</code></a> (H13, <code>CODEOWNERS</code> para QG-Review, worklogs nuevos con frontmatter).</li>
+<li>Subir antes el <strong>core</strong>: pin <code>v0.4.2</code> (o <code>v0.4.0</code>/<code>v0.4.1</code>) y <code>sdaf.version: "0.4.0"</code>, siguiendo las secciones 0.4.0, 0.4.1 y 0.4.2 de <a href="https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/adopcion-y-upgrade.md"><code>adopcion-y-upgrade.md</code></a> (H13, <code>CODEOWNERS</code> para QG-Review, worklogs nuevos con frontmatter).</li>
 <li>Actualizar pin del submodule del <strong>pack</strong> a <code>v0.3.0</code>, <code>stack.pack: sdaf-stack-dotnet@0.3.0</code> y citas <code>skill@version</code> (<code>@0.3.0</code>) en worklogs <strong>nuevos</strong>. Los worklogs ya cerrados no se reescriben.</li>
 <li>Volver a ejecutar el script de materialización del consumidor (<code>-Force</code> / <code>--force</code> si cambió el árbol).</li>
 <li>No auto-migrar specs del consumidor.</li>

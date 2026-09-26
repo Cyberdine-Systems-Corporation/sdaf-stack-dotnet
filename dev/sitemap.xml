@@ -2,122 +2,122 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/ADOPT/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/CHANGELOG/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/CONTRIBUTING/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/SECURITY/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/agents/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/agents/domain-application-agent/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/agents/frontend-agent/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/agents/infrastructure-agent/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/checklist-pagina-docs/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/navegacion-docs/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/uso-local/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/adoption/escenarios/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/architecture/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/architecture/relacion-componentes/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/architecture/adr/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/architecture/adr/ADR-001-fusion-domain-application/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/architecture/adr/ADR-002-infrastructure-stub/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/docs/architecture/adr/plantilla-adr/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/playbooks/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/playbooks/coding-standards-csharp/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/playbooks/vertical-slice-cqrs/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/prompts/agents/domain-application-agent/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/prompts/agents/frontend-agent/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/prompts/agents/infrastructure-agent/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/skills/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/skills/aspire-local-run/SKILL/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/skills/blazor-bff-slice/SKILL/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/skills/csharp-adr006-slice/SKILL/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
     <url>
          <loc>https://cyberdine-systems-corporation.github.io/sdaf-stack-dotnet/dev/worklogs/INIT-auditoria-v0.2.0/Iteration-001/</loc>
-         <lastmod>2026-09-25</lastmod>
+         <lastmod>2026-09-26</lastmod>
     </url>
 </urlset>
