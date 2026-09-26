@@ -2,6 +2,19 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/). El semver del pack vive en [`pack.yaml`](pack.yaml). Las entradas publicadas no se reescriben; desde 0.3.0 las fechas nuevas llevan hora y zona (sdaf-core H13 §9).
 
+## [Unreleased]
+
+Alineación con los parches `v0.4.1` y `v0.4.2` de sdaf-core. Sin cambio de compat (`sdaf_core: ">=0.4.0 <0.5.0"` ya los cubre) ni de norma en contratos, skills y playbooks.
+
+### Changed
+
+- Pin recomendado del core `v0.4.2` en README, ADOPT, `examples/` y docs; `sdaf.version` sigue en `"0.4.0"`.
+- CI `validate.yml`: action `validate-sdaf` y validador de worklog de sdaf-core fijados a `v0.4.2` (`581d4ee`). Los `examples/` no declaran `tooling`.
+
+### Added
+
+- ADOPT: sección «Tooling externo (opcional)» según ADR-004 del core. El pack es neutral al tooling y sus skills siguen subordinadas a Gate 0 y H06 §7.
+
 ## [0.3.0] — 2026-09-25T09:01+02:00
 
 Cierre de la auditoría del pack v0.2.0 frente a sdaf-core 0.4.0. Trazabilidad: [worklog](worklogs/INIT-auditoria-v0.2.0/Iteration-001.md).

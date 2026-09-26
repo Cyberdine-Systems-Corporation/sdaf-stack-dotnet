@@ -6,14 +6,14 @@
 |--------|--------|
 | Id | `sdaf-stack-dotnet@0.3.0` |
 | Compat | `sdaf-core` `>=0.4.0 <0.5.0` |
-| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.0/docs/contrato-pack-stack.md) |
+| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/contrato-pack-stack.md) |
 | Rol | Índice / hub del pack (no es constitución del método) |
 
 > [!NOTE]
 > Este repositorio es un **overlay técnico**. La constitución y el handbook Approved viven en **sdaf-core**. Este pack no los sustituye.
 
 > [!IMPORTANT]
-> Gate 0 del core manda sobre cualquier skill de implementación de este pack. Compat: **sdaf-core 0.4.x** (pin árbol `v0.4.0` recomendado, `sdaf.version: "0.4.0"`).
+> Gate 0 del core manda sobre cualquier skill de implementación de este pack. Compat: **sdaf-core 0.4.x** (pin árbol `v0.4.2` recomendado, `sdaf.version: "0.4.0"`).
 
 ## En esta página
 
