@@ -1,7 +1,7 @@
 name: validate
 
 # Acciones fijadas por SHA (comentario = versión); dependabot propone subidas.
-# sdaf-core fijado a v0.4.0 (fa48537), la línea de compat de pack.yaml.
+# sdaf-core fijado a v0.4.2 (581d4ee), la línea de compat de pack.yaml.
 
 on:
   push:
@@ -44,16 +44,16 @@ jobs:
         with:
           python-version: "3.12"
       - name: examples/ contra schema e invariantes de sdaf-core (I4 estricto)
-        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@fa48537704ab84c16349da20ec9f79ad2cb8a395 # v0.4.0
+        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@581d4ee2d6f7a396d48951bb1f560a426c07307c # v0.4.2
         with:
           config-paths: examples/*.yaml
           check-worklog: "false"
           strict-i4: "true"
-      - name: Checkout de sdaf-core v0.4.0 (validador de worklog)
+      - name: Checkout de sdaf-core v0.4.2 (validador de worklog)
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: Cyberdine-Systems-Corporation/sdaf-core
-          ref: fa48537704ab84c16349da20ec9f79ad2cb8a395 # v0.4.0
+          ref: 581d4ee2d6f7a396d48951bb1f560a426c07307c # v0.4.2
           path: .sdaf-core
       - name: Validar worklogs del pack con el schema del core
         shell: bash

@@ -44,7 +44,7 @@ Commits con prefijo (`feat:`, `fix:`, `docs:`, `chore:`) y prosa en castellano.
 
 ## Worklog
 
-Cambio material (contrato, skill, playbook, prompt o ADR del pack): worklog en `worklogs/<PBI>/Iteration-NNN.md` con el frontmatter de `templates/worklog.md` del core `v0.4.0`. `commit`, `pr` y `sha` quedan en `null` si aún no existen. Typos y enlaces: no obligatorio.
+Cambio material (contrato, skill, playbook, prompt o ADR del pack): worklog en `worklogs/<PBI>/Iteration-NNN.md` con el frontmatter de `templates/worklog.md` del core `v0.4.2`. `commit`, `pr` y `sha` quedan en `null` si aún no existen. Typos y enlaces: no obligatorio.
 
 ## Checks
 

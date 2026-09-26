@@ -44,7 +44,7 @@ mkdocs build -f mkdocs/mkdocs.yml --strict
 
 ## Checks del CI en local
 
-Los mismos que ejecutan [`validate.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/validate.yml) y [`docs-links.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs-links.yml) (salvo markdownlint, que necesita Node). Los dos últimos usan un checkout de sdaf-core `v0.4.0` al lado de este repo (`../sdaf-core`).
+Los mismos que ejecutan [`validate.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/validate.yml) y [`docs-links.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs-links.yml) (salvo markdownlint, que necesita Node). Los dos últimos usan un checkout de sdaf-core `v0.4.2` al lado de este repo (`../sdaf-core`).
 
 ```powershell
 pip install pyyaml jsonschema

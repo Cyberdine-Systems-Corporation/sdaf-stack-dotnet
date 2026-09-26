@@ -34,7 +34,7 @@ Uso: handoff completo `Specification → Architecture → domain-application →
 
 ## Validación
 
-Los dos escenarios se validan en el CI del pack con la composite action `validate-sdaf` de sdaf-core `v0.4.0` (schema + invariantes, I4 en modo estricto). En local, con un checkout del core al lado:
+Los dos escenarios se validan en el CI del pack con la composite action `validate-sdaf` de sdaf-core `v0.4.2` (schema + invariantes, I4 en modo estricto). En local, con un checkout del core al lado:
 
 ```powershell
 python ../sdaf-core/scripts/validate-config.py --strict-i4 --consumer-root . examples/01-pack-only.yaml examples/02-pack-frontend.yaml
