@@ -44,7 +44,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: examples/ contra schema e invariantes de sdaf-core (I4 estricto)
-        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@581d4ee2d6f7a396d48951bb1f560a426c07307c # v0.4.2
+        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@66ee77b7e85cb3a7c748b824ab73e580b8bd75ce # v0.5.0
         with:
           config-paths: examples/*.yaml
           check-worklog: "false"
