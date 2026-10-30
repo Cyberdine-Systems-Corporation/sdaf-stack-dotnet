@@ -3,6 +3,6 @@
 # Dependabot (pip) propone las subidas.
 # Instalar con: pip install -r requirements-docs.txt
 mkdocs==1.6.*
-mkdocs-material==9.7.*
+mkdocs-material==9.8.*
 mike==2.2.*
 pymdown-extensions==12.*
