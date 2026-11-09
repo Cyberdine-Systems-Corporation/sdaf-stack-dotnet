@@ -1,0 +1,22 @@
+# sdaf-pack.yaml — manifiesto de sdaf-stack-dotnet para sdaf-core 0.6.x.
+# Lo valida el core (scripts/validate-pack.py) contra sdaf-pack.schema.json.
+# pack.yaml sigue siendo la fuente interna del pack (playbooks, limits,
+# description); ambos deben coincidir y scripts/check-pack-metadata.py lo comprueba.
+
+id: sdaf-stack-dotnet
+version: "0.4.0"
+core: ">=0.6.0 <0.7.0"
+
+provides:
+  extension_ids:
+    - domain-application
+    - frontend
+    - infrastructure
+  skills:
+    - csharp-adr006-slice
+    - blazor-bff-slice
+    - aspire-local-run
+  prompts:
+    - frontend
+    - domain-application
+    - infrastructure

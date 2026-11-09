@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -1623,7 +1623,7 @@
   <span class="md-ellipsis">
     
   
-    Adopción — sdaf-stack-dotnet@0.3.0
+    Adopción — sdaf-stack-dotnet@0.4.0
   
 
     
@@ -2091,7 +2091,7 @@
 </tr>
 <tr>
 <td>Versión</td>
-<td>0.3.0</td>
+<td>0.4.0</td>
 </tr>
 <tr>
 <td>Estado</td>
@@ -2103,11 +2103,11 @@
 </tr>
 <tr>
 <td>Fecha</td>
-<td>2026-09-25T09:01+02:00</td>
+<td>2026-11-09T19:36+01:00</td>
 </tr>
 <tr>
 <td>Pack</td>
-<td>sdaf-stack-dotnet@0.3.0</td>
+<td>sdaf-stack-dotnet@0.4.0</td>
 </tr>
 <tr>
 <td>Norma</td>
@@ -2138,7 +2138,7 @@ HOWTO de UI/BFF. <strong>BFF</strong> = Backend-for-Frontend: capa API orientada
   g0[Confirmar Gate 0] --&gt; adr[Respetar límites BFF/API]
   adr --&gt; ui[Implementar Blazor + BFF]
   ui --&gt; reuse[Reutilizar contratos de aplicación]
-  reuse --&gt; wl[Registrar skill@0.3.0]
+  reuse --&gt; wl[Registrar skill@0.4.0]
   domainUi[Reglas de dominio en UI] --&gt; stop[STOP]
 
   classDef stop fill:#f8d0d0,stroke:#8b1e1e,color:#8b1e1e
@@ -2155,7 +2155,7 @@ HOWTO de UI/BFF. <strong>BFF</strong> = Backend-for-Frontend: capa API orientada
 <li>Respetar límites BFF/API del ADR del consumidor (no llamar dominio desde el browser si el ADR lo prohíbe).</li>
 <li>Implementar componentes/páginas Blazor y endpoints BFF necesarios en <code>src_path</code>.</li>
 <li>Reutilizar contratos ya expuestos por el slice de aplicación; no duplicar reglas de negocio en la UI.</li>
-<li>Citar <code>blazor-bff-slice@0.3.0</code> en worklog; handoff a testing-review.</li>
+<li>Citar <code>blazor-bff-slice@0.4.0</code> en worklog; handoff a testing-review.</li>
 </ol>
 <h2 id="definition-of-done">Definition of Done<a class="headerlink" href="#definition-of-done" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2226,6 +2226,11 @@ HOWTO de UI/BFF. <strong>BFF</strong> = Backend-for-Frontend: capa API orientada
 <td>2026-09-25T09:01+02:00</td>
 <td>Compat sdaf-core 0.4.x; pack@0.3.0. Sin cambio de norma.</td>
 </tr>
+<tr>
+<td>0.4.0</td>
+<td>2026-11-09T19:36+01:00</td>
+<td>Compat sdaf-core 0.6.x; pack@0.4.0. Sin cambio de norma.</td>
+</tr>
 </tbody>
 </table>
 
@@ -2289,7 +2294,7 @@ HOWTO de UI/BFF. <strong>BFF</strong> = Backend-for-Frontend: capa API orientada
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>

@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -1494,7 +1494,7 @@
   <span class="md-ellipsis">
     
   
-    Adopción — sdaf-stack-dotnet@0.3.0
+    Adopción — sdaf-stack-dotnet@0.4.0
   
 
     
@@ -2089,7 +2089,7 @@
 </table>
 <blockquote>
 <p>[!NOTE]
-La norma vive en <strong>sdaf-core</strong> (línea <code>0.4.x</code>). Esta página solo explica cómo aplicarla a este pack.</p>
+La norma vive en <strong>sdaf-core</strong> (línea <code>0.6.x</code>). Esta página solo explica cómo aplicarla a este pack.</p>
 </blockquote>
 <h2 id="en-esta-página">En esta página<a class="headerlink" href="#en-esta-página" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2131,12 +2131,12 @@ La norma vive en <strong>sdaf-core</strong> (línea <code>0.4.x</code>). Esta p�
 </tr>
 <tr>
 <td>Compat</td>
-<td>Cambia el rango <code>sdaf_core</code> de <a href="../pack.yaml"><code>pack.yaml</code></a></td>
+<td>Cambia el rango <code>sdaf_core</code> de <a href="../pack.yaml"><code>pack.yaml</code></a> (y <code>core</code> de <a href="../sdaf-pack.yaml"><code>sdaf-pack.yaml</code></a>)</td>
 <td>minor del pack (0.x); upgrade en <a href="../ADOPT/#upgrade">ADOPT</a></td>
 </tr>
 </tbody>
 </table>
-<p><code>pack.yaml</code> es la fuente de verdad: su <code>version</code> coincide con las citas <code>skill@version</code>, el campo <code>Pack</code> de cada cabecera y <code>stack.pack</code> de <code>examples/</code>. Un release del pack alinea todos los artefactos a esa versión, como en 0.2.0 y 0.3.0.</p>
+<p><code>pack.yaml</code> es la fuente de verdad: su <code>version</code> coincide con las citas <code>skill@version</code>, el campo <code>Pack</code> de cada cabecera y la referencia de <code>stack.packs</code> de <code>examples/</code>. <a href="../sdaf-pack.yaml"><code>sdaf-pack.yaml</code></a> es el manifiesto que lee el core y repite id, versión, rango <code>core</code>, ids de extensión, skills y prompts: debe coincidir con <code>pack.yaml</code> y <code>check-pack-metadata.py</code> lo cruza. Un release del pack alinea todos los artefactos a esa versión, como en 0.2.0, 0.3.0 y 0.4.0.</p>
 <h2 id="historial-y-fechas">Historial y fechas<a class="headerlink" href="#historial-y-fechas" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Cambio de versión = fila nueva al final de <strong>Historial</strong>. Las filas publicadas no se editan ni se borran (H08 §7 del core).</li>
@@ -2157,7 +2157,7 @@ La norma vive en <strong>sdaf-core</strong> (línea <code>0.4.x</code>). Esta p�
 <tbody>
 <tr>
 <td><code>check-pack-metadata.py</code></td>
-<td>Versión, <code>Pack</code>, fechas o citas <code>skill@version</code> que no cuadran con <code>pack.yaml</code></td>
+<td>Versión, <code>Pack</code>, fechas o citas <code>skill@version</code> que no cuadran con <code>pack.yaml</code>; <code>sdaf-pack.yaml</code> ausente o distinto de <code>pack.yaml</code>; <code>examples/</code> fuera del rango <code>core</code></td>
 </tr>
 <tr>
 <td><code>check-history-append-only.py</code></td>
@@ -2170,6 +2170,10 @@ La norma vive en <strong>sdaf-core</strong> (línea <code>0.4.x</code>). Esta p�
 <tr>
 <td><code>validate-sdaf</code> (action del core)</td>
 <td><code>examples/</code> fuera del schema o de las invariantes</td>
+</tr>
+<tr>
+<td><code>validate-pack.py</code> (core)</td>
+<td><code>sdaf-pack.yaml</code> fuera del schema del manifiesto. Hoy se ejecuta a mano; el paso de CI se añade cuando exista el tag <code>v0.6.0</code> del core</td>
 </tr>
 <tr>
 <td><code>validate-worklog.py</code> (core)</td>
@@ -2275,7 +2279,7 @@ La norma vive en <strong>sdaf-core</strong> (línea <code>0.4.x</code>). Esta p�
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.follow", "search.suggest", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
     
   </body>
