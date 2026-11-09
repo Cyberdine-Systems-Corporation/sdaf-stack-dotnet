@@ -24,7 +24,7 @@ sdaf-stack-dotnet/
 
 ## Relación con sdaf-core
 
-- El pack declara compatibilidad `sdaf_core: ">=0.4.0 <0.5.0"` en [`pack.yaml`](../../pack.yaml).
+- El pack declara compatibilidad `sdaf_core: ">=0.6.0 <0.7.0"` en [`pack.yaml`](../../pack.yaml) y `core` en [`sdaf-pack.yaml`](../../sdaf-pack.yaml).
 - Gate 0 y el handbook Approved viven en `sdaf-core`; este pack solo aporta agentes de **extensión** (nunca redefine `specification`, `architecture` o `testing-review` del core).
 - El consumidor materializa el pack como submodule pinneado a un tag — ver [ADOPT.md](../../ADOPT.md).
 

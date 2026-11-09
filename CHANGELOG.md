@@ -2,18 +2,30 @@
 
 Formato basado en [Keep a Changelog](https://keepachangelog.com/). El semver del pack vive en [`pack.yaml`](pack.yaml). Las entradas publicadas no se reescriben; desde 0.3.0 las fechas nuevas llevan hora y zona (sdaf-core H13 §9).
 
-## [Unreleased]
+## [0.4.0] — 2026-11-09T19:36+01:00
 
-Alineación con los parches `v0.4.1` y `v0.4.2` de sdaf-core. Sin cambio de compat (`sdaf_core: ">=0.4.0 <0.5.0"` ya los cubre) ni de norma en contratos, skills y playbooks.
+Compatibilidad con sdaf-core 0.6.x y manifiesto `sdaf-pack.yaml`. Trazabilidad: [worklog](worklogs/INIT-compat-core-0.6/Iteration-001.md).
 
 ### Changed
 
-- Pin recomendado del core `v0.4.2` en README, ADOPT, `examples/` y docs; `sdaf.version` sigue en `"0.4.0"`.
-- CI `validate.yml`: action `validate-sdaf` y validador de worklog de sdaf-core fijados a `v0.4.2` (`581d4ee`). Los `examples/` no declaran `tooling`.
+- Compatibilidad **`sdaf_core: ">=0.6.0 <0.7.0"`** (deja la línea 0.4.x). Pin del core `v0.6.0`, `sdaf.version: "0.6.0"` en `examples/`, README y ADOPT; contrato enlazado a `v0.6.0`.
+- Semver del pack a **0.4.0** en `pack.yaml`, cabeceras, citas `skill@version` y referencia del pack en `examples/`. Contratos, prompts, skills y playbooks: **sin cambio de norma**.
+- `examples/`: el pack se declara en `stack.packs` (lista de `id@version`) en lugar del alias obsoleto `stack.pack`, y se quita `ai` de los `stubs` (el pack no aporta ese id de extensión; con el manifiesto y `--strict-i4` fallaba la comprobación I4).
+- ADOPT: `stack.packs`, pin `v0.6.0` y upgrade 0.3.0 → 0.4.0.
+- CI `validate.yml`: la action `validate-sdaf` del core pasa de `v0.5.3` al SHA `60e9e5b` de `main` del core, de forma provisional hasta que exista el tag `v0.6.0` (el schema de `v0.5.3` no conoce `stack.packs`). El validador de worklog sigue en `v0.4.2` (`581d4ee`).
+- `scripts/check-pack-metadata.py` (+ autocomprobación, 20 → 31 mutaciones y una variante aceptada): exige que `sdaf-pack.yaml` exista y coincida con `pack.yaml`; `examples/` se leen por `stack.packs` (el alias `stack.pack` se sigue leyendo) y su `sdaf.version` debe caer dentro del `core` declarado.
+- Dependencias de CI y docs ya en `main` (dependabot): `actions/setup-python` 7.1.0, `markdownlint-cli2-action` 25.0.0 y `mkdocs-material` 9.8.
+- Pin recomendado del core `v0.4.2` en README, ADOPT, `examples/` y docs, y CI con `validate-sdaf` y validador de worklog en `v0.4.2` (alineación previa con los parches `v0.4.1` y `v0.4.2`): sustituido por `v0.6.0` y por el SHA provisional de arriba, salvo el validador de worklog.
 
 ### Added
 
+- [`sdaf-pack.yaml`](sdaf-pack.yaml): manifiesto del pack para el core (`id`, `version`, `core`, `provides.extension_ids`, `provides.skills`, `provides.prompts`), válido contra `sdaf-pack.schema.json` del core. `pack.yaml` sigue siendo la fuente interna (playbooks, limits, description) y ambos deben coincidir.
 - ADOPT: sección «Tooling externo (opcional)» según ADR-004 del core. El pack es neutral al tooling y sus skills siguen subordinadas a Gate 0 y H06 §7.
+
+### Notas
+
+- Consumidores en **sdaf-core 0.4.x** se quedan en pack **0.3.0**.
+- `sdaf-pack.yaml` no se valida aún en el CI del pack: el paso con `validate-pack.py` y `validate-config.py --pack-manifest` se añade cuando exista el tag `v0.6.0` del core. Hasta entonces se ejecutan a mano.
 
 ## [0.3.0] — 2026-09-25T09:01+02:00
 

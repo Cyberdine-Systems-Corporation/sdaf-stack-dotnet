@@ -3,7 +3,7 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 🧭 HOWTO de navegación (no es norma) |
-| Pack | `sdaf-stack-dotnet@0.3.0` |
+| Pack | `sdaf-stack-dotnet@0.4.0` |
 
 > [!NOTE]
 > Mapa de clics y vocabulario visual. No sustituye contratos Approved, playbooks ni sdaf-core.

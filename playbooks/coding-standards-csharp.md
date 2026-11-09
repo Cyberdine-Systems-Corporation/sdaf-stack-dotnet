@@ -4,10 +4,10 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 📖 Playbook / norma técnica de stack |
-| Versión | 0.3.0 |
-| Pack | sdaf-stack-dotnet@0.3.0 |
+| Versión | 0.4.0 |
+| Pack | sdaf-stack-dotnet@0.4.0 |
 | Estado | Approved |
-| Fecha | 2026-09-25T09:01+02:00 |
+| Fecha | 2026-11-09T19:36+01:00 |
 
 > [!NOTE]
 > Norma técnica del **overlay**. No sustituye el handbook Approved de sdaf-core ni el ADR de coding standards del consumidor.
@@ -50,6 +50,7 @@ La regla [`.cursor/rules/coding-standards-csharp.mdc`](../.cursor/rules/coding-s
 | 0.1.1 | 2026-09-17 | Alineación pack@0.1.1 en `main`; no incluida en ningún tag |
 | 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 (tag `v0.2.0`) |
 | 0.3.0 | 2026-09-25T09:01+02:00 | Compat sdaf-core 0.4.x; pack@0.3.0. Historial añadido desde los tags publicados. Sin cambio de norma. |
+| 0.4.0 | 2026-11-09T19:36+01:00 | Compat sdaf-core 0.6.x; pack@0.4.0. Sin cambio de norma. |
 
 ## Relacionado
 

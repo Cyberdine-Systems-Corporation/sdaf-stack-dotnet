@@ -4,6 +4,10 @@
 Comprueba:
 - pack.yaml: id, semver, rango sdaf_core; rutas de agentes, prompts, skills y
   playbooks del manifest (y que no haya skills ni contratos sin declarar).
+- sdaf-pack.yaml (el manifiesto que lee sdaf-core): existe y coincide con
+  pack.yaml (id, version, core = sdaf_core, provides.extension_ids = agents.extension,
+  provides.skills = skills sin @versión, provides.prompts = ids de los agentes de
+  extensión, cada uno con su prompts/agents/<id>-agent.md).
 - Cabeceras de contratos, prompts, skills y playbooks: `Pack` = id@version,
   `Versión` = version del pack, `Fecha` = fecha de la fila más reciente de la
   versión máxima del Historial (sdaf-core H13 §9).
@@ -11,7 +15,8 @@ Comprueba:
   hora y zona (AAAA-MM-DDThh:mm±hh:mm).
 - Citas `sdaf-stack-dotnet@x.y.z` y `<skill>@x.y.z` fuera de historiales y del
   CHANGELOG = versión vigente.
-- examples/*.yaml: stack.pack = id@version y sdaf.version dentro de sdaf_core.
+- examples/*.yaml: stack.packs incluye id@version (se sigue leyendo el alias
+  obsoleto stack.pack) y sdaf.version dentro de sdaf_core.
 - README (Id y Compat), CHANGELOG (entrada de la versión) y ADRs del pack
   (numeración desde 001, estado, fila en el índice).
 
@@ -149,6 +154,45 @@ def check(root: Path) -> list[str]:
         if p.parent.name not in skills:
             err(p.relative_to(root).as_posix(), "skill no declarada en pack.yaml")
 
+    # --- sdaf-pack.yaml frente a pack.yaml -----------------------------------
+    man_rel = "sdaf-pack.yaml"
+    manifest = None
+    if not (root / man_rel).is_file():
+        err(man_rel, "falta el manifiesto (el core lo lee; pack.yaml no lo sustituye)")
+    else:
+        try:
+            manifest = yaml.safe_load(read(man_rel))
+        except yaml.YAMLError as e:
+            err(man_rel, f"YAML inválido: {e}")
+        if manifest is not None and not isinstance(manifest, dict):
+            err(man_rel, "no es un mapa YAML")
+        if not isinstance(manifest, dict):
+            manifest = None
+    if manifest is not None:
+        if manifest.get("id") != pid:
+            err(man_rel, f"id = {manifest.get('id')!r}; pack.yaml dice {pid!r}")
+        if str(manifest.get("version", "")) != pver:
+            err(man_rel, f"version = {str(manifest.get('version', ''))!r}; pack.yaml dice {pver!r}")
+        if str(manifest.get("core", "")) != compat:
+            err(man_rel, f"core = {str(manifest.get('core', ''))!r}; pack.yaml sdaf_core dice {compat!r}")
+        provides = manifest.get("provides")
+        provides = provides if isinstance(provides, dict) else {}
+        want = {
+            "extension_ids": ("agents.extension de pack.yaml", agents),
+            "skills": ("skills de pack.yaml sin @versión", list(skills)),
+            "prompts": ("ids de los agentes de extensión de pack.yaml", agents),
+        }
+        for key, (origen, expected) in want.items():
+            got = provides.get(key)
+            got = [str(x) for x in got] if isinstance(got, list) else []
+            if len(got) != len(set(got)):
+                err(man_rel, f"provides.{key} tiene ids repetidos: {got}")
+            if set(got) != set(expected):
+                err(man_rel, f"provides.{key} = {sorted(got)}; esperado {sorted(expected)} ({origen})")
+        for p in provides.get("prompts") or []:
+            if not (root / f"prompts/agents/{p}-agent.md").is_file():
+                err(man_rel, f"provides.prompts: falta prompts/agents/{p}-agent.md")
+
     # --- cabeceras e historial ----------------------------------------------
     for rel in versioned:
         text = read(rel)
@@ -199,8 +243,13 @@ def check(root: Path) -> list[str]:
     for p in sorted((root / "examples").glob("*.yaml")):
         rel = p.relative_to(root).as_posix()
         cfg = yaml.safe_load(read(rel)) or {}
-        if (cfg.get("stack") or {}).get("pack") != ident:
-            err(rel, f"stack.pack = {(cfg.get('stack') or {}).get('pack')!r}; esperado {ident!r}")
+        stack = cfg.get("stack") or {}
+        refs = stack.get("packs")
+        if refs is None and stack.get("pack"):  # alias obsoleto, aún legible
+            refs = [stack["pack"]]
+        refs = [str(r) for r in (refs if isinstance(refs, list) else [])]
+        if ident not in refs:
+            err(rel, f"stack.packs = {refs!r}; esperado que incluya {ident!r}")
         sv = str((cfg.get("sdaf") or {}).get("version", ""))
         if rng and SEMVER.match(sv):
             if not (ver(rng.group(1)) <= ver(sv) < ver(rng.group(2))):

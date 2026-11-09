@@ -4,12 +4,12 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | Contrato de agente de extensión (fusión) |
-| Versión | 0.3.0 |
+| Versión | 0.4.0 |
 | Estado | Approved |
-| Fecha | 2026-09-25T09:01+02:00 |
+| Fecha | 2026-11-09T19:36+01:00 |
 | Modo | active (fusión; cuando el consumidor lo declare) |
 | Prompt base | `prompts/agents/domain-application-agent.md` |
-| Pack | sdaf-stack-dotnet@0.3.0 |
+| Pack | sdaf-stack-dotnet@0.4.0 |
 
 ## En esta página
 
@@ -95,6 +95,7 @@ Un PBI → un slice coherente; acceptance mapeable.
 | 0.1.1 | 2026-09-13 | Publicado en tag `v0.1.1` |
 | 0.2.0 | 2026-09-19 | Compat sdaf-core 0.3.x; pack@0.2.0 (tag `v0.2.0`; la cabecera publicada decía 2026-09-13) |
 | 0.3.0 | 2026-09-25T09:01+02:00 | Compat sdaf-core 0.4.x; pack@0.3.0. Historial añadido desde los tags publicados. Sin cambio de norma. |
+| 0.4.0 | 2026-11-09T19:36+01:00 | Compat sdaf-core 0.6.x; pack@0.4.0. Sin cambio de norma. |
 
 ## Relacionado
 

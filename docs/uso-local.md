@@ -44,12 +44,12 @@ mkdocs build -f mkdocs/mkdocs.yml --strict
 
 ## Checks del CI en local
 
-Los mismos que ejecutan [`validate.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/validate.yml) y [`docs-links.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs-links.yml) (salvo markdownlint, que necesita Node). Los dos últimos usan un checkout de sdaf-core `v0.4.2` al lado de este repo (`../sdaf-core`).
+Los mismos que ejecutan [`validate.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/validate.yml) y [`docs-links.yml`](https://github.com/Cyberdine-Systems-Corporation/sdaf-stack-dotnet/blob/main/.github/workflows/docs-links.yml) (salvo markdownlint, que necesita Node). Los dos últimos usan un checkout de sdaf-core al lado de este repo (`../sdaf-core`; la línea 0.6 se valida con su `main` hasta que exista el tag `v0.6.0`).
 
 ```powershell
 pip install pyyaml jsonschema
 
-# Coherencia pack.yaml ↔ cabeceras ↔ historial ↔ citas skill@version ↔ examples
+# Coherencia pack.yaml ↔ sdaf-pack.yaml ↔ cabeceras ↔ historial ↔ citas skill@version ↔ examples
 python scripts/check-pack-metadata.py
 python scripts/test-check-pack-metadata.py
 
@@ -59,8 +59,9 @@ python scripts/check-history-append-only.py --base origin/main
 # Enlaces, anclas (GitHub y MkDocs) y huérfanos
 powershell -File ./scripts/check-md-links.ps1 -StrictAnchors -StrictOrphans
 
-# Escenarios y worklogs con los validadores del core
-python ../sdaf-core/scripts/validate-config.py --strict-i4 --consumer-root . examples/01-pack-only.yaml examples/02-pack-frontend.yaml
+# Manifiesto, escenarios y worklogs con los validadores del core
+python ../sdaf-core/scripts/validate-pack.py sdaf-pack.yaml
+python ../sdaf-core/scripts/validate-config.py --strict-i4 --consumer-root . --pack-manifest sdaf-pack.yaml examples/01-pack-only.yaml examples/02-pack-frontend.yaml
 python ../sdaf-core/scripts/validate-worklog.py worklogs/INIT-auditoria-v0.2.0/Iteration-001.md
 ```
 

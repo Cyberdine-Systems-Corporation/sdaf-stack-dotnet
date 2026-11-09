@@ -3,7 +3,7 @@
 | Campo | Valor |
 |--------|--------|
 | Rol | 🛠️ HOWTO de escenarios de config |
-| Pack | `sdaf-stack-dotnet@0.3.0` |
+| Pack | `sdaf-stack-dotnet@0.4.0` |
 
 Cada escenario es un `sdaf.config.yaml` de referencia a copiar en la raíz del consumidor y ajustar (`project.name`, `stack.src_path`, `stack.tests_path`).
 
@@ -34,10 +34,11 @@ Uso: handoff completo `Specification → Architecture → domain-application →
 
 ## Validación
 
-Los dos escenarios se validan en el CI del pack con la composite action `validate-sdaf` de sdaf-core `v0.4.2` (schema + invariantes, I4 en modo estricto). En local, con un checkout del core al lado:
+Los dos escenarios se validan en el CI del pack con la composite action `validate-sdaf` del core (schema + invariantes, I4 en modo estricto), fijada a un SHA de `main` del core hasta que exista el tag `v0.6.0`. En local, con un checkout del core al lado, también contra el manifiesto del pack:
 
 ```powershell
-python ../sdaf-core/scripts/validate-config.py --strict-i4 --consumer-root . examples/01-pack-only.yaml examples/02-pack-frontend.yaml
+python ../sdaf-core/scripts/validate-pack.py sdaf-pack.yaml
+python ../sdaf-core/scripts/validate-config.py --strict-i4 --consumer-root . --pack-manifest sdaf-pack.yaml examples/01-pack-only.yaml examples/02-pack-frontend.yaml
 ```
 
 ## Relacionado

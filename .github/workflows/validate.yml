@@ -43,8 +43,10 @@ jobs:
       - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: "3.12"
+      # Pin provisional: SHA de main de sdaf-core (60e9e5b), no un tag. El schema
+      # de v0.5.3 no conoce stack.packs; se vuelve a un tag cuando exista v0.6.0.
       - name: examples/ contra schema e invariantes de sdaf-core (I4 estricto)
-        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@75933a46a5ef604c2bb8f4d000ebb49de3928d00 # v0.5.3
+        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@60e9e5bc2a7b5384af9827f1a1f4af4436564037 # main de sdaf-core (provisional hasta v0.6.0)
         with:
           config-paths: examples/*.yaml
           check-worklog: "false"

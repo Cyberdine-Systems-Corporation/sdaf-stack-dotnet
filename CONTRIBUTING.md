@@ -5,7 +5,7 @@
 | Rol | 🛠️ HOWTO de contribución (no es norma del método) |
 
 > [!NOTE]
-> La norma vive en **sdaf-core** (línea `0.4.x`). Esta página solo explica cómo aplicarla a este pack.
+> La norma vive en **sdaf-core** (línea `0.6.x`). Esta página solo explica cómo aplicarla a este pack.
 
 ## En esta página
 
@@ -32,9 +32,9 @@ Commits con prefijo (`feat:`, `fix:`, `docs:`, `chore:`) y prosa en castellano.
 |-------|------------|---------|
 | Redacción | Claridad, TOC, Relacionado, enlaces; la obligación no cambia | patch del artefacto; historial «Sin cambio de norma» |
 | Significado | Cambia una obligación de un contrato, skill o playbook Approved | minor del artefacto; entrada en [CHANGELOG](CHANGELOG.md) |
-| Compat | Cambia el rango `sdaf_core` de [`pack.yaml`](pack.yaml) | minor del pack (0.x); upgrade en [ADOPT](ADOPT.md#upgrade) |
+| Compat | Cambia el rango `sdaf_core` de [`pack.yaml`](pack.yaml) (y `core` de [`sdaf-pack.yaml`](sdaf-pack.yaml)) | minor del pack (0.x); upgrade en [ADOPT](ADOPT.md#upgrade) |
 
-`pack.yaml` es la fuente de verdad: su `version` coincide con las citas `skill@version`, el campo `Pack` de cada cabecera y `stack.pack` de `examples/`. Un release del pack alinea todos los artefactos a esa versión, como en 0.2.0 y 0.3.0.
+`pack.yaml` es la fuente de verdad: su `version` coincide con las citas `skill@version`, el campo `Pack` de cada cabecera y la referencia de `stack.packs` de `examples/`. [`sdaf-pack.yaml`](sdaf-pack.yaml) es el manifiesto que lee el core y repite id, versión, rango `core`, ids de extensión, skills y prompts: debe coincidir con `pack.yaml` y `check-pack-metadata.py` lo cruza. Un release del pack alinea todos los artefactos a esa versión, como en 0.2.0, 0.3.0 y 0.4.0.
 
 ## Historial y fechas
 
@@ -52,10 +52,11 @@ Los mismos que el CI, en local: ver [uso local](docs/uso-local.md#checks-del-ci-
 
 | Check | Qué falla |
 |-------|-----------|
-| `check-pack-metadata.py` | Versión, `Pack`, fechas o citas `skill@version` que no cuadran con `pack.yaml` |
+| `check-pack-metadata.py` | Versión, `Pack`, fechas o citas `skill@version` que no cuadran con `pack.yaml`; `sdaf-pack.yaml` ausente o distinto de `pack.yaml`; `examples/` fuera del rango `core` |
 | `check-history-append-only.py` | Fila de historial o sección del CHANGELOG borrada o reescrita |
 | `check-md-links.ps1 -StrictAnchors -StrictOrphans` | Enlace, ancla (GitHub y MkDocs) o página huérfana |
 | `validate-sdaf` (action del core) | `examples/` fuera del schema o de las invariantes |
+| `validate-pack.py` (core) | `sdaf-pack.yaml` fuera del schema del manifiesto. Hoy se ejecuta a mano; el paso de CI se añade cuando exista el tag `v0.6.0` del core |
 | `validate-worklog.py` (core) | Worklog con frontmatter inválido |
 | markdownlint | Fences sin lenguaje (MD040) y enlaces vacíos (MD042) |
 | `mkdocs build --strict` | Nav, enlaces o snippets rotos en el sitio |
