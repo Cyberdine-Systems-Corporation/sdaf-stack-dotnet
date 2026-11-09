@@ -49,22 +49,39 @@ CASES = {
     "Versión de skill desalineada": sub("skills/aspire-local-run/SKILL.md", r"^\| Versión \| [^|]+\|", "| Versión | 0.2.9 |"),
     "Pack de contrato desalineado": sub("agents/frontend-agent.md", r"^\| Pack \| [^|]+\|", "| Pack | sdaf-stack-dotnet@0.2.0 |"),
     "Fecha de cabecera ≠ última fila": sub("playbooks/vertical-slice-cqrs.md", r"^\| Fecha \| [^|]+\|", "| Fecha | 2026-01-01T00:00+02:00 |"),
-    "fila nueva sin hora": sub("prompts/agents/frontend-agent.md", r"^(\| 0\.3\.0 \| )[^|]+\|", r"\g<1>2026-09-25 |"),
+    "fila nueva sin hora": sub("prompts/agents/frontend-agent.md", r"^(\| 0\.4\.0 \| )[^|]+\|", r"\g<1>2026-11-09 |"),
     "Historial no creciente": sub("agents/infrastructure-agent.md", r"^\| 0\.1\.1 \|", "| 0.0.9 |"),
     "contrato sin Historial": sub("agents/domain-application-agent.md", r"^## Historial$", "## Versiones"),
     "cita skill@version vieja": append("docs/uso-local.md", "\nUsa `csharp-adr006-slice@0.2.0`.\n"),
     "cita pack@version vieja": append("skills/README.md", "\nVer `sdaf-stack-dotnet@0.1.1`.\n"),
-    "examples con stack.pack viejo": sub("examples/01-pack-only.yaml", r"pack: sdaf-stack-dotnet@\S+", "pack: sdaf-stack-dotnet@0.2.0"),
+    "examples con la referencia del pack vieja": sub("examples/01-pack-only.yaml", r"sdaf-stack-dotnet@\S+", "sdaf-stack-dotnet@0.2.0"),
+    "examples sin el pack en stack.packs": sub("examples/02-pack-frontend.yaml", r"sdaf-stack-dotnet@\S+", "sdaf-stack-otro@0.4.0"),
     "examples con sdaf.version fuera de compat": sub("examples/02-pack-frontend.yaml", r'version: "[^"]+"', 'version: "0.3.0"'),
+    "examples con sdaf.version en el límite superior": sub("examples/01-pack-only.yaml", r'version: "[^"]+"', 'version: "0.7.0"'),
     "skill sin declarar": lambda root: shutil.copytree(root / "skills/aspire-local-run", root / "skills/aspire-extra"),
     "playbook del manifest inexistente": delete("playbooks/vertical-slice-cqrs.md"),
     "frontmatter name de skill distinto": sub("skills/blazor-bff-slice/SKILL.md", r"^name: .*$", "name: blazor-otro"),
     "README con Id viejo": sub("README.md", r"^\| Id \| [^|]+\|", "| Id | `sdaf-stack-dotnet@0.2.0` |"),
-    "CHANGELOG sin entrada": sub("CHANGELOG.md", r"^## \[0\.3\.0\]", "## [0.3.0-borrador]"),
+    "CHANGELOG sin entrada": sub("CHANGELOG.md", r"^## \[0\.4\.0\]", "## [0.4.0-borrador]"),
     "ADR fuera del índice": sub("docs/architecture/adr/index.md", r"\]\(ADR-002-infrastructure-stub\.md\)", "](x.md)"),
     "ADR con estado inválido": sub("docs/architecture/adr/ADR-001-fusion-domain-application.md", r"^\| Estado \| [^|]+\|", "| Estado | Approved |"),
     "ADR con numeración con hueco": lambda root: (root / "docs/architecture/adr/ADR-002-infrastructure-stub.md").rename(
         root / "docs/architecture/adr/ADR-003-infrastructure-stub.md"),
+    # --- sdaf-pack.yaml frente a pack.yaml ---
+    "manifiesto ausente": delete("sdaf-pack.yaml"),
+    "manifiesto con id distinto": sub("sdaf-pack.yaml", r"^id: .*$", "id: sdaf-stack-otro"),
+    "manifiesto con versión distinta": sub("sdaf-pack.yaml", r'^version: "[^"]+"', 'version: "0.3.0"'),
+    "manifiesto con core distinto": sub("sdaf-pack.yaml", r"^core: .*$", 'core: ">=0.5.0 <0.7.0"'),
+    "manifiesto con extension_ids distintos": sub("sdaf-pack.yaml", r"^    - infrastructure$", "    - infra"),
+    "manifiesto sin una skill del pack": sub("sdaf-pack.yaml", r"^    - aspire-local-run\n", ""),
+    "manifiesto con una skill que el pack no tiene": sub("sdaf-pack.yaml", r"^(    - aspire-local-run\n)", r"\g<1>    - skill-fantasma\n"),
+    "manifiesto con un prompt sin fichero": sub("sdaf-pack.yaml", r"^    - infrastructure\n\Z", "    - fantasma\n"),
+    "manifiesto sin un prompt de agente": sub("sdaf-pack.yaml", r"^    - infrastructure\n\Z", ""),
+}
+
+# Variantes que el checker debe aceptar (lectura compatible del alias `stack.pack`).
+ACCEPTED = {
+    "examples con el alias stack.pack": sub("examples/01-pack-only.yaml", r"packs:\n    - (sdaf-stack-dotnet@\S+)", r"pack: \g<1>"),
 }
 
 
@@ -88,6 +105,16 @@ def main() -> int:
             else:
                 print(f"FALLO {name}: el checker la aceptó")
                 failures += 1
+        for i, (name, mutate) in enumerate(ACCEPTED.items()):
+            case = Path(tmp) / f"a{i}"
+            shutil.copytree(base, case)
+            mutate(case)
+            errs = cpm.check(case)
+            if errs:
+                print(f"FALLO {name}: el checker la rechazó: {errs[0]}")
+                failures += 1
+            else:
+                print(f"OK   {name}: aceptada")
     print(f"test-check-pack-metadata: {len(CASES) - failures}/{len(CASES)} mutaciones detectadas")
     return 1 if failures else 0
 

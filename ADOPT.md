@@ -1,11 +1,11 @@
 <!-- --8<-- [start:cuerpo] -->
-# Adopción — sdaf-stack-dotnet@0.3.0
+# Adopción — sdaf-stack-dotnet@0.4.0
 
 | Campo | Valor |
 |--------|--------|
 | Rol | 🛠️ HOWTO de adopción (no es constitución del método) |
-| Pack | `sdaf-stack-dotnet@0.3.0` |
-| Requiere | `sdaf-core@0.4.x` ya adoptado (pin `v0.4.2` recomendado) + Gate 0 del método vigente |
+| Pack | `sdaf-stack-dotnet@0.4.0` |
+| Requiere | `sdaf-core@0.6.x` ya adoptado (pin `v0.6.0` recomendado) + Gate 0 del método vigente |
 
 > [!NOTE]
 > Esto es un **HOWTO**. No sustituye el handbook Approved ni la constitución de **sdaf-core**.
@@ -23,7 +23,7 @@
 
 ```mermaid
 flowchart TD
-  pin[Pin submodule v0.3.0] --> cfg[sdaf.config.yaml]
+  pin[Pin submodule v0.4.0] --> cfg[sdaf.config.yaml]
   cfg --> mat[Materializar enlaces]
   mat --> ex[Elegir examples]
   ex --> adr{ADR stack nuevo?}
@@ -46,23 +46,24 @@ flowchart TD
 
 ## Pasos
 
-1. Añadir este pack como submodule pinneado a tag `v0.3.0`, p. ej. en `sdaf-stack-dotnet/`:
+1. Añadir este pack como submodule pinneado a tag `v0.4.0`, p. ej. en `sdaf-stack-dotnet/`:
 
     ```text
     git submodule add <url-sdaf-stack-dotnet> sdaf-stack-dotnet
-    cd sdaf-stack-dotnet && git checkout v0.3.0
+    cd sdaf-stack-dotnet && git checkout v0.4.0
     ```
 
 2. En la raíz del consumidor, `sdaf.config.yaml`:
 
     ```yaml
     sdaf:
-      version: "0.4.0"
+      version: "0.6.0"
     stack:
-      pack: sdaf-stack-dotnet@0.3.0
+      packs:
+        - sdaf-stack-dotnet@0.4.0
     ```
 
-    Pin del **core**: tag `v0.4.2` (recomendado; `v0.4.0` y `v0.4.1` también valen). `sdaf.version` nombra la línea de constitución (`"0.4.0"`), no un tag — igual que documenta sdaf-core.
+    Pin del **core**: tag `v0.6.0` (recomendado). `sdaf.version` nombra la línea de constitución (`"0.6.0"`), no un tag — igual que documenta sdaf-core. `stack.packs` es una lista de referencias `id@version`; el alias `stack.pack` está obsoleto en el core. El `sdaf-pack.yaml` de la raíz del pack declara el rango `core` (`>=0.6.0 <0.7.0`) y lo que aporta; `validate-config.py` del core lo cruza con esta config (`--pack-manifest`).
 
 3. Materializar aportes del pack en la raíz del consumidor. Preferido: symlinks relativos (Git mode `120000`), no copias.
 
@@ -87,7 +88,7 @@ flowchart TD
 
     ⛔ **No** usar junctions de Windows (`mklink /J`): Git no los modela como enlaces portables cross-platform.
 
-    Materializar también skills/agentes/prompts del **core** según [`sdaf-core` docs/adopcion-y-upgrade.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/adopcion-y-upgrade.md).
+    Materializar también skills/agentes/prompts del **core** según [`sdaf-core` docs/adopcion-y-upgrade.md](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.6.0/docs/adopcion-y-upgrade.md).
 
 4. Elegir escenario de `examples/` ([detalle](docs/adoption/escenarios.md)):
 
@@ -98,22 +99,22 @@ flowchart TD
 
 5. Si el runtime/UI/BD se fijan por primera vez: abrir **ADR** en el consumidor (el pack no sustituye esa decisión).
 
-6. Opcional: validar `sdaf.config.yaml` en el CI del consumidor con la composite action [`validate-sdaf`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/.github/actions/validate-sdaf/README.md) del core (este pack la usa para sus `examples/`).
+6. Opcional: validar `sdaf.config.yaml` en el CI del consumidor con la composite action [`validate-sdaf`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.6.0/.github/actions/validate-sdaf/README.md) del core (este pack la usa para sus `examples/`).
 
 7. Antes de código de producto: skill `sdaf-gate0` del core.
 
 > [!IMPORTANT]
-> Con **sdaf-core 0.4.x**, H06 §7 exige petición humana **explícita en el mensaje de este turno** para commit o escritura al remoto. El pack no la relaja: no autorices git/remoto desde skills o prompts del overlay.
+> Con **sdaf-core 0.6.x**, H06 §7 exige petición humana **explícita en el mensaje de este turno** para commit o escritura al remoto. El pack no la relaja: no autorices git/remoto desde skills o prompts del overlay.
 
 ## Tooling externo (opcional)
 
-El pack no aporta ni presupone tooling de agentes (memoria, MCP, instaladores como gentle-ai). Según [ADR-004](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/architecture/decisions/ADR-004-tooling-externo-de-agentes.md) del core, ese tooling no es un pack: se declara en `tooling.gentle_ai` de `sdaf.config.yaml`, nunca en `stack.pack`.
+El pack no aporta ni presupone tooling de agentes (memoria, MCP, instaladores como gentle-ai). Según [ADR-004](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.6.0/architecture/decisions/ADR-004-tooling-externo-de-agentes.md) del core, ese tooling no es un pack: se declara en `tooling.gentle_ai` de `sdaf.config.yaml`, nunca en `stack.packs`.
 
 Si el consumidor lo adopta:
 
 - Las skills del pack (`csharp-adr006-slice`, `blazor-bff-slice`, `aspire-local-run`) siguen subordinadas a Gate 0 y a H06 §7. No se usan las skills `sdd-*`.
-- `AGENTS.md` lleva la sección «Tooling externo» de `AGENTS.md.template` (core `v0.4.2`).
-- Guía del core: [`integracion-gentle-ai.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/integracion-gentle-ai.md).
+- `AGENTS.md` lleva la sección «Tooling externo» de `AGENTS.md.template` (core `v0.6.0`).
+- Guía del core: [`integracion-gentle-ai.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.6.0/docs/integracion-gentle-ai.md).
 
 ## Prohibido
 
@@ -126,15 +127,15 @@ Si el consumidor lo adopta:
 
 ## Upgrade
 
-Pack **0.2.0 → 0.3.0** exige core **0.4.x**. Quien siga en core `v0.3.3` se queda en pack `v0.2.0`.
+Pack **0.3.0 → 0.4.0** exige core **0.6.x**. Quien siga en core `0.4.x` se queda en pack `v0.3.0`.
 
-1. Subir antes el **core**: pin `v0.4.2` (o `v0.4.0`/`v0.4.1`) y `sdaf.version: "0.4.0"`, siguiendo las secciones 0.4.0, 0.4.1 y 0.4.2 de [`adopcion-y-upgrade.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/adopcion-y-upgrade.md) (H13, `CODEOWNERS` para QG-Review, worklogs nuevos con frontmatter).
-2. Actualizar pin del submodule del **pack** a `v0.3.0`, `stack.pack: sdaf-stack-dotnet@0.3.0` y citas `skill@version` (`@0.3.0`) en worklogs **nuevos**. Los worklogs ya cerrados no se reescriben.
-3. Volver a ejecutar el script de materialización del consumidor (`-Force` / `--force` si cambió el árbol).
+1. Subir antes el **core**: pin `v0.6.0` y `sdaf.version: "0.6.0"`, siguiendo [`adopcion-y-upgrade.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.6.0/docs/adopcion-y-upgrade.md) del core.
+2. Actualizar el pin del submodule del **pack** a `v0.4.0`, sustituir el alias `stack.pack` por `stack.packs: [sdaf-stack-dotnet@0.4.0]` y usar las citas `skill@version` (`@0.4.0`) en worklogs **nuevos**. Los worklogs ya cerrados no se reescriben.
+3. Volver a ejecutar el script de materialización del consumidor (`-Force` / `--force` si cambió el árbol). El pack trae ahora `sdaf-pack.yaml` en su raíz: es el manifiesto que `materialize.py` y `validate-config.py` del core esperan.
 4. No auto-migrar specs del consumidor.
 5. Revisar handoff a `testing-review` y skills del core Parte III (`testing-review-pr`, `security-review`, `devops-ci-gate`) según el escenario.
 
-Los contratos, skills y playbooks no cambian de obligación en 0.3.0: ver [CHANGELOG](CHANGELOG.md).
+Los contratos, skills y playbooks no cambian de obligación en 0.4.0: ver [CHANGELOG](CHANGELOG.md).
 
 <!-- --8<-- [end:cuerpo] -->
 
@@ -148,3 +149,4 @@ Los contratos, skills y playbooks no cambian de obligación en 0.3.0: ver [CHANG
 | 🧭 | [docs/navegacion-docs.md](docs/navegacion-docs.md) | Mapa de clics del pack |
 | 📝 | [docs/checklist-pagina-docs.md](docs/checklist-pagina-docs.md) | DoD de página markdown |
 | 📦 | [pack.yaml](pack.yaml) | Manifest canónico |
+| 📦 | [sdaf-pack.yaml](sdaf-pack.yaml) | Manifiesto del pack para el core |

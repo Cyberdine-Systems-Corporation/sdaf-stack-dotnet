@@ -1,19 +1,19 @@
 # sdaf-stack-dotnet
 
-`sdaf-stack-dotnet@0.3.0` — pack de stack SDAF para **.NET / Blazor / Aspire**.
+`sdaf-stack-dotnet@0.4.0` — pack de stack SDAF para **.NET / Blazor / Aspire**.
 
 | Campo | Valor |
 |--------|--------|
-| Id | `sdaf-stack-dotnet@0.3.0` |
-| Compat | `sdaf-core` `>=0.4.0 <0.5.0` |
-| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.4.2/docs/contrato-pack-stack.md) |
+| Id | `sdaf-stack-dotnet@0.4.0` |
+| Compat | `sdaf-core` `>=0.6.0 <0.7.0` |
+| Contrato | [sdaf-core `docs/contrato-pack-stack.md`](https://github.com/Cyberdine-Systems-Corporation/sdaf-core/blob/v0.6.0/docs/contrato-pack-stack.md) |
 | Rol | Índice / hub del pack (no es constitución del método) |
 
 > [!NOTE]
 > Este repositorio es un **overlay técnico**. La constitución y el handbook Approved viven en **sdaf-core**. Este pack no los sustituye.
 
 > [!IMPORTANT]
-> Gate 0 del core manda sobre cualquier skill de implementación de este pack. Compat: **sdaf-core 0.4.x** (pin árbol `v0.4.2` recomendado, `sdaf.version: "0.4.0"`).
+> Gate 0 del core manda sobre cualquier skill de implementación de este pack. Compat: **sdaf-core 0.6.x** (pin árbol `v0.6.0` recomendado, `sdaf.version: "0.6.0"`).
 
 ## En esta página
 
@@ -63,7 +63,8 @@
 sdaf-stack-dotnet/
 ├── README.md                 ← hub (esta página)
 ├── ADOPT.md                  ← HOWTO adopción
-├── pack.yaml                 ← manifest @0.3.0 (fuente de verdad de versión)
+├── pack.yaml                 ← manifest @0.4.0 (fuente de verdad de versión)
+├── sdaf-pack.yaml            ← manifiesto que lee el core (debe coincidir con pack.yaml)
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md           ← cómo proponer cambios y qué comprueba el CI
 ├── SECURITY.md               ← aviso de vulnerabilidades
@@ -104,11 +105,11 @@ flowchart LR
 ```
 
 > [!TIP]
-> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.3.0`, y elige un escenario en [`examples/`](docs/adoption/escenarios.md).
+> Empieza por [ADOPT.md](ADOPT.md), pin a tag `v0.4.0`, y elige un escenario en [`examples/`](docs/adoption/escenarios.md).
 
 ## Familia sdaf-stack-*
 
-Otros packs (node, etc.) deben repetir este patrón: `pack.yaml`, agentes solo de extensión, skills con prefijo de stack, `ADOPT.md`, sin producto. Este repo es el primer ejemplar.
+Otros packs (node, etc.) deben repetir este patrón: `pack.yaml`, `sdaf-pack.yaml`, agentes solo de extensión, skills con prefijo de stack, `ADOPT.md`, sin producto. Este repo es el primer ejemplar.
 
 ## Licencia
 
@@ -125,5 +126,6 @@ MIT — ver [LICENSE](LICENSE).
 | 🛠️ | [docs/uso-local.md](docs/uso-local.md) | Levantar el sitio MkDocs en local |
 | ✅ | [CHANGELOG.md](CHANGELOG.md) | Historial de versiones del pack |
 | 📦 | [pack.yaml](pack.yaml) | Manifest canónico |
+| 📦 | [sdaf-pack.yaml](sdaf-pack.yaml) | Manifiesto del pack para el core |
 | 🛠️ | [CONTRIBUTING.md](CONTRIBUTING.md) | Rama, PR, checks y worklog |
 | 🧭 | [SECURITY.md](SECURITY.md) | Aviso privado de vulnerabilidades |
