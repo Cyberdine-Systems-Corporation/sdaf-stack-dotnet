@@ -46,7 +46,7 @@ jobs:
       # Pin provisional: SHA de main de sdaf-core (60e9e5b), no un tag. El schema
       # de v0.5.3 no conoce stack.packs; se vuelve a un tag cuando exista v0.6.0.
       - name: examples/ contra schema e invariantes de sdaf-core (I4 estricto)
-        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@60e9e5bc2a7b5384af9827f1a1f4af4436564037 # main de sdaf-core (provisional hasta v0.6.0)
+        uses: Cyberdine-Systems-Corporation/sdaf-core/.github/actions/validate-sdaf@768ffa6238a4499b88e6f4f81859331ba3bbc62d # main de sdaf-core (provisional hasta v0.6.0)
         with:
           config-paths: examples/*.yaml
           check-worklog: "false"
